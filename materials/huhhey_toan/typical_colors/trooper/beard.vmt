@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "huhhey_toan/Typical_Colors/Trooper/beard"
+              "$translucent" 1
+
+}

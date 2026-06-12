@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "huhhey_toan/Typical_Colors/Agent/Agent_hair"
+               $alphatest 1
+
+}

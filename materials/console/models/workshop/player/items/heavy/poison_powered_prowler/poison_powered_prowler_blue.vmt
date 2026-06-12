@@ -1,0 +1,130 @@
+"VertexLitGeneric"
+{
+	"$basetexture"		"console/models/workshop/player/items/heavy/poison_powered_prowler/poison_powered_prowler_color"
+	"$lightwarptexture"		"models/weapons/c_items/c_ambassador_lightwarp"
+	"$phong"		"1"
+	"$phongexponent"		"30.000000"
+	"$phongboost"		"0.100000"
+	"$phongfresnelranges"		"[.25 .5 1]"
+	"$rimlight"		"1"
+	"$rimlightexponent"		"4"
+	"$rimlightboost"		"1.500000"
+	"$blendtintbybasealpha"		"1"
+	"$blendtintcoloroverbase"		"0.000000"
+	"$colortint_base"		"{ 100 255 100 }"
+	"$color2"		"{ 100 255 100 }"
+	"$colortint_tmp"		"[0 0 0]"
+	"$bumpmapalphaphongmask"		"1"
+	"$envmap"		"env_cubemap"
+	"$basealphaenvmapmask"		"0"
+	"$normalmapalphaenvmapmask"		"0"
+	"$envmaptint"		"[0.392157 0.392157 0.392157]"
+	"$cloakPassEnabled"		"1"
+	"$detail"		"effects/tiledfire/fireLayeredSlowTiled512"
+	"$detailscale"		"5"
+	"$detailblendfactor"		"0"
+	"$detailblendmode"		"6"
+	"$yellow"		"0"
+	">=DX90"
+	{
+		"$selfillum"		"1"
+	}
+	"$selfillumtint"		"[0.941177 3.000000 0.941177]"
+	"$selfillummask"		"console/models/workshop/player/items/heavy/poison_powered_prowler/poison_powered_prowler_illum"
+	"$SinevalScroll"		"0"
+	"$HorizontalRate"		"0.005000"
+	"$FinalRate"		"0.500000"
+	"$Sineval"		"0"
+	"$SinevalMin"		"0"
+	"$SinevalMax"		"0"
+	"$Transform"		"[1 1]"
+	"$ZeroVal"		"0"
+	"$Scroll"		"0"
+	"proxies"
+	{
+		"invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar"		"$detail"
+			"animatedtextureframenumvar"		"$detailframe"
+			"animatedtextureframerate"		"30"
+		}
+		"BurnLevel"
+		{
+			"resultVar"		"$detailblendfactor"
+		}
+		"ItemTintColor"
+		{
+			"resultVar"		"$colortint_tmp"
+		}
+		"SelectFirstIfNonZero"
+		{
+			"srcVar1"		"$colortint_tmp"
+			"srcVar2"		"$colortint_base"
+			"resultVar"		"$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar"		"$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1"		"$color2"
+			"srcVar2"		"$yellow"
+			"resultVar"		"$color2"
+		}
+		"Sine"
+		{
+			"resultVar"		"$selfillumtint"
+			"sinemin"		"0.800000"
+			"sinemax"		"1.700000"
+			"sineperiod"		"8"
+		}
+		"Sine"
+		{
+			"sinemin"		"0.600000"
+			"sinemax"		"1.200000"
+			"sineperiod"		"100000"
+			"resultVar"		"$SineVal"
+		}
+		"Sine"
+		{
+			"sinemin"		"-0.004000"
+			"sinemax"		"-0.030000"
+			"sineperiod"		"20"
+			"resultVar"		"$SinevalMin"
+		}
+		"Sine"
+		{
+			"sinemin"		"0.003000"
+			"sinemax"		"0.046000"
+			"sineperiod"		"20"
+			"resultVar"		"$SinevalMax"
+		}
+		"Sine"
+		{
+			"sinemin"		"$SinevalMin"
+			"sinemax"		"$SinevalMax"
+			"sineperiod"		"$SineVal"
+			"resultVar"		"$Transform[0]"
+		}
+		"LinearRamp"
+		{
+			"rate"		"0.380000"
+			"initialValue"		"$ZeroVal"
+			"resultVar"		"$Scroll"
+		}
+		"Equals"
+		{
+			"srcVar1"		"$Scroll"
+			"resultVar"		"$Transform[1]"
+		}
+		"TextureTransform"
+		{
+			"translateVar"		"$Transform"
+			"resultVar"		"$basetexturetransform"
+		}
+	}
+}

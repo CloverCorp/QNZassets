@@ -1,0 +1,12 @@
+VertexLitGeneric
+{
+	$basetexture "huhhey_toan/Typical_Colors/Agent/Agent_body_red"
+                $bumpmap "huhhey_toan/Typical_Colors/Agent/shading_tc2"
+
+	"$phong" "1"
+                "$phongexponent" "20"
+	"$phongboost" "3"
+	"$halflambert" "0"
+
+
+}
