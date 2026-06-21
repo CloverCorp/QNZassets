@@ -1,0 +1,9 @@
+"Patch"
+{
+	include "materials\models\player\shared\blue_invun.vmt"
+	
+	insert
+	{
+	"$basetexture" "models/player/civilian_tfc/tfc_civ_head"
+	}
+}
