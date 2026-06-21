@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "backpack/weapons/c_models/c_clin_trial/c_clin_trial_large.vtf"
+	$translucent 1
+}

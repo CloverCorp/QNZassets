@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/c_models/c_minigun/minishark"
+	"$lightwarptexture" "models/lightwarps/weapon_lightwarp"
+}

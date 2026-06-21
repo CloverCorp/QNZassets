@@ -1,0 +1,17 @@
+<<<<<<<< Updated upstream:materials/backpack/weapons/c_models/c_tb/c_tb.vmt
+"UnlitGeneric"
+{
+	"$baseTexture"	 "backpack/weapons/c_models/c_tb/c_tb"
+	"$translucent"	"1"
+	"$vertexcolor"	"1"
+	"$ignorez"	"1"
+}
+========
+"UnlitGeneric"
+{
+	"$baseTexture"	 "backpack/weapons/c_models/c_trashcannon_large"
+	"$translucent"	"1"
+	"$vertexcolor"	"1"
+	"$ignorez"	"1"
+}
+>>>>>>>> Stashed changes:materials/backpack/weapons/c_models/c_trashcannon_large.vmt
