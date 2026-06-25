@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------------------------ //
 // 				   Quinnz Custom Weapons
-//					      6.0.0
-//				   Heavy vs Medic update
+//					      6.4.0
+//				   Heavy vs Medic update hotfix 4
 // ------------------------------------------------------------------------------------ //
 
 #base "items_game.txt"
@@ -4037,7 +4037,7 @@ This weapon will reload automatically when not active"
 			}
 			"base_item_name" "The Red-Tape Recorder"
 			"enabled" "0"
-			"item_class" "tf_weapon_sapper"
+			"item_class" "tf_weapon_builder"
 			"craft_class" "weapon"
 			"craft_material_type" "weapon"
 			"show_in_armory" "1"
@@ -11187,7 +11187,7 @@ This weapon will reload automatically when not active"
 			"image_inventory" "backpack/workshop/weapons/c_models/c_eviction_notice/c_eviction_notice"
 			"inspect_panel_dist" "53"
 			"model_player" "models/workshop/weapons/c_models/c_eviction_notice/c_eviction_notice.mdl"
-            "extra_wearable" "models/workshop/player/items/heavy/dec24_battle_balaclava_style1/dec24_battle_balaclava_style1.mdl"
+            "extra_wearable" "models/workshop/player/items/heavy/sum25_hardcore/sum25_hardcore.mdl"
 			"attach_to_hands" "1"
 			"item_quality" "unique"
 			"min_ilevel" "10"
@@ -11236,10 +11236,7 @@ This weapon will reload automatically when not active"
 			}
 			"visuals"
 			{
-                                "player_bodygroups"
-				{
-					"hands" "1"
-				}
+
 				"sound_melee_miss" "EvictionNotice.Swing"
 				"sound_melee_hit" "EvictionNotice.Impact"
 				"sound_melee_hit_world" "EvictionNotice.HitWorld"
@@ -12101,6 +12098,7 @@ This weapon will reload automatically when not active"
 			"item_logname" "blutsauger"
 			"item_iconname" "blutsauger"
 			"show_in_armory" "1"
+			"equip_region"		"glasses"
 			"item_type_name" "#TF_Weapon_SyringeGun"
 			"item_name" "#TF_Unique_Achievement_Syringegun1"
 			"item_slot" "primary"
@@ -12122,8 +12120,6 @@ This weapon will reload automatically when not active"
 			    "mad milk syringes" "1"
 				"min_viewmodel_offset" "10 0 -12"
 				"health drain medic"   "-6"
-				"fire rate penalty"       "1.5"
-				"damage penalty"       "0.5"
 				"crit mod disabled" "0"
 			}
 			"visuals"
@@ -13215,11 +13211,11 @@ This weapon will reload automatically when not active"
 			"mouse_pressed_sound" "ui/item_light_gun_pickup.wav"
 			"drop_sound" "ui/item_light_gun_drop.wav"
 		}
-		"58000"
+		"58"
 		{
-			"name" "Live Jarate"
-			"prefab" "valve weapon_jarate"
-			"first_sale_date" "2010/09/29"
+			"name"	"Jarate"
+			"prefab"	"valve weapon_jarate"
+			"first_sale_date"	"2010/09/29"
 		}
 		"57"
 		{
@@ -14834,15 +14830,10 @@ Weapon by: 'Quinnz'"
 					"attribute_class" "add_health_on_radius_damage"
 					"value" "25"
 				}
-				"custom projectile model"
+				"max pipebombs decreased"
 				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models\weapons\w_models\w_weewilly_bomb.mdl"
-				}
-				"reload time decreased"										
-				{
-					"attribute_class"	"mult_reload_time"
-					"value" 			"0.85"
+					"attribute_class"	"add_max_pipebombs"
+					"value" 			"-4"
 				}
 				"clip size penalty"
 				{
@@ -15160,21 +15151,29 @@ Weapon by: 'Lime Girl'"
 			{
 				"trail_effect_crit"		"critical_rocket_red"
 				"explosion_effect_crit"	"coilgun_boom_red"
+				"sound_single_shot" "Weapon_BaseBallGun.Single"
+				"sound_burst" "Weapon_BaseBallGun.SingleCrit"
 			}
 			"visuals_blu"
 			{
 				"trail_effect_crit"		"critical_rocket_blue"
 				"explosion_effect_crit"	"coilgun_boom_blue"
+				"sound_single_shot" "Weapon_BaseBallGun.Single"
+				"sound_burst" "Weapon_BaseBallGun.SingleCrit"
 			}
 			"visuals_grn"
 			{
 				"trail_effect_crit"		"critical_rocket_green"
 				"explosion_effect_crit"	"coilgun_boom_green"
+				"sound_single_shot" "Weapon_BaseBallGun.Single"
+				"sound_burst" "Weapon_BaseBallGun.SingleCrit"
 			}
 			"visuals_ylw"
 			{
 				"trail_effect_crit"		"critical_rocket_yellow"
 				"explosion_effect_crit"	"coilgun_boom_yellow"
+				"sound_single_shot" "Weapon_BaseBallGun.Single"
+				"sound_burst" "Weapon_BaseBallGun.SingleCrit"
 			}
 		}
 
@@ -16005,7 +16004,7 @@ Weapon by: 'Colrot'"
 			"image_inventory"   	"backpack/workshop/weapons/c_models/c_sr3_punch/c_sr3_punch"
 			"model_world"			"models/workshop/weapons/c_models/c_sr3_punch/c_sr3_punch.mdl"			
 			"model_player" 			"models/workshop/weapons/c_models/c_sr3_punch/c_sr3_punch.mdl"
-			"extra_wearable"        "models\player\items\heavy\sr3_heavy_mask.mdl"
+			"extra_wearable"        "models/workshop/player/items/heavy/sum23_hog_heels/sum23_hog_heels.mdl"
 			"attach_to_hands"			"1"
 			"used_by_classes"
 			{
@@ -17113,6 +17112,11 @@ Weapon by: 'Quinnz'"
 					"attribute_class" "mult_crit_chance"
 					"value" "0"
 				}
+				"always draw tracer"
+				{
+					"attribute_class"	"mod_always_draw_tracer_effect"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -17241,8 +17245,7 @@ Weapon by: 'Colrot'"
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Staff"
 			"item_name" "The Freedom Finisher"
-			"item_description" "
-Crits powered by 1776
+			"item_description" "Crits powered by 1776
 
 Weapon by: 'Sigara'"
 			"item_slot" "melee"
@@ -18089,7 +18092,7 @@ Weapon by: 'Quinnz'"
 			"show_in_armory" "1"
 			"item_type_name" "High-Tech Flamethrower"
 			"item_description" "Can Ignite Pyros!
-67% Less gravity while active!
+In space no one can hear you burn.
 
 Weapon by: 'Lime Girl'"
 			"item_name" "The Nostromo Napalmer"
@@ -18117,14 +18120,14 @@ Weapon by: 'Lime Girl'"
 				"flame_random_life_time_offset"	"0.100000"
 				"flame_velocity_fade_start"		"0.300000"
 				"flame_velocity_fade_end"		"0.500000"
+				"provide on active" "1"
 				"extinguish restores health" "20"
 			}
 			"attributes"
 			{
-                "provide on active"
+				"Gravity decrease visual"
 				{
-					"attribute_class" "provide_on_active"
-					"value" "1"
+					"value" "1.67"
 				}
 				"move speed bonus"
 				{
@@ -19224,7 +19227,7 @@ Weapon by: 'Lime Girl'"
 					"attribute_class"	"ragdolls_become_ash"
 					"value"				"1"
 				}
-			    	"viewfinder outline aoe headshot"																
+			    "viewfinder outline aoe headshot"																
 				{
 					"attribute_class"	"dummy"
 					"value"				"1"
@@ -19422,8 +19425,8 @@ Weapon by: 'Lime Girl'"
 			"show_in_armory" "1"
 			"item_type_name" "M2 Flamethrower"
 			"item_description" "
-			Model By: 'CoreVixen'
-			Weapon by: 'Sigara'"
+Model By: 'CoreVixen'
+Weapon by: 'Sigara'"
 			"item_name" "Compact Combustor"
 			"item_slot" "primary"
 			"image_inventory" "backpack/weapons/c_models/c_combustor/c_combustor"
@@ -20871,7 +20874,7 @@ Remaster By 'Sigara"
 		"8076"
 		{
 			"name" "The Ap-Sap"
-			"item_class" "tf_weapon_sapper"
+			"item_class" "tf_weapon_builder"
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Spy_Sapper"
 			"item_description" "
@@ -20943,7 +20946,7 @@ Weapon by: 'Lime Girl'"
 		"8077"
 		{
 			"name" "The Snack Attack"
-			"item_class" "tf_weapon_sapper"
+			"item_class" "tf_weapon_builder"
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Spy_Sapper"
 			"item_name" "The Snack Attack"
@@ -21803,8 +21806,8 @@ Weapon by: 'Limegirl'"
 		"8085"
 		{
 			"name" "The Bi-Decoder"
-			"item_class" "tf_weapon_sapper"
-			"show_in_armory" "0"
+			"item_class" "tf_weapon_builder"
+			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Spy_Sapper"
 			"item_name" "Bi-Decoder"
 			"propername" "1"
@@ -21861,6 +21864,11 @@ Weapon by: 'Quinnz'"
 					"attribute_class" "custom_teleport_sapper"
 					"value" "1"
 				}
+				 "custom projectile origin offset"
+                {
+                    "attribute_class" "custom_projectile_origin_offset"
+                    "value" "-1 0 1"
+                }
 				"teleport_sapper_throw_distance"											
 				{
 					"attribute_class"	"teleport_sapper_throw_distance"
@@ -22160,16 +22168,6 @@ Weapon by: 'Sigara'"
 				}
 				"Wanga desc text"
 				{
-					"value"				"1"
-				}
-				"mod outline hit DISPLAY"
-				{
-					"attribute_class"	"mod_outline_on_hit"
-					"value"				"8"
-				}
-				"tranq on hit"
-				{
-					"attribute_class"	"mod_tranq_onhit"
 					"value"				"8"
 				}
 				"spy club desc text"
@@ -22196,8 +22194,18 @@ Weapon by: 'Sigara'"
 					"attribute_class"	"mult_dmg"
 					"value"				"0.000001"
 				}
-                		"hidden separator"	"1"
-			    	"mult dmg crit multiplier"
+				"hidden separator"	"1"
+				"tranq on hit"
+				{
+					"attribute_class"	"mod_tranq_onhit"
+					"value"				"8"
+				}
+			    "mod outline hit DISPLAY"																
+				{
+					"attribute_class"	"mod_outline_on_hit"
+					"value"				"8"
+				}
+			    "mult dmg crit multiplier"
 				{
 					"attribute_class"	"mult_dmg_crit_multiplier"
 					"value"				"0"
@@ -22426,7 +22434,7 @@ Remastered by: 'Sigara'"
 		"8092"
 		{
 			"name" "The Intermission"
-			"item_class" "tf_weapon_sapper"
+			"item_class" "tf_weapon_builder"
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Spy_Sapper"
 			"item_name" "Intermission"
@@ -22851,6 +22859,11 @@ Weapon by: 'Colrot'"
 					"attribute_class" "dummy"
 					"value" "1.33"
 				}
+				"gesture speed increase"
+				{
+					"attribute_class" "mult_gesture_time"
+					"value" "1.5"
+				}
 				"special taunt"
 				{
 					"attribute_class" "special_taunt"
@@ -22869,7 +22882,7 @@ Weapon by: 'Colrot'"
 				"lunchbox healing decreased"
 				{
 					"attribute_class" "lunchbox_healing_scale"
-					"value" "0.6"
+					"value" "0.7"
 				}
 				
 				"hidden separator"	"1"
@@ -23661,8 +23674,8 @@ Weapon by: 'Sigara"
 			"item_name"			"Boo-B-Que"
 			"item_type_name"	"Ghost In A Can"
 			"item_description"	"Boo, I Got You
-			Model By: 'Aftroid'
-			Weapon By: 'Sigara'"
+Model By: 'Aftroid'
+Weapon By: 'Sigara'"
 			"item_quality"		"completed"
             "item_logname"		"Boo_bque"
 			"item_iconname"		"Boo_bque"
@@ -23882,7 +23895,7 @@ Weapon by: 'Sigara"
 			"item_name"			"Banana Republic"
 			"item_type_name" "High Pressure Banana Launcher"
 			"item_description"	"This Hardware Store Is Driving Me Banana's
-		Model By:  Haau	
+		Model By:  Haau
 		Weapon By: Sigara"
 			"item_quality"		"completed"
 			"propername"		"1"
@@ -24026,7 +24039,7 @@ Weapon by: 'Sigara"
 				"sound_single_shot" "Weapon_Bananas.Single"
 				"sound_burst"		"Weapon_Bananas.SingleCrit"
 				"sound_special1"	"Misc_Banana"
-				"explosion_effect"	"bullet_scattershock_elec_impact_green"
+				"explosion_effect"	"rr_null"
             }
 			"item_logname"	"banana_republic"
 			"item_iconname"	"banana_republic"
@@ -24122,6 +24135,16 @@ Weapon by: 'Sigara'"
 				{
 					"attribute_class"	"crit_vs_bleeding_players"
 					"value"				"1"
+				}
+				"minicrits become crits"
+				{
+					"attribute_class"	"minicrits_become_crits"
+					"value"				"1"
+				}
+				"closerange backattack minicrits"
+				{
+					"attribute_class" "closerange_backattack_minicrits"
+					"value" "1"
 				}
 				"crit vs cond no dot"
 				{
@@ -24868,8 +24891,8 @@ Stats by: 'Panáček'"
 			"item_type_name"			"Compact Shotgun"
 			"item_description"			"Compact and concealed, truly for those below 6'0
 
-			Model/Animations by: Colrot
-			Weapon by: Panacek"
+Model/Animations by: Colrot
+Weapon by: Panacek"
 			"bucket"					"0"
 			"bucket_position"			"0"
 			"item_logname"				"Serbu_Shorty"
@@ -25181,10 +25204,10 @@ Weapon by: 'Colrot'"
 			"item_type_name" "Coconut Gun"
 			"show_in_armory" "1"
 			"item_description" "I have trained with apes, eaten bananas, and I am STILL more American than you
-			From: Weapon's Crate #1 Update
-			Model By '[VADN] Sputnik'
-			Sounds By 'Dio'
-			Weapon By 'Sigara'"
+From: Weapon's Crate #1 Update
+Model By '[VADN] Sputnik'
+Sounds By 'Dio'
+Weapon By 'Sigara'"
 			"item_name" "Jungle Juggler"
 			"item_slot" "primary"
 			"item_quality" "completed"
@@ -25285,11 +25308,11 @@ Weapon by: 'Colrot'"
 			"show_in_armory" "1"
 			"item_type_name" "Lance"
 			"item_description" "Don't Poke My Other Eye Out
-			From: Weapon's Crate #1 Update
-			Model By 'Mnemosynaut'
-			Resources From 'Renaissance Revival'
-			Weapon By 'Sigara'"
-			"item_name" "Whisky Stick"
+From: Weapon's Crate #1 Update
+Model By 'Mnemosynaut'
+Resources From 'Renaissance Revival'
+Weapon By 'Sigara'"
+			"item_name" "Whiskey Stick"
 			"anim_slot" "secondary"
 			"item_slot" "melee"
 			"item_quality" "completed"
@@ -25833,7 +25856,7 @@ Weapon By: 'RedElite'"
 				"grenade launcher damage"
 				{
 					"attribute_class"	"grenade_launcher_damage"
-					"value"				"75"
+					"value"				"150"
 				}
 				"grenade launcher radius"
 				{
@@ -26126,11 +26149,11 @@ Revisions by: 'Sigara'"
 					"attribute_class" "mult_zoom_fov"
 					"value" "0.4"
 				}
-				"aiming movespeed decreased"
-				{
-					"attribute_class" "mult_player_aiming_movespeed"
-					"value" "0.6"
-				}
+                "punch angle mod add hidden"
+                {
+                    "attribute_class"    "punch_angle_mod"
+                    "value"                ".55"
+                }
 				"crits_become_minicrits"
 				{
 					"attribute_class"	"crits_become_minicrits"
@@ -26155,7 +26178,7 @@ Revisions by: 'Sigara'"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"0.3"
+					"value"				"0.35"
 				}
 				"crits_become_minicrits"
 				{
@@ -26195,7 +26218,7 @@ Revisions by: 'Sigara'"
 				"aiming movespeed decreased"
 				{
 					"attribute_class" "mult_player_aiming_movespeed"
-					"value" "0.6"
+					"value" "0.8"
 				}
 				}
 			"visuals"
@@ -26264,41 +26287,51 @@ Revisions by: 'Sigara'"
 			}
 			"attributes"
 			{
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"				"1"
+				}
 				"crit mod disabled"
 				{
 					"attribute_class" "mult_crit_chance"
 					"value" "0"
 				}
 				"hidden separator" "1"
-				"punch angle mod add hidden"
+				"maxammo primary increased"
 				{
-					"attribute_class"	"punch_angle_mod"
-					"value"				".1"
-				}
-				"mod sustained fire accuracy"
-				{
-					"attribute_class" "mod_sustained_fire_accuracy"
-					"value" "-1 1.5"
+					"attribute_class" "mult_maxammo_secondary"
+					"value" "1.7"
 				}
 				"clip size bonus"
 				{
 					"attribute_class" "mult_clipsize"
 					"value" "1.28"
 				}
+				"punch angle mod add hidden"
+				{
+					"attribute_class"	"punch_angle_mod"
+					"value"				".1"
+				}
+				"punch angle mod add hidden"
+				{
+					"attribute_class"	"punch_angle_is_constant"
+					"value"				".2"
+				}
+				"mod sustained fire accuracy"
+				{
+					"attribute_class" "mod_sustained_fire_accuracy"
+					"value" "30 1.5"
+				}
 				"weapon spread bonus"
 				{
 					"attribute_class" "mult_spread_scale"
-					"value" "2"
+					"value" ".1"
 				}
 				"fire rate bonus"
 				{
 					"attribute_class" "mult_postfiredelay"
 					"value" ".8"
-				}
-				"maxammo secondary increased"
-				{
-					"attribute_class" "mult_maxammo_secondary"
-					"value" "1.7"
 				}
 			}
 			"visuals"
@@ -26381,6 +26414,11 @@ Revisions by: 'Sigara'"
 					"attribute_class"	"mult_dmg"
 					"value" 			"1.50"
 				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"2"
+				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
@@ -26402,11 +26440,6 @@ Revisions by: 'Sigara'"
 					"attribute_class" "headshot_is_minicrit"
 					"value" "1"
 				}
-				"fire rate penalty HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"				"2"
-				}
 				"revolver use hit locations"
 				{
 					"attribute_class" "can_headshot"
@@ -26416,6 +26449,21 @@ Revisions by: 'Sigara'"
 				{
 					"attribute_class"	"mult_falloff_distance"
 					"value"				"1.2"
+				}
+               "punch angle is constant"
+                {
+                    "attribute_class"    "punch_angle_is_constant"
+                    "value"                "1"
+                }
+                "punch angle mod add hidden"
+                {
+                    "attribute_class"    "punch_angle_mod"
+                    "value"                ".6"
+                }
+				"always draw tracer"
+				{
+					"attribute_class"	"mod_always_draw_tracer_effect"
+					"value"				"1"
 				}
 			}
 			"visuals"
@@ -26488,22 +26536,17 @@ Revisions by: 'Sigara'"
 			    "damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" 			"1.32"
+					"value" 			"1.50"
 				}
-				"damage penalty on bodyshot"
+				"fire rate penalty"
 				{
-					"attribute_class"	"bodyshot_damage_modify"
-					"value"				"0.85"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"				"0.7"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"2"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				".9"
+					"value"				"0.75"
 				}
 				"crit mod disabled"
 				{
@@ -26521,11 +26564,6 @@ Revisions by: 'Sigara'"
 					"attribute_class" "headshot_is_minicrit"
 					"value" "1"
 				}
-				"fire rate penalty HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"				"2"
-				}
 				"revolver use hit locations"
 				{
 					"attribute_class" "can_headshot"
@@ -26535,6 +26573,21 @@ Revisions by: 'Sigara'"
 				{
 					"attribute_class"	"mult_falloff_distance"
 					"value"				"1.2"
+				}
+               "punch angle is constant"
+                {
+                    "attribute_class"    "punch_angle_is_constant"
+                    "value"                "1"
+                }
+                "punch angle mod add hidden"
+                {
+                    "attribute_class"    "punch_angle_mod"
+                    "value"                ".6"
+                }
+				"always draw tracer"
+				{
+					"attribute_class"	"mod_always_draw_tracer_effect"
+					"value"				"1"
 				}
 			}
 			"visuals"
@@ -26816,8 +26869,8 @@ Weapon By 'Sigara'"
 			"item_name"			"Garden Warfare"
 			"item_type_name"	"Gnome"
 			"item_description"	"You Failed The Challenge
-		Model By:  Alaxe,colrot
-		Weapon By: Sigara"
+Model By:  'Alaxe' , 'Colrot'
+Weapon By: 'Sigara'"
 			"item_quality"		"completed"
 			"propername"		"1"
 
@@ -26871,7 +26924,7 @@ Weapon By 'Sigara'"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" 			"0.9"
+					"value" 			"0.7"
 				}
 				"crit mod disabled"
 				{
@@ -26886,7 +26939,7 @@ Weapon By 'Sigara'"
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" 			"0.75"
+					"value" 			"0.40"
 				}
 				"charge weapon no extra speed"
 				{
@@ -26958,9 +27011,9 @@ Weapon by: 'Sigara'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset"	"10 0 -10"
-				"hidden primary max ammo bonus" "0.03"
+				"hidden primary max ammo bonus" "0.12"
 				"ammo gives charge" "1"
-				"effect bar recharge rate increased" "0.1"
+				"effect bar recharge rate increased" "0.25"
 			}
 			"used_by_classes"
 			{
@@ -26986,6 +27039,21 @@ Weapon by: 'Sigara'"
 				"no double jump"
 				{
 					"attribute_class"	"set_scout_doublejump_disabled"
+					"value"				"1"
+				}
+				"primary ammo from ammo packs penalty"
+				{
+					"attribute_class"	"mult_primary_ammo_from_ammo_packs"
+					"value"				"0.1"
+				}
+				"primary ammo from dropped weapons penalty"
+				{
+					"attribute_class"	"mult_primary_ammo_from_dropped_weapons"
+					"value"				"0.1"
+				}
+				"no primary ammo from dispensers"
+				{
+					"attribute_class"	"no_primary_ammo_from_dispensers_always"
 					"value"				"1"
 				}
 				"crit mod disabled"
@@ -27146,8 +27214,8 @@ Weapon By 'Sigara'
 				"sound_burst"			"Weapon_Beegun.SingleCrit"
 				"sound_special1"		"Weapon_Beegun.Single"
 				"muzzle_flash"			"muzzle_tranq"
-				"explosion_effect"	"bullet_scattershock_elec_impact_green"
-				"explosion_effect_crit"	"bullet_scattershock_elec_impact_green"
+				"explosion_effect"	"rr_null"
+				"explosion_effect_crit"	"rr_null"
 			   "animation_replacement"
                 {
                     "ACT_VM_PRIMARYATTACK" "ACT_PRIMARY_VM_PRIMARYATTACK_3"
@@ -27181,7 +27249,7 @@ Weapon by: 'Sigara'"
 			"item_iconname" "rhythm_chaser"
 			"show_in_armory" "1"
 			"item_type_name" "Instrument"
-			"item_name" "Rythem Chaser"
+			"item_name" "Rhythm Chaser"
 			"item_slot" "primary"
                         "image_inventory"	"backpack\weapons\w_models\saxophone"
 			"model_world"		"models\workshop\weapons\c_models\c_saxophone\c_saxophone.mdl"
@@ -27286,7 +27354,7 @@ Weapon by: 'Sigara'"
 				"min_viewmodel_offset" "10 0 -10"
 				"particle on melee hit" "bonk_text"
 				"add condition on miss" "30 1"
-				"weapon enemy knockback mod mult hidden" "0.5"
+				"weapon enemy knockback mod mult hidden" "0"
 				"wreckingcrew Desc" "1"
 				"wreckingcrew Desc2" "1"
 				"wreckingcrew Desc3" "1"
@@ -27442,7 +27510,7 @@ Weapon by: 'Sigara'"
             "maxammo grenades1 increased"              "0.6"
             "Projectile speed decreased"               "0.8"
 			"stickybomb charge rate mine layer"        "0"
-			"mult_player_movespeed_active"             "0.6"
+			"mult_player_movespeed_active"             "0.8"
             "blast splash damage decreased"            "1.75"
             "Blast radius increased"                   "1.5"
 			}
@@ -27679,7 +27747,7 @@ Weapon by: 'Sigara'"
 				"sound_reload"          "Weapon_Null"
 				"sound_special2"        "Weapon_Null"
 				"sound_special3"        "Weapon_Null"
-				"tracer_effect"         "d3_tracer"
+				"tracer_effect"         "db_tracer01"
 				"animation_replacement" 													
 				{
 					//The Attacking Animations
@@ -27883,7 +27951,7 @@ Weapon by: 'Sigara'"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"				"1.49"
+					"value"				"1.3"
 				}
 				"Reload time increased"
 				{
@@ -27899,11 +27967,6 @@ Weapon by: 'Sigara'"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"				"0.85"
-				}
-				"blast splash damage decreased"
-				{
-					"attribute_class"	"mult_explosion_splash_damage"
-					"value"				"0.7"
 				}
 				"punch angle mod add hidden"
 				{
@@ -27978,11 +28041,17 @@ Weapon by: 'Sigara'"
 				"class select override vcd"				"taunt02"
 				"Britishripper Desc" "1"
 				"crit mod disabled"  "0"
-                "mod sustained fire damage" "1.5 1.5"				
+                "mod sustained fire damage" "1.5 1.5"	
+                "spread penalty additive" "0.1"				
 			}
 			"attributes"
 			{ 
 			    "hidden separator"		"1"
+				"bullet is a hull"
+				{
+					"attribute_class"	"bullet_is_a_hull"
+					"value"				"8"
+				}	
 			    "aiming movespeed increased"
 				{
 					"attribute_class"	"mult_player_aiming_movespeed"
@@ -27998,10 +28067,15 @@ Weapon by: 'Sigara'"
 					"attribute_class"	"mult_minigun_spindown_time"
 					"value"				"0.36"
 				}
+				 "shorter damage falloff distance"
+				{
+					"attribute_class"	"mult_falloff_distance"
+					"value"				"0.5"
+				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"0.13"
+					"value"				"0.1"
 				}
 				 "add condition on hit self weapon"
                 {
@@ -28011,17 +28085,12 @@ Weapon by: 'Sigara'"
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"				"0.25"
+					"value"				"0.1"
 				}
 				"maxammo primary increased"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value"				"3.75"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"				"0.01"
+					"value"				"7.5"
 				}
 				"Projectile range increased"																
 				{
@@ -28044,7 +28113,7 @@ Weapon by: 'Sigara'"
 				"sound_special2"        "Weapon_Null"
 				"sound_special3"        "Weapon_Null"
 				"muzzle_flash" 			"muzzle_bignasty"
-				"tracer_effect"         "d3_tracer"
+				"tracer_effect" 		"bullet_bignasty_tracer01"
 				"animation_replacement" 													
 				{
 					//The Attacking Animations
@@ -28290,9 +28359,8 @@ Weapon by: 'Sigara'"
 				"sound_special1"		"Weapon_Veles.WindUp"	
 				"sound_special2"		"Weapon_Velese.WindDown"	
 				"sound_special3"		"Weapon_Veles.Spin"	
-				"tracer_effect"			"impact_generic_smoke"
+				"tracer_effect"         "db_tracer01"
 				"explosion_effect"		"impact_generic_smoke"
-				"muzzle_flash"          "impact_generic_smoke"
 			}
 			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
@@ -28327,7 +28395,7 @@ Weapon by: 'Sigara'"
 			{
 				"min_viewmodel_offset" "10 0 -10"
 				"Zhanna Desc" "1"
-				"mod burstfire"				"5 0.05"
+				"mod burstfire"				"5 0.08"
 				"custom rampup" "1"
 			}
 			"attributes"													
@@ -28350,12 +28418,12 @@ Weapon by: 'Sigara'"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" 			"2"
+					"value" 			"1.3"
 				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" 			"0.46"
+					"value" 			"0.5"
 				}
 				"crit mod disabled"
 				{
@@ -28370,7 +28438,7 @@ Weapon by: 'Sigara'"
 				"Projectile speed additive"
 				{
 					"attribute_class" "mult_projectile_speed"
-					"value" "3333"
+					"value" "3000"
 				}
 				"ragdolls become ash"
 				{
@@ -28395,10 +28463,20 @@ Weapon by: 'Sigara'"
 			"visuals_red"
 			{
 				"trail_effect" "drg_cow_rockettrail_charged"
+				"sound_reload" "Weapon_Zhanna.Spin"
+				"sound_single_shot" "Weapon_Zhanna.Fire"
+				"sound_special2" "Weapon_Zhanna.WindUp"
+				"sound_special3" "Weapon_Zhanna.WindDown"
+				"sound_burst" "Weapon_Zhanna.FireCrit"
 			}
 			"visuals_blu"
 			{
                 "trail_effect" "drg_cow_rockettrail_charged_blue"
+				"sound_reload" "Weapon_Zhanna.Spin"
+				"sound_single_shot" "Weapon_Zhanna.Fire"
+				"sound_special2" "Weapon_Zhanna.WindUp"
+				"sound_special3" "Weapon_Zhanna.WindDown"
+				"sound_burst" "Weapon_Zhanna.FireCrit"
 			}
 			"mouse_pressed_sound"	"ui/item_heavier_gun_pickup.wav"
 			"drop_sound"			"ui/item_heavier_gun_drop.wav"
@@ -28525,6 +28603,20 @@ Weapon by: 'Sigara'"
 					"attribute_class" "heal_on_kill"
 					"value" "25"
 				}
+				"minigun crouchwalk text"
+				{
+					"attribute_class" "DISPLAY_ONLY"
+					"value" "1"
+				}
+				"You Can Jump While Reved"
+				{
+					"value"				"1"
+				}
+				"minigun deployed crouchwalk"
+				{
+					"attribute_class" "minigun_deployed_crouchwalk"
+					"value" "1"
+				}
 				"maxammo primary increased"
 				{
 					"attribute_class"	"mult_maxammo_primary"
@@ -28579,17 +28671,22 @@ Weapon by: 'Sigara'"
 				"Blast radius decreased"
 				{
 					"attribute_class" "mult_explosion_radius"
-					"value" "0.08"
+					"value" "0.04"
 				}
 				"Blast radius decreased"
 				{
 					"attribute_class" "mult_explosion_radius"
-					"value" "0.08"
+					"value" "0.04"
 				}
 				"aiming movespeed increased"
 				{
 					"attribute_class"	"mult_player_aiming_movespeed"
 					"value"				"2.1"
+				}
+				"minigun jump while revved"
+				{
+					"attribute_class"	"minigun_jump_while_revved"
+			    	"value"				"1"
 				}
 				"add condition on hit self weapon"
          		{
@@ -28668,7 +28765,7 @@ Weapon by: 'Sigara'"
 				"damage penalty"
 				{
 					"attribute_class" "mult_dmg"
-				    "value" "0.66"
+				    "value" "0.84"
 				}
 				"no damage falloff over distance"
 				{
@@ -28708,7 +28805,7 @@ Weapon by: 'Sigara'"
 				"rocket limited lifetime"
 				{
 					"attribute_class"	"rocket_lifetime"
-					"value"				"1"
+					"value"				"1.25"
 				}
 				"self dmg push force decreased"
 				{
@@ -28730,11 +28827,6 @@ Weapon by: 'Sigara'"
 					"attribute_class" "override_projectile_type"
 					"value" "2"
 				}
-				"Projectile speed decreased"
-				{
-					"attribute_class"	"mult_projectile_speed"
-					"value"				"0.8"
-				}
 				"Blast radius decreased"
 				{
 					"attribute_class" "mult_explosion_radius"
@@ -28749,13 +28841,13 @@ Weapon by: 'Sigara'"
 			}
 			"visuals"
 			{
-			"trail_effect" "bullet_scattershock_elec_impact_green"
+			"trail_effect" "rr_null"
 				"sound_empty"		"Weapon_AAGun.ClipEmpty"
 				"sound_double_shot"	"Weapon_AAGun.Fire"
 				"sound_burst"		"Weapon_AAGun.FireCrit"
 				"sound_special1"	"Weapon_AAGun.Explode"
-				"explosion_effect"	"bullet_scattershock_elec_impact_green"
-				"explosion_effect_crit"	"bullet_scattershock_elec_impact_green"
+				"explosion_effect"	"rr_null"
+				"explosion_effect_crit"	"rr_null"
 			}
 			"mouse_pressed_sound"	"ui/item_heavier_gun_pickup.wav"
 			"drop_sound"			"ui/item_heavier_gun_drop.wav"
@@ -28767,8 +28859,9 @@ Weapon by: 'Sigara'"
 			"item_name"			"Quetzal Cultist"
 			"item_type_name"	"Religion Type"
 			"item_quality" "completed"
+			"show_in_armory" "1"
 			"item_description"	"I am a snake! I am fire
-			Weapon By 'Sigara'"
+Weapon By 'Sigara'"
 			"image_inventory"		"backpack/workshop/player/items/all_class/fall17_quizzical_quetzal/fall17_quizzical_quetzal"
 			"propername"		"0"
 
@@ -28805,25 +28898,83 @@ Weapon by: 'Sigara'"
 				"override projectile type"
 				{
 					"attribute_class"	"override_projectile_type"
-					"value"				"43" 
+					"value"				"2" 
 				}
-								"hidden separator"	"1"
-               "dmg penalty vs players"
+				"weapon enemy knockback mod mult hidden"
+				{
+					"attribute_class"	"weapon_enemy_knockback_mod"
+					"value"				"1.5"
+				}
+				"blast splash damage decreased"
+				{
+					"attribute_class"	"mult_explosion_splash_damage"
+					"value"				"1"
+				}
+			    "rocket gravity"
+				{
+					"attribute_class"	"mod_rocket_gravity"
+					"value"				"0.75"
+				}
+				"Projectile speed decreased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"0.75"
+				}
+								"damage penalty"
+				{
+					"attribute_class" "mult_dmg"
+					"value" "0.3"
+				}
+							    "no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}
+                "custom rampup"
                 {
-                    "attribute_class" "mult_dmg_vs_players"
-                    "value" "0.6"
+                    "attribute_class"    "mod_custom_rampup"
+                    "value"                "1"
                 }
-                "dmg penalty vs buildings"
+                "custom falloff"
                 {
-                    "attribute_class" "mult_dmg_vs_buildings"
-                    "value" "0.6"
+                    "attribute_class"    "mod_custom_falloff"
+                    "value"                "1"
                 }
+								"Set DamageType Ignite"
+				{
+					"attribute_class" "set_dmgtype_ignite"
+					"value" "1"
+				}
+				                "blast splash damage decreased"
+                {
+                    "attribute_class"    "mult_explosion_splash_damage"
+                    "value"                "1.25"
+                }
+								"blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"				"0.25"
+				}
+								"self dmg push force decreased"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value" 			"0.25"
+				}
+								"custom projectile model"
+				{
+					"attribute_class" "custom_projectile_model"
+					"value" "models/weapons/w_models/projectiles/w_bullet_tracer_sm.mdl"
+				}
 			}
 			"visuals"
 			{
 				"sound_single_shot"		"Halloween.spell_fireball_cast"
 				"sound_burst"			"Halloween.spell_fireball_cast"
 				"sound_special1"		"Halloween.spell_fireball_impact"
+				"explosion_effect"	    "heavy_ring_of_fire_child01"
+				"explosion_effect_crit"	"spell_fireball_small_glow_red"
+				"trail_effect"			"spell_fireball_small_red"
+				"trail_effect_crit"		"spell_fireball_small_red"
 				"animation_replacement"
 				{
 					"ACT_VM_IDLE"				"ACT_ITEM3_VM_IDLE"
@@ -28836,8 +28987,8 @@ Weapon by: 'Sigara'"
 					"r_arm"				"3"
 				}
 			}
-			"item_logname"	"spell_fire"
-			"item_iconname"	"spellbook_fireball"
+			"item_logname"	"Quetzal_firespell"
+			"item_iconname"	"Quetzal_firespell"
 			"mouse_pressed_sound"	"ui/item_wood_weapon_drop.wav"	
 			"drop_sound"			"ui/item_metal_weapon_drop.wav"
 		}
@@ -28896,10 +29047,15 @@ Weapon by: 'Sigara'"
 					"attribute_class" "special_taunt"
 					"value" "1"
 				}
+				"gesture speed increase"
+				{
+					"attribute_class" "mult_gesture_time"
+					"value" "1.5"
+				}
 				"lunchbox healing decreased"
 				{
 					"attribute_class" "lunchbox_healing_scale"
-					"value" "0.35"
+					"value" "0.7"
 				}
 				"custom lunchbox throwable type"
 				{
@@ -29144,6 +29300,11 @@ Weapon by: 'Sigara'"
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value"				"1.25"
+				}
+				"cannot use stored crits"
+				{
+					"attribute_class"	"cannot_use_stored_crits"
+					"value"				"1"
 				}
 				"boots falling stomp"
 				{
@@ -29745,6 +29906,11 @@ Weapon by: 'Sigara'"
 					"attribute_class" "ragdolls_become_ash"
 					"value" "1"
 				}
+				"damage bonus"
+				{
+					"attribute_class" "mult_dmg"
+					"value" "1.3"
+				}
 				"mod use custom ammo type"
 				{
 					"attribute_class"	"mod_use_custom_ammo_type"
@@ -29760,8 +29926,8 @@ Weapon by: 'Sigara'"
 			{
 				"sound_single_shot"		"Weapon_Malediction.Single"
 				"sound_burst"			"Weapon_Malediction.SingleCrit"
-				"tracer_effect"         "bullet_scattershock_elec_impact_green"
-				"trail_effect"          "bullet_scattershock_elec_impact_green"
+				"tracer_effect"         "rr_null"
+				"trail_effect"          "rr_null"
 				"explosion_effect"      "wrenchmotron_teleport_beam"		
 			}
 			"mouse_pressed_sound"		"ui/item_wood_pole_pickup.wav"
@@ -29795,7 +29961,7 @@ Model by 'ColonelBD'"
 			}
 			"attributes"
 			{
-				"provisions positive attribs"
+					"provisions positive attribs"
          	 	{
 					"attribute_class"	"dummy"
 					"value"				"1"
@@ -29808,22 +29974,22 @@ Model by 'ColonelBD'"
 				"add condition on hit self"
          	 	{
 					"attribute_class"     "add_onhit_addcond_self"
-					"value"                  "55, 0.75"
+					"value"                  "55, 1.25"
               	}
 				"maxammo primary increased"
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value"				"1.33"
 				}
-				"Reload time increased"
+				"mod max primary clip override"
 				{
-					"attribute_class" "mult_reload_time"
-					"value" "1.4"
+					"attribute_class" "mod_max_primary_clip_override"
+					"value" "-1"
 				}
-				"clip size penalty"
+				"fire rate penalty"
 				{
-					"attribute_class" "mult_clipsize"
-					"value" "0.10"
+					"attribute_class" "mult_postfiredelay"
+					"value" "5"
 				}
 				"health drain medic"
 				{
@@ -29854,7 +30020,7 @@ Animations by: 'Colrot'
 Weapon by: 'Lime Girl' and 'Saturn'"
 
 			"item_type_name"	"Shotgun"
-			"item_quality"		"community"	
+			"item_quality"		"completed"	
 			"propername"		"0"
 			"item_name"		"Tavish Terminator"
 			"item_logname" 		"terminator"
@@ -30031,8 +30197,8 @@ You'll be feeling like new from any place on ze world! it's perfect!
 Model by: 'Gadget, Lucky38, FissionMetroid101, Dim'
 Weapon by: 'Sigara'"
 			"image_inventory"			"backpack/weapons/c_models/c_transmission/c_transmission"
-			"model_world"				"models/weapons/c_models/c_transmission_medigun/c_transmission_medigun.mdl"
-			"model_player"				"models/weapons/c_models/c_transmission_medigun/c_transmission_medigun.mdl"
+			"model_world"				"models/weapons/c_models/c_transmission_medigun/c_transmission_medigun_edit.mdl"
+			"model_player"				"models/weapons/c_models/c_transmission_medigun/c_transmission_medigun_edit.mdl"
 			"attach_to_hands"			"1"
 			"extra_wearable" 			"models/weapons/c_models/c_transmission_backpack/c_transmission_backpack.mdl"
 			"used_by_classes"
@@ -30118,8 +30284,8 @@ Weapon By: 'Lime Girl'"
 			"item_iconname"	"m1_browning"
 
 			"image_inventory"		"backpack/models/weapons/w_models/w_browning"
-			"model_world"		"models/workshop/weapons/c_models/c_browning/c_browning.mdl"
-			"model_player"		"models/workshop/weapons/v_models/v_m2b_heavy_v2.mdl"
+			"model_world"		"models/workshop/weapons/c_models/c_browning/c_browning_edit.mdl"
+			"model_player"		"models/workshop/weapons/v_models/v_m2b_heavy_v2_edit.mdl"
 			"attach_to_hands"	"2"
 			"extra_wearables"
 			{
@@ -30140,7 +30306,7 @@ Weapon By: 'Lime Girl'"
                 		"apply self knockback"
 				{
 					"attribute_class"	"apply_self_knockback"
-					"value"				"150"
+					"value"				"105"
 				}
 				"bullet is a hull"
 				{
@@ -30175,7 +30341,7 @@ Weapon By: 'Lime Girl'"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"0.5"
+					"value"				"0.3"
 				}
 				"limited range"
 				{
@@ -30442,10 +30608,20 @@ Weapon by: 'Lime Girl And Sigara'"
 			}
 			"attributes"
 			{
+				"minigun crouchwalk text"
+				{
+					"attribute_class" "DISPLAY_ONLY"
+					"value" "1"
+				}
+				"minigun deployed crouchwalk"
+				{
+					"attribute_class" "minigun_deployed_crouchwalk"
+					"value" "1"
+				}
 				"uses ammo while aiming"
 				{
 					"attribute_class" "uses_ammo_while_aiming"
-					"value" "6"
+					"value" "4"
 				}
 				"crit mod disabled"
 				{
@@ -30453,6 +30629,11 @@ Weapon by: 'Lime Girl And Sigara'"
 					"value" "0"
 				}
 				"hidden separator"	"1"
+				"cannot use stored crits"
+				{
+					"attribute_class"	"cannot_use_stored_crits"
+					"value"				"1"
+				}
 				"mult_player_movespeed_active"
 				{
 					"attribute_class"	"mult_player_movespeed_active"
@@ -30461,7 +30642,7 @@ Weapon by: 'Lime Girl And Sigara'"
 				"apply self knockback hidden"
 				{
 					"attribute_class"	"apply_self_knockback"
-					"value"				"100"
+					"value"				"200"
 				}
 				"no self blast dmg"
 				{
@@ -30574,11 +30755,6 @@ Weapon by: 'Lime Girl'"
 					"attribute_class"	"mult_postfiredelay"
 					"value"				"0.5"
 				}
-				"maxammo primary increased"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"1.5"
-				}
 				"overheat spread penalty"
 				{
 					"attribute_class" "dummy"
@@ -30603,6 +30779,16 @@ Weapon by: 'Lime Girl'"
 				{
 					"attribute_class" "ragdolls_plasma_effect"
 					"value" "1"
+				}
+				"no primary ammo from dispensers while active"
+				{
+					"attribute_class" "no_primary_ammo_from_dispensers"
+					"value" "1"
+				}
+				"primary ammo from dropped weapons penalty"
+				{
+					"attribute_class" "mult_primary_ammo_from_dropped_weapons"
+					"value" "0.5"
 				}
 				"crit mod disabled"															
 				{
@@ -30647,12 +30833,26 @@ Weapon by: 'Lime Girl'"
 				"skin"		"0"
 				"muzzle_flash"		"muzzle_raygun_red"
 				"tracer_effect"		"bullet_tracer_raygun"
+			    	"sound_empty"           	"Weapon_Laika.Spin"
+				"sound_double_shot"		"Weapon_Laika.Fire"
+				"sound_burst"			"Weapon_Laika.Fire"
+				"sound_single_shot" 		"Weapon_Bison.Single"
+				"sound_special1"		"Weapon_Laika.SpinUp"	
+				"sound_special2"		"Weapon_Laika.StopSpin"	
+				"sound_special3"		"Weapon_Laika.Spin"	
 			}
 			"visuals_blu"
 			{
 				"skin"		"1"
 				"muzzle_flash"		"muzzle_raygun_blue"
 				"tracer_effect"		"bullet_tracer_raygun"
+			    	"sound_empty"           	"Weapon_Laika.Spin"
+				"sound_double_shot"		"Weapon_Laika.Fire"
+				"sound_burst"			"Weapon_Laika.Fire"
+				"sound_single_shot" 		"Weapon_Bison.Single"
+				"sound_special1"		"Weapon_Laika.SpinUp"	
+				"sound_special2"		"Weapon_Laika.StopSpin"	
+				"sound_special3"		"Weapon_Laika.Spin"	
 			}		
 			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
@@ -30710,13 +30910,13 @@ Weapon by: 'Lime Girl'"
 					"attribute_class"	"mult_maxammo_primary"
 					"value"				"0.75"
 				}
+				"damage penalty"
+				{
+					"attribute_class" "mult_dmg"
+					"value" "0.5"
+				}
 				"hidden separator"	"1"
 			    	//Backend stuff aka stuff that actually does things.
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.35"
-				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -30766,7 +30966,17 @@ Weapon by: 'Lime Girl'"
 				{
 					"attribute_class"	"weapon_enemy_knockback_mod"
 					"value"				"2.0"
-				}	
+				}
+			    	"mod projectiles per shot"
+				{
+					"attribute_class"	"mod_projectiles_per_shot"
+					"value"				"3"
+				}
+				"projectile spread angle penalty"
+				{
+					"attribute_class" "projectile_spread_angle"
+					"value" "3"
+				}
 			}
 			"visuals"
 			{
@@ -30782,11 +30992,23 @@ Weapon by: 'Lime Girl'"
 			{
 			    "trail_effect"			"nailtrails_scout_red"
 				"trail_effect_crit"		"nailtrails_scout_red_crit"
+			    	"sound_empty"           "Weapon_Jezebel.Spin"	
+				"sound_double_shot"		"Weapon_Jezebel.Fire"	
+				"sound_burst"			"Weapon_Jezebel.FireCrit"	
+				"sound_special1"		"Weapon_Jezebel.WindUp"	
+				"sound_special2"		"Weapon_Jezebel.WindDown"	
+				"sound_special3"		"Weapon_Jezebel.Spin"
 			}
 			"visuals_blu"
 			{
 			    "trail_effect"			"nailtrails_scout_blue"
 				"trail_effect_crit"		"nailtrails_scout_blue_crit"
+			    	"sound_empty"           "Weapon_Jezebel.Spin"	
+				"sound_double_shot"		"Weapon_Jezebel.Fire"	
+				"sound_burst"			"Weapon_Jezebel.FireCrit"	
+				"sound_special1"		"Weapon_Jezebel.WindUp"	
+				"sound_special2"		"Weapon_Jezebel.WindDown"	
+				"sound_special3"		"Weapon_Jezebel.Spin"
 			}		
 			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
@@ -30827,20 +31049,15 @@ Weapon by: 'Lime Girl and Sigara"
 					"attribute_class" "dummy"
 					"value" "4"
 				}
-				"mod burstfire"
-				{
-					"attribute_class"	"mod_burstfire"
-					"value"	"4 0.1"
-				}
 				"bullet is a hull"
 				{
 					"attribute_class"	"bullet_is_a_hull"
 					"value"				"35"
 				}
-				"projectile penetration"
+				"fire rate bonus"
 				{
-					"attribute_class" "projectile_penetration"
-					"value" "1"
+					"attribute_class"	"mult_postfiredelay"
+					"value" 			"0.2"
 				}
 				"mod horizontal spread"
 				{
@@ -30858,6 +31075,11 @@ Weapon by: 'Lime Girl and Sigara"
 					"value" "0"
 				}
 				"hidden separator"	"1"
+				"mult_player_movespeed_active"
+				{
+					"attribute_class" "mult_player_movespeed_active"
+					"value" "0.85"
+				}
 				"custom falloff"
 				{
 					"attribute_class"	"mod_custom_falloff"
@@ -30876,17 +31098,17 @@ Weapon by: 'Lime Girl and Sigara"
 				"custom rampup"
 				{
 					"attribute_class"	"mod_custom_rampup"
-					"value"				"1"
+					"value"				"0.75"
 				}
 			    	"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"				"0.5"
-                		}
+                }
 				"weapon spread bonus"															
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				"2"
+					"value"				"3"
 				}
 				"punch angle mod mult hidden"
 				{
@@ -30930,10 +31152,10 @@ Weapon by: 'Lime Girl'"
             "item_logname"				"Barrakada"
 			"item_iconname"				"Barrakada"
 			"image_inventory"			"backpack/weapons/c_models/c_barrakada/c_barrakada"
-			"model_world"				"models/weapons/c_models/c_barrakada/c_barrakada.mdl"
-			"model_player"				"models/weapons/c_models/c_barrakada/c_barrakada.mdl"
+			"model_world"                "models/weapons/c_models/c_barrakada/c_barrakada_v2.mdl"
+            "model_player"                "models/weapons/v_models/v_barrakada/v_barrakada_v2.mdl"
 			"extra_wearable"			"models/workshop/player/items/heavy/jul13_katyusha/jul13_katyusha.mdl"
-			"attach_to_hands"			"1"
+			"attach_to_hands"			"2"
 			"used_by_classes"
 			{
 				"heavy"					"1"
@@ -31060,10 +31282,20 @@ Weapon by: 'Lime Girl'"
             		"visuals_red"
 			{
 				"trail_effect_crit"		"fatbullet_large_trail_crit_red"
+			    	"sound_single_shot"		"Weapon_BarrakadaShotgun.Single"
+				"sound_burst"			"Weapon_BarrakadaShotgun.SingleCrit"
+				"sound_empty"           "Weapon_BarrakadaShotgun.Empty"
+				"sound_reload"          "Weapon_BarrakadaShotgun.WorldReload"
+				"sound_special1"		"Weapon_Airstrike.Explosion"
 			}
 			"visuals_blu"
 			{
 				"trail_effect_crit"		"fatbullet_large_trail_crit_blue"
+			    	"sound_single_shot"		"Weapon_BarrakadaShotgun.Single"
+				"sound_burst"			"Weapon_BarrakadaShotgun.SingleCrit"
+				"sound_empty"           "Weapon_BarrakadaShotgun.Empty"
+				"sound_reload"          "Weapon_BarrakadaShotgun.WorldReload"
+				"sound_special1"		"Weapon_Airstrike.Explosion"
 			}					
 			"mouse_pressed_sound"		"#ui/item_pack_pickup.wav"
 			"drop_sound"				"#ui/item_pack_drop.wav"
@@ -31120,7 +31352,7 @@ Weapon by: 'Lime Girl'"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"0.7"
+					"value"				"0.85"
 				}
 				"crit mod disabled"
 				{
@@ -31189,9 +31421,10 @@ Weapon by: 'Lime Girl'"
 			"propername" "1"
 			"inspect_panel_dist" "45"
 			"image_inventory" "backpack/weapons/c_models/c_full_throttle/c_full_throttle"
-			"model_player" "models/weapons/c_models/c_full_throttle/c_full_throttle.mdl"
+			"model_world" "models/weapons/c_models/c_full_throttle/c_full_throttle_v2.mdl"
+            "model_player" "models/weapons/v_models/v_full_throttle/v_full_throttle_v2.mdl"
 			"extra_wearable" "models/workshop/player/items/heavy/sum23_heavy_metal/sum23_heavy_metal.mdl"
-			"attach_to_hands" "1"
+			"attach_to_hands" "2"
 			"used_by_classes"
 			{
 				"heavy" "1"
@@ -31477,7 +31710,7 @@ Weapon by: 'Lime Girl'"
 			"item_class" "tf_weapon_crossbow"
 			"item_type_name" "Heal-bomb dispenser"
 			"item_name" "Under Pressure"
-			"item_description" "Fires healing bombs that give residual healing to allies
+			"item_description" "Fires healing bolts that give minimal healing to allies on direct hits
 This weapon will reload automatically when not active
 
 Model by: 'HAAU'
@@ -31500,10 +31733,20 @@ Weapon by: 'Lime Girl And Sigara'"
 			}
 			"attributes"
 			{
-				"mod set healbomb lifetime"
+				"provide on active"
 				{
-					"attribute_class" "mod_set_healbomb_lifetime"
-					"value" "0.5"
+					"attribute_class" "provide_on_active"
+					"value" "1"
+				}
+				"single wep deploy time decreased"
+				{
+					"attribute_class" "mult_single_wep_deploy_time"
+					"value" "0.4"
+				}
+				"deploy time decreased"
+				{
+					"attribute_class" "mult_deploy_time"
+					"value" "0.4"
 				}
 				"residual heal duration"
 				{
@@ -31533,7 +31776,7 @@ Weapon by: 'Lime Girl And Sigara'"
 				"Reload time increased"
 				{
 					"attribute_class" "mult_reload_time"
-					"value" "1.50"
+					"value" "1.2"
 				}
 				"maxammo primary reduced"
 				{
@@ -31820,8 +32063,8 @@ Weapon by 'Lime Girl'"
 			"item_quality" "completed"
 			"propername" "1"
 			"image_inventory"		"backpack/weapons/w_models/w_bible"
-			"model_world"		"event/weapons/w_models/w_bible.mdl"
-			"model_player"		"event/weapons/v_models/v_bible_soldier.mdl"
+			"model_world"		"models/weapons/w_models/w_bible.mdl"
+			"model_player"		"models/weapons/v_models/v_bible_soldier.mdl"
 			"extra_wearable"	"models/workshop/player/items/medic/hw2013_medic_undertaker_vest/hw2013_medic_undertaker_vest.mdl"
 			"attach_to_hands"	"2"
 			"used_by_classes"
@@ -31890,7 +32133,8 @@ Weapon by 'Lime Girl'"
 			"item_type_name"	"#TF_Weapon_Bonesaw"
 			"item_name"	"#TF_Unique_Achievement_Bonesaw1"
 			"item_slot"	"melee"
-			"item_description" "
+			"item_description" "Went to zhe market to find a shovel but couldn't quite find one.
+
 Rework by 'Lime Girl and Sigara'"
 			"image_inventory"	"backpack/weapons/c_models/c_ubersaw/c_ubersaw"
 			"model_player"	"models/weapons/c_models/c_ubersaw/c_ubersaw.mdl"
@@ -31903,6 +32147,7 @@ Rework by 'Lime Girl and Sigara'"
 			}
 			"static_attrs"
 			{
+				"add condition on miss" "30 3"
 				"min_viewmodel_offset"		"10 0 -12"
 			}
 			"attributes"
@@ -31927,10 +32172,14 @@ Rework by 'Lime Girl and Sigara'"
                     			"attribute_class"    "crit_vs_class"
                     			"value"                "16"
                 		}
-						"self mark for death"
+						"wreckingcrew Desc3"
                 		{
-                    			"attribute_class"    "self_mark_for_death"
-                    			"value"                "2.5"
+                    			"value"                "3"
+                		}
+						"fire rate penalty"
+                		{
+                    			"attribute_class"    "mult_postfiredelay"
+                    			"value"                "1.5"
                 		}
              			"damage penalty"
                 		{
@@ -32307,7 +32556,7 @@ Weapon by: 'Quinnz'"
 				"grenade launcher damage"
 				{
 					"attribute_class"	"grenade_launcher_damage"
-					"value"				"150"
+					"value"				"100"
 				}
 				"grenade launcher radius"
 				{
@@ -32348,7 +32597,7 @@ Weapon by: 'Quinnz'"
 			    "sound_single_shot"		"Weapon_UFSon.Single"
 				"sound_burst"			"Weapon_UFSon.SingleCrit"
 				"muzzle_flash" "muzzle_smg"
-				"tracer_effect" "tracer_bigballs"
+				"tracer_effect" "bullet_bignasty_tracer01"
 				"attached_models_festive"
 				{
 					"0"
@@ -32443,11 +32692,6 @@ Weapon by: 'Quinnz'"
 					"attribute_class"	"stickybomb_charge_rate"
 					"value" 			"0.0"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" 			"0.75"
-				}
 				"max pipebombs decreased"
 				{
 					"attribute_class"	"add_max_pipebombs"
@@ -32541,7 +32785,7 @@ Weapon by: 'CloverCorp'"
 				"damage penalty"
 				{
 					"attribute_class" "mult_dmg"
-					"value" "0.7"
+					"value" "0.85"
 				}
 				"Reload time increased"
 				{
@@ -32564,11 +32808,16 @@ Weapon by: 'CloverCorp'"
 					"value" "0"
 				}
 				"hidden separator"	"1"
-				"strange restriction type 1"
+				"always draw tracer"
 				{
 					"attribute_class"	"mod_always_draw_tracer_effect"
 					"value"				"1"
-				}	
+				}
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -32590,7 +32839,7 @@ Weapon by: 'CloverCorp'"
 			"item_quality"		"completed"
 			"propername"		"1"
 
-			"item_class"	"tf_weapon_sapper"
+			"item_class"	"tf_weapon_builder"
 			"item_slot"		"building"
 			"extra_wearable"    "models/player/items/spy/spy_spats.mdl"
 			"image_inventory"		"backpack/weapons/w_models/w_sinad"
@@ -32715,7 +32964,7 @@ Backpack icon by: 'Skyrym'"
 				"medigun targets enemies"
 				{
 					"attribute_class" "medigun_targets_enemies"
-					"value" "2"
+					"value" "3"
 				}
 				"addcond on enemy uber"
 				{
@@ -32752,6 +33001,7 @@ Backpack icon by: 'Skyrym'"
 			"item_name"			"Magic Ace"
 			"item_type_name"	"Religion Type"
 			"item_quality" "completed"
+			"show_in_armory" "0"
 			"bucket"					"4"
 			"bucket_position"			"4"
 			"item_description"	"And I Summon Magic Ace, Which Allows Me To Draw Three Additional Cards From My Deck
@@ -32764,8 +33014,8 @@ Weapon by 'Sigara'"
 			"propername"		"0"
 
 			"extra_wearable" "models/workshop/player/items/spy/sf14_the_rogues_rabbit/sf14_the_rogues_rabbit.mdl"
-		    "model_player"		"models\weapons\v_models\v_cards\v_cards.mdl"
-			"model_world"		"models\weapons\w_models\w_cards\w_cards.mdl"
+		    "model_player"		"models\weapons\v_models\v_cards\v_cards_edit.mdl"
+			"model_world"		"models\weapons\w_models\w_cards\w_cards_edit.mdl"
 			"item_class"	"tf_weapon_grenade_mirv"
 			"item_slot"    "pda2"
 			"equip_region" "necklace"
@@ -32797,10 +33047,20 @@ Weapon by 'Sigara'"
 					"attribute_class"	"override_projectile_type"
 					"value"				"46" 
 				}
+				"custom projectile origin offset"
+				{
+					"attribute_class" "custom_projectile_origin_offset"
+					"value" "-1 0 1"
+				}
 				"custom projectile model"													
 				{
 					"attribute_class"	"custom_projectile_model"
-					"value"				"models/weapons/w_models/w_cards/w_cards_projectile.mdl"	
+					"value"				"models/weapons/w_models/w_cards/w_cards_projectile_edit.mdl"	
+				}
+				"magic ace oob check"													
+				{
+					"attribute_class"	"magic_ace_oob_check"
+					"value"				"1"	
 				}
 			}
             "visuals"
@@ -32845,7 +33105,7 @@ Weapon by 'Sigara'"
 				"BirdMedigun Desc" "1"
 				"increased air control" "3"
 				"ubercharge rate bonus" "2"
-				"dmg taken from fall reduced" "0"
+				"dmg taken from fall reduced" "0.9"
 				"take minicrits projectile airborne" "1"
 			}
 			"attributes"
@@ -33157,7 +33417,7 @@ Weapon by: 'Sigara'"
 				"apply self knockback hidden"
 				{
 					"attribute_class"	"apply_self_knockback"
-					"value"				"-500"
+					"value"				"-650"
 				}
 				"Reload time increased"
 				{
@@ -33167,7 +33427,7 @@ Weapon by: 'Sigara'"
 				"damage penalty"
 				{
 					"attribute_class" "mult_dmg"
-					"value" "0.75"
+					"value" "0.30"
 				}
 				"allowed in medieval mode"
 				{
@@ -33185,6 +33445,21 @@ Weapon by: 'Sigara'"
 					"attribute_class" "mult_maxammo_primary"
 					"value" "0.11"
 				}
+				"override projectile type"
+				{
+					"attribute_class" "override_projectile_type"
+					"value" "31"
+				}
+				"custom projectile origin offset"
+				{
+					"attribute_class" "custom_projectile_origin_offset"
+					"value" "0, 5, -4"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models\weapons\w_models/w_nail_minigun_nail.mdl"
+				}
 			}
 			"visuals"
 			{
@@ -33193,8 +33468,6 @@ Weapon by: 'Sigara'"
 			"drop_sound"				"#weapons/birdmedic_drop.wav"
 			"xifier_class_remap" "crusaders_crossbow"
 		}
-		
-		
 
 
 		
@@ -33935,16 +34208,6 @@ Disables buildings for a short amount of time when thrown!"
         "effect_type"    "positive"
         "stored_as_integer"    "1"
     	}
-		"7068"
-    	{
-        "name"    "mod set player scale on wearer"
-        "attribute_class"    "mod_set_player_scale_on_wearer"
-        "description_format"        "value_is_percentage"
-        "effect_type"               "neutral"
-        "hidden"    "0"
-        "effect_type"    "positive"
-        "stored_as_integer"    "1"
-    	}
 		"7069"
 		{
 			"name"					"gravity mod wearer increased"
@@ -33987,14 +34250,6 @@ Disables buildings for a short amount of time when thrown!"
 			"attribute_class"		"stickies_dont_stick"
 			"description_format"	"value_is_additive"
 			"effect_type"			"neutral"	
-		}
-		"7074"
-		{
-			"name"					"take minicrits projectile airborne"
-			"attribute_class"		"take_minicrits_projectile_airborne"
-			"description_string"	"On Wearer: Take minicrits from projectiles while airborne"
-			"description_format"	"value_is_additive"
-			"effect_type"			"negative"
 		}
 		       "7075"
 		{
@@ -34137,6 +34392,15 @@ Disables buildings for a short amount of time when thrown!"
 			"effect_type"		"positive"
 			"stored_as_integer"		"0"
 		}
+		"7092"
+        {
+            "name"    "spread penalty additive"
+            "attribute_class"    "mult_spread_scale"
+            "description_format"    "value_is_additive"
+            "hidden"    "1"
+            "effect_type"    "negative"
+            "stored_as_integer"    "0"
+        }
 		
 //  --------------------------------
 // |!!!!! VISUAL ATTRIBUTES !!!!!  |
@@ -34163,7 +34427,8 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15002"
 		{
 			"name"					"displacer unique" 
-			"description_string"	"Fires neutronium blaster bolts that mini-criton quick double tap!"
+			"description_string"	"Fires neutronium blaster bolts!
+Both bolts connecting minicrits your target"
             "custom_color"			"223 203 51 255"	
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34204,7 +34469,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15007"
 		{
 			"name"					"Combustor desc text 2" 
-			"description_string"	"+100% Max Primary Ammo"
+			"description_string"	"+100% max primary ammo"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
@@ -34267,7 +34532,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15015"
 		{
 			"name"					"devotion desc text" 
-			"description_string"	"Three point stab and backstabs don't instakill"
+			"description_string"	"Attacking once swings three times, and backstabs don't instakill"
             "custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34275,7 +34540,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15016"
 		{
 			"name"					"Depriver desc text" 
-			"description_string"	"Activate You're Watch on Hit or Miss"
+			"description_string"	"Activate your watch on swing"
             "custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34283,21 +34548,21 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15017"
 		{
 			"name"					"Depriver desc text2" 
-			"description_string"	"On Kill: For The Next 4 Seconds, You Can Float While Holding The Jump Key"
+			"description_string"	"On kill: You can float while holding the jump key for 4 seconds"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15018"
 		{
 			"name"					"Black Rose desc text" 
-			"description_string"	"Heal From All Knife Crits And Critical Bleeding"
+			"description_string"	"Heal from all knife crits and critical bleeding"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 				"15019"
 		{
 			"name"					"Firearm desc text" 
-			"description_string"	"Fires In A 6-Round Burst"
+			"description_string"	"Fires in a 6-round burst"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
@@ -34318,14 +34583,14 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15022"
 		{
 			"name"					"Wanga desc text" 
-			"description_string"	"On Hit: target jarate's themself for 8 seconds"
+			"description_string"	"On hit: Victim is tranquilized, jarated, and outlined for %s1 seconds"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15023"
 		{
 			"name"					"blackmamba desc text" 
-			"description_string"	"Impact Revolver For Rocket Jumping"
+			"description_string"	"Fires explosive rounds which can be used to rocketjump"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34333,15 +34598,15 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15024"
 		{
 			"name"					"shala desc text" 
-			"description_string"	"You Shoot and Reload 25% Faster"
+			"description_string"	"You shoot and reload 25% faster"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15025"
 		{
 			"name"					"swarmer desc text" 
-			"description_string"	"You Can't Die, The Swarm Lives Forever
-			The Swarm Are Horrible At Using Guns"
+			"description_string"	"You cannot die, the Swarm lives forever
+The Swarm are horrible at using guns"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34356,14 +34621,14 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15027"
 		{
 			"name"					"company desc text2" 
-			"description_string"	"melee ignores your resistances"
+			"description_string"	"Melee ignores your resistances"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
 		}
 		"15028"
 		{
 			"name"					"NoCloak text" 
-			"description_string"	"You Can't Cloak"
+			"description_string"	"You can't cloak"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
 		}
@@ -34377,7 +34642,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15030"
 		{
 			"name"					"ak47 desc text" 
-			"description_string"	"Can Headshot But Builds Up Recoil Very Fast"
+			"description_string"	"Can headshot but builds up recoil very fast"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34453,7 +34718,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15040"
 		{
 			"name"					"arty mann sentry" 
-			"description_string"	"Replaces your sentry with an Artillery sentry"
+			"description_string"	"Replaces your sentry with an artillery sentry"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34478,7 +34743,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15043"
        		{
         	    	"name"        "cosmic cuisine bonus"
-        	    	"description_string"        "Grants flight for 15 when eaten"
+        	    	"description_string"        "Grants flight for 15 seconds when eaten"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "positive"
        		}
@@ -34499,14 +34764,14 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15046"
        		{
         	    	"name"        "fishcake bonus"
-        	    	"description_string"        "Upon consuming, Reloading And Attacking Are Slightly Faster For 10 Seconds"
+        	    	"description_string"        "Upon consuming, reloading and attacking are slightly faster for 10 seconds"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "positive"
        		}
 		"25046"
        		{
         	    	"name"        "fishcake bonus2"
-        	    	"description_string"        "Upon consuming, Burst Into Flames From All The Wasabi"
+        	    	"description_string"        "Upon consuming, burst into flames from all the wasabi"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "negative"
        		}
@@ -34521,7 +34786,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15048"
 		{
 			"name"					"krakken desc text" 
-			"description_string"	"Shoots Preassured Water That Speeds You Up and Marks Enemies For Death On Hit"
+			"description_string"	"Shoots pressurized water that speeds you up and marks enemies for death on hit"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34529,7 +34794,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15049"
 		{
 			"name"					"boo desc text" 
-			"description_string"	"Launch Ghost Skulls That Follow Enemies That Are Set On Fire"
+			"description_string"	"Launch ghost skulls that follow enemies that are on fire"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34537,7 +34802,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15050"
 		{
 			"name"					"Banalayer desc text" 
-			"description_string"	"Launch Banana Peels For Your Enemies To Slip On"
+			"description_string"	"Launch banana peels for your enemies to slip on"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34545,14 +34810,14 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15051"
 		{
 			"name"					"Wrangler desc text" 
-			"description_string"	"You Take +35% Damage From Ranged Sources While Active"
+			"description_string"	"You take +35% damage from ranged sources while active"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
 		}
 		"15052"
 		{
 			"name"					"Roaster desc text" 
-			"description_string"	"Mini Flamethrower That Still Functions Like A Wrench"
+			"description_string"	"Mini-flamethrower that functions like a wrench"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34560,7 +34825,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15053"
 		{
 			"name"					"Combustor desc text" 
-			"description_string"	"Air Blast Crushs Projectiles Into Ammo Instead Of Pushing"
+			"description_string"	"Airlast crushes projectiles into ammo instead of pushing or reflecting"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34568,14 +34833,14 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15054"
 		{
 			"name"					"battleban desc text" 
-			"description_string"	"+25% Reload Speed On Wearer"
+			"description_string"	"+25% reload speed on wearer"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15055"
 		{
 			"name"					"LittleBuddy desc text" 
-			"description_string"	"Little Buddy Decides When You Crit And Does All The Damage"
+			"description_string"	"Little Buddy decides when you crit and does all the damage"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34583,7 +34848,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15056"
 		{
 			"name"					"Flama desc text" 
-			"description_string"	"On Hit: Burns The Body And The Soul"
+			"description_string"	"On hit: Burns the body and the soul"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34591,7 +34856,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15057"
 		{
 			"name"					"HolyMed Desc Text" 
-			"description_string"	"ÜberCharge increases All Action Speed Significantly"
+			"description_string"	"ÜberCharge increases All action speed significantly"
 			"description_format"	"value_is_additive"
 			"effect_type"			"netural"
 		}
@@ -34612,7 +34877,8 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15060"
 		{
 			"name"					"Big Bertha desc text" 
-			"description_string"	"Can Only Fire One Single Giant Pill With Massive Knockback And Massive Recoil. If The Pill Does Not Kill It Will Bounce And If It Does Kill It Will Penetrate"
+			"description_string"	"Can only fire one single giant pill with massive knockback and massive recoil
+If the pill does not kill it will bounce, and if it does kill it will penetrate"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34620,29 +34886,29 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15061"
 		{
 			"name"					"Big Bertha desc text 2" 
-			"description_string"	"You Can Only Get Ammo From Ammo Boxes and Resupply
-			Has Damage Fall Off And Only Does 50 Damage In Melee Range"
+			"description_string"	"You can only get ammo from ammo boxes and resupply
+Has damage fall off and only does 50 damage in melee range"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
 		}
 		"15062"
 		{
 			"name"					"Pissback desc text" 
-			"description_string"	"Jump 25% Higher and Take 50% Less Fall Damage"
+			"description_string"	"Jump 25% higher and take 50% less fall damage"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15063"
 		{
 			"name"					"Pissback desc text2" 
-			"description_string"	"Jarate Shield: You Take 50% Less Damage From Enemies On Fire"
+			"description_string"	"Jarate shield: You take 50% less damage from enemies on fire"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15064"
 		{
 			"name"					"Pissbow desc text" 
-			"description_string"	"Your Arrows Are Empowered By Ancient Jarate And Headshots Explode Into Jarate Shrapnel"
+			"description_string"	"Your arrows are empowered by ancient jarate and headshots explode into jarate shrapnel"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34650,14 +34916,14 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15065"
 		{
 			"name"					"Viper desc text" 
-			"description_string"	"On Kill: Refill Ammo"
+			"description_string"	"On kill: Refill ammo"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15066"
 		{
 			"name"					"freedomfinish desc text" 
-			"description_string"	"Store 1 Crit On Kill Than Mark Self For Death For 10 Seconds"
+			"description_string"	"Store 1 crit on kill than mark self for death for 10 seconds"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34665,22 +34931,22 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15067"
 		{
 			"name"					"Big Bertha desc text 3" 
-			"description_string"	"Mini-Crits Enemies With Overheal"
+			"description_string"	"!00% minicrits vs enemies with overheal"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15068"
 		{
 			"name"					"Banalayer desc text 2" 
-			"description_string"	"Bananas Can Bounce You And Enemies Into The Air
-			Banana Bounce Strength Is Based On Banana Bundle Size"
+			"description_string"	"Bananas can bounce you and enemies into the air
+			Banana bounce strength is based on banana bundle size"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15069"
 		{
 			"name"					"Roaster desc text2" 
-			"description_string"	"Level 3 Sentrys Launch Mid-Ranged Gas Tanks Instead Of Rockets"
+			"description_string"	"Level 3 sentries launch mid-ranged gas tanks instead of rockets"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34695,8 +34961,8 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15071"
 		{
 			"name"					"BFH desc text" 
-			"description_string"	"You Are Huge And Very Heavy
-			You Take 15% Less Damage To All Melee/Ranged Damage"
+			"description_string"	"You are huge and very heavy
+You take 15% less damage to all melee/ranged damage"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34704,7 +34970,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15072"
 		{
 			"name"					"Coconut desc text" 
-			"description_string"	"Rockets Bounce And Can Knock Enemies Into The Air"
+			"description_string"	"Rockets bounce and can enock enemies tnto the air"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34712,7 +34978,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15073"
 		{
 			"name"					"viewfinder outline aoe headshot" 
-			"description_string"	"headshots outline targets in an 'aoe' radius"
+			"description_string"	"Headshots outline targets in an area"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
@@ -34726,7 +34992,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15075"
 		{
 			"name"					"Slugger Desc" 
-			"description_string"	"You Shoot Rusty Nail Projectiles"
+			"description_string"	"You shoot rusty nail projectiles"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34734,14 +35000,14 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15076"
 		{
 			"name"					"Slugger Desc2" 
-			"description_string"	"100% Mini-Crit Vs Bleeding Players"
+			"description_string"	"100% Minicrits vs bleeding players"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15077"
 		{
 			"name"					"Compound Desc" 
-			"description_string"	"Launch A Volly Of Arrows All At Once"
+			"description_string"	"Launch a volley Of arrows all at once"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34749,14 +35015,14 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15078"
 		{
 			"name"					"IronC Desc" 
-			"description_string"	"Destroy Most Projectiles On Hit"
+			"description_string"	"Destroy most projectiles on hit"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15079"
 		{
 			"name"					"Bad With Shields" 
-			"description_string"	"The Soldier Does Not Know How To Charge"
+			"description_string"	"The Soldier does not know how to charge"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34778,7 +35044,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 	    "15082"
 		{
 			"name"					"dahooks Desc" 
-			"description_string"	"Shoot To Hook Yourself To Enemies Or Walls"
+			"description_string"	"Shoot to hook yourself to enemies or walls"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34786,36 +35052,36 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15083"
 		{
 			"name"					"pumpking Desc"
-			"description_string"	"-20% Slower Move Speed On Wearer (Shield Required)
-			25% Slower Reload And Fire Rate On Wearer"
+			"description_string"	"-20% slower move Speed On Wearer (Shield Required)
+25% slower reload and fire rate on wearer"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
 		}
 		"15084"
 		{
 			"name"					"pumpking Desc2" 
-			"description_string"	"On Wearer: Immune To All Forms Of Enemy Knockback"
+			"description_string"	"On wearer: Immune to all forms of enemy knockback"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15085"
 		{
 			"name"					"Volcano Desc" 
-			"description_string"	"You Take 50% Less Damage From Enemies On Fire"
+			"description_string"	"You take 50% less damage from enemies on fire"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 				"15086"
 		{
 			"name"					"sunonstick Desc" 
-			"description_string"	"Can Launch A Fire Ball Every 9 Seconds"
+			"description_string"	"Can launch a fire ball every 9 seconds"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 			    "15087"
 		{
 			"name"					"Beegun Desc" 
-			"description_string"	"Shoot A Stream Of Bee's That Home In On Enemys"
+			"description_string"	"Shoot a stream of bees that home in on enemies"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34823,7 +35089,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15088"
 		{
 			"name"					"wreckingcrew Desc" 
-			"description_string"	"Swing 6 Times In A Row And +25% Faster"
+			"description_string"	"Swing 6 times in a row and +25% faster"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34831,23 +35097,23 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15089"
 		{
 			"name"					"wreckingcrew Desc2" 
-			"description_string"	"On Hit: Apply concussion For 1 Second
-			100% MiniCrit Vs concussed players"
+			"description_string"	"On hit: Apply concussion for 1 second
+			100% MiniCrit vs concussed players"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15090"
 		{
 			"name"					"wreckingcrew Desc3" 
-			"description_string"	"On Miss: Mark Self For Death For 1 Seconds"
+			"description_string"	"On miss: Mark self for death for %s1 seconds"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
 		}
 		"15091"
 		{
 			"name"					"rhythm Desc" 
-			"description_string"	"Airblasting Teammates Speeds Up You And Them
-			Less Delay On Shooting Music After An Airblast"
+			"description_string"	"Airblasting teammates speeds up you and them
+Less delay on shooting music after an airblast"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34863,7 +35129,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15093"
 		{
 			"name"					"pumpking Desc3" 
-			"description_string"	"On Wearer: You're Larger"
+			"description_string"	"On wearer: You're larger"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34871,7 +35137,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15094"
 		{
 			"name"					"payload Desc" 
-			"description_string"	"Throw The Entire Minecart, It Explodes After 5 Seconds For Massive Damage"
+			"description_string"	"Throw the entire minecart, it explodes after 5 seconds for massive damage"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34879,8 +35145,8 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15095"
 		{
 			"name"					"Payload Desc2" 
-			"description_string"	"Move 40% Slower On Active
-			You Can't Jump Or Duck On Active"
+			"description_string"	"Move 20% slower on active
+			You can't jump or duck on active"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
 		}
@@ -34895,23 +35161,23 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15097"
 		{
 			"name"					"sentrybuster Desc2" 
-			"description_string"	"On Hit: Immune To Enemy Knockback For 1 Second
-			+35% sentry damage resistance on wearer"
+			"description_string"	"On hit: Immune to enemy knockback for 1 second
++35% sentry damage resistance on wearer"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15098"
 		{
 			"name"					"Bolshevik Desc" 
-			"description_string"	"Grenades Explode On Impact"
+			"description_string"	"Grenades explode on impact"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15099"
 		{
 			"name"					"Britishripper Desc" 
-			"description_string"	"Damage Increases From Continuous Fire
-			Move And Shoot Faster On Hit"
+			"description_string"	"Damage increases from continuous fire
+Move and shoot faster on hit"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34948,7 +35214,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 						"15104"
 		{
 			"name"					"Cultist Desc2" 
-			"description_string"	"You Can Cast A Fireball Every 18 Seconds"
+			"description_string"	"You can cast a fireball every 8 seconds"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34973,7 +35239,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 										"15107"
 		{
 			"name"					"Drill Desc" 
-			"description_string"	"Melee Ranged Drill That Does Not Restrict Movement Speed"
+			"description_string"	"Melee ranged drill that does not restrict movement speed"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -34981,22 +35247,22 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 										"15108"
 		{
 			"name"					"Drill Desc2" 
-			"description_string"	"On Hit: Increase Movespeed
-			On Kill: Increase Movespeed For 3 Seconds"
+			"description_string"	"On hit: Increase movespeed
+On Kill: Increase movespeed for 3 seconds"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 									   "15109"
 		{
 			"name"					"Hotdog Desc" 
-			"description_string"	"On Eat: Refill All Non-Throwable Ammo"
+			"description_string"	"On Eat: Refill all non-throwable ammo"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15110"
 		{
 			"name"					"FlyingBol Desc" 
-			"description_string"	"Hold Fire To Fly The Bolshevik"
+			"description_string"	"Hold fire to fly the bolshevik"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -35004,21 +35270,21 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15111"
 		{
 			"name"					"Miniguncoconut Desc" 
-			"description_string"	"On Hit: This Coconut Gun Can Fire In Spurts"
+			"description_string"	"On hit: This coconut gun can fire in spurts"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 		"15112"
 		{
 			"name"					"Veles Desc" 
-			"description_string"	"On Hit And Kill: Regain Ammo"
+			"description_string"	"On hit and kill: Regain ammo"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 				"15113"
 		{
 			"name"					"Veles Desc2" 
-			"description_string"	"Fires Single High Caliber Bullets Rapidly"
+			"description_string"	"Fires single high caliber bullets rapidly"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -35026,7 +35292,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15114"
 		{
 			"name"					"Zhanna Desc" 
-			"description_string"	"Burst Fires Five Plasma Balls That Can Bounce Off Walls"
+			"description_string"	"Burst fires five plasma balls that can bounce off walls"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -35034,7 +35300,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15115"
 		{
 			"name"					"sickle Desc" 
-			"description_string"	"Drags Enemies Towards You On Hit"
+			"description_string"	"Drags enemies towards you on hit"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -35042,21 +35308,21 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 		"15116"
 		{
 			"name"					"sickle Desc2" 
-			"description_string"	"Crits Only Do Double Damage"
+			"description_string"	"Crits only do double damage"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
 		}
 				"15117"
 		{
 			"name"					"Hothand Desc" 
-			"description_string"	"Smacking An Ass Always Crits"
+			"description_string"	"Smacking an ass always crits"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
 				"15118"
 		{
 			"name"					"hamshank Desc" 
-			"description_string"	"You Can Throw Your Meat Every 6 Seconds With Right Click"
+			"description_string"	"You can throw your meat every 6 seconds with right click"
 				"custom_color"		"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -35064,14 +35330,14 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 				"15119"
 		{
 			"name"					"hamshank Desc2" 
-			"description_string"	"You're Hungry If You Don't Bring Extra Supplies"
+			"description_string"	"You're hungry if you don't bring extra supplies"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
 		}
 		"15120"
 		{
 			"name"					"Malediction desc text" 
-			"description_string"	"Summon Lighting From The Sky To Curse Enemies With Mad Milk"
+			"description_string"	"Summon lighting from the sky to curse enemies with mad milk"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -35079,7 +35345,7 @@ Once thrown press 'reload' again to TELEPORT to your sappers location"
 				"15121"
 		{
 			"name"					"ArSaka desc text" 
-			"description_string"	"Fires Large Projectile Bullets"
+			"description_string"	"Fires large projectile bullets"
 			"custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
@@ -35111,7 +35377,7 @@ Applies AOE healing to nearby teammates when you damage an enemy"
 		"15125"
 		{
 		"name"					"jabber desc 1" 
-		"description_string"	"Crits Jumping Targets on Hit"
+		"description_string"	"Crits jumping targets on hit"
 		"description_format"	"value_is_additive"
 		"effect_type"			"positive"		
 		}
@@ -35249,7 +35515,7 @@ Once thrown it will temporarily disable buildings around it"
 		"15144"
        		{
         	    	"name"        "barrakada slug"
-        	    	"description_string"        "Fires a 4-guage explosive slug"
+        	    	"description_string"        "Fires a 4-gauge explosive slug"
 			"custom_color"			"223 203 51 255"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "neutral"
@@ -35288,15 +35554,15 @@ Once thrown it will temporarily disable buildings around it"
 		"15149"
        		{
         	    	"name"        "bible bonus"
-        	    	"description_string"        "Alt-Fire: Grants a Teammate 300% healing for %s1 seconds"
+        	    	"description_string"        "Alt-Fire: Grants a teammate 300% healing for %s1 seconds"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "positive"
        		}
 					"15150"
        		{
         	    	"name"        "milkyway desc"
-        	    	"description_string"        "Mines Explode On Walls And Arc Upwards
-					Alt-Fire Twice To Make Mines Explode"
+        	    	"description_string"        "Mines explode on walls and arc upwards
+Alt-Fire twice to make mines explode"
 			"custom_color"			"223 203 51 255"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "negative"
@@ -35304,7 +35570,7 @@ Once thrown it will temporarily disable buildings around it"
 								"15151"
        		{
         	    	"name"        "gnomegun desc"
-        	    	"description_string"        "Mines Don't Stick To Walls"
+        	    	"description_string"        "Mines don't stick to walls"
 			"custom_color"			"223 203 51 255"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "negative"
@@ -35312,7 +35578,7 @@ Once thrown it will temporarily disable buildings around it"
 			"15152"
        		{
         	    	"name"        "mp7 desc"
-        	    	"description_string"        "Alt Fire: Launch Grenade"
+        	    	"description_string"        "Alt-Fire: Launch grenade"
 			"custom_color"			"223 203 51 255"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "negative"
@@ -35320,8 +35586,8 @@ Once thrown it will temporarily disable buildings around it"
 			"15153"
        		{
         	 "name"        "hotrod desc"
-        	 "description_string"        "Fire: NitroBoost A Short Distance For 25 Ammo
-			Alt Fire: Drive The Bike"
+        	 "description_string"        "Tilt upwards and fire: NitroBoost a short distance for 25 ammo
+Alt-Fire: Drive the bike"
 			"custom_color"			"223 203 51 255"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "negative"
@@ -35329,7 +35595,7 @@ Once thrown it will temporarily disable buildings around it"
 			"15154"
        		{
         	    	"name"        "hotrod desc2"
-        	    	"description_string"        "Creates A Stronger Ring Of Flames While Spun Up"
+        	    	"description_string"        "Creates a stronger ring of flames while spun up"
          	   	"description_format"        "value_is_additive"
          	   	"effect_type"        "positive"
        		}
@@ -35352,8 +35618,7 @@ Once thrown it will temporarily disable buildings around it"
         	"name" "weld desc2"
         	"description_string"        "Immunity to crits
 50% sentry sentry damage reduction
-35% damaage reduction from all other sources.
-"
+35% damaage reduction from all other sources."
          	"description_format"        "value_is_additive"
          	"effect_type"        "positive"
        		}
@@ -35405,7 +35670,7 @@ Once thrown it will temporarily disable buildings around it"
 			"15164"
        		{
         	"name" "MagicAce Desc"
-        	"description_string"        "Throw A Magic Card And Than Swap Places With It"
+        	"description_string"        "Throw a magic card and then swap places with it"
          	"description_format"        "value_is_additive"
 			"custom_color"			"223 203 51 255"
          	"effect_type"        "neutral"
@@ -35413,14 +35678,14 @@ Once thrown it will temporarily disable buildings around it"
 			"15165"
        		{
         	"name" "Only 5th Slot"
-        	"description_string"        "This Weapon Is In The 5th Slot"
+        	"description_string"        "This weapon is in the 5th slot"
          	"description_format"        "value_is_additive"
          	"effect_type"        "neutral"
        		}
 			"15166"
        		{
         	"name" "BirdMedigun Desc"
-        	"description_string"        "You're Smaller, Immune To Fall Damage, And Have Low Gravity"
+        	"description_string"        "You're smaller, immune to fall damage, and have low gravity"
          	"description_format"        "value_is_additive"
 			"custom_color"			"223 203 51 255"
          	"effect_type"        "neutral"
@@ -35428,14 +35693,14 @@ Once thrown it will temporarily disable buildings around it"
 			"15167"
        		{
         	"name" "PortalMedigun Desc"
-        	"description_string"        "Alt-Fire: Launch A Device That Grants Immunity To Bullets, The Device Can Stick To Walls And Can Be Thrown Farther"
+        	"description_string"        "Alt-Fire: Launch a device that grants immunity to bullets, the device can stick to walls and can be thrown farther"
          	"description_format"        "value_is_additive"
          	"effect_type"        "neutral"
        		}
 						"15168"
        		{
         	"name" "PortalMedigun Desc2"
-        	"description_string"        "Launch 3 Healing Grenades At Once With A Bottomless Clip"
+        	"description_string"        "Launch 3 healing grenades at once with a bottomless clip"
          	"description_format"        "value_is_additive"
 			"custom_color"			"223 203 51 255"
          	"effect_type"        "neutral"
@@ -35443,14 +35708,29 @@ Once thrown it will temporarily disable buildings around it"
 						"15169"
        		{
         	"name" "BirdMedigun Desc2"
-        	"description_string"        "ÜberCharge Grants Flight For 16 Seconds"
+        	"description_string"        "ÜberCharge grants flight for 16 seconds"
          	"description_format"        "value_is_additive"
          	"effect_type"        "neutral"
        		}
 			"15170"
        		{
         	"name" "pullymedic Desc"
-        	"description_string"        "On Fire: Pull Yourself Forward If You're In The Air"
+        	"description_string"        "On fire when airborne: pull yourself forward"
+         	"description_format"        "value_is_additive"
+			"custom_color"			"223 203 51 255"
+         	"effect_type"        "neutral"
+       		}
+			"15171"
+       		{
+        	"name" "Gravity decrease visual"
+        	"description_string"        "%s1% decreased gravity"
+         	"description_format"        "value_is_percentage"
+         	"effect_type"        "positive"
+       		}
+						"15172"
+       		{
+        	"name" "trashman Desc"
+        	"description_string"        "Launch exploding trash bags that can gain bonus damage on charge"
          	"description_format"        "value_is_additive"
 			"custom_color"			"223 203 51 255"
          	"effect_type"        "neutral"
@@ -35724,6 +36004,21 @@ Once thrown it will temporarily disable buildings around it"
             "description_format"    "value_is_additive"
             "effect_type"           "neutral"
 			}
-
+			"30028" ///VSCRIPT ATTRIBUTE
+			{
+            "name"                  "magic ace oob check"
+            "attribute_class"       "magic_ace_oob_check"
+            "hidden"                "1"
+            "description_format"    "value_is_additive"
+            "effect_type"           "neutral"
+			}
+			"30029"
+			{
+			"name"					"mod ignite on eat"
+			"attribute_class"		"mod_ignite_on_eat"
+			"description_format"	"value_is_additive"
+			"hidden"				"1"
+			"effect_type"			"negative"
+			}
 	}
 }
