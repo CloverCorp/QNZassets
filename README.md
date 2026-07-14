@@ -18,6 +18,6 @@ cp_ancient_b5
 ctf_helltrain_event
 ```
 
-If any other maps are missing ping @silverparasolgames in the Questionable Ethics discord which is linked below
-discord.gg/qnz
+If any other maps are missing ping @silverparasolgames in the Questionable Ethics discord which is linked below <br/>
+discord.gg/qnz <br/>
 thank you to user "girthquake" for the repo formatting.
