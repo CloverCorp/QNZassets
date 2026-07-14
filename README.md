@@ -2,11 +2,11 @@
 Public assets for the Questionable Ethics custom weapons community.
 
 Installation instructions
-At the top of the page theres a green button that says "< > Code" clicking it will open up a dropdown menu
-in that dropdown menu press the option "Download ZIP"
-this will give you a zip file named "QNZ-Assets-main.zip" this will take AWHILE to download.
-Inside that zip file is a folder with the same name as the zip go inside that folder and there will be a folder named "tf2classified" 
-simply extract the "tf2classified" folder into steamapps\common\Team Fortress 2 Classified
+1. At the top of the page theres a green button that says "< > Code" clicking it will open up a dropdown menu
+2. in that dropdown menu press the option "Download ZIP"
+3. this will give you a zip file named "QNZ-Assets-main.zip" this will take AWHILE to download.
+4. Inside that zip file is a folder with the same name as the zip go inside that folder and there will be a folder named "tf2classified" 
+5. simply extract the "tf2classified" folder into steamapps\common\Team Fortress 2 Classified
 
 ## Due to github file size limitations the following maps are not in the maps folder.
 ```
