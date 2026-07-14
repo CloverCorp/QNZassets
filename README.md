@@ -18,3 +18,4 @@ ctf_helltrain_event
 
 If any other maps are missing ping @silverparasolgames in the Questionable Ethics discord which is linked below
 discord.gg/qnz
+thank you to user "girthquake" for the formatting.
