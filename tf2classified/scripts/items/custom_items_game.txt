@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------------------------ //
 // 				   Quinnz Custom Weapons
-//					      6.4.0
-//				   Heavy vs Medic update hotfix 4
+//					      6.4.1
+//				   Heavy vs Medic update hotfix 5
 // ------------------------------------------------------------------------------------ //
 
 #base "items_game.txt"
@@ -2970,6 +2970,7 @@
 		"weapon_sandvich"
 		{
 			"prefab" "weapon_lunchbox"
+			"show_in_armory" "1"
 			"craft_class" "weapon"
 			"craft_material_type" "weapon"
 			"capabilities"
@@ -3017,7 +3018,6 @@
 					"value" "1"
 				}
 			}
-			"xifier_class_remap" "sandvich"
 		}
 		"weapon_gru"
 		{
@@ -5014,8 +5014,9 @@ This weapon will reload automatically when not active"
 			"item_description"	"#TF_Weapon_Sandvich_Desc"
 			"item_quality"		"normal"
 			"propername"		"1"
-
+			"show_in_armory" "0"
 			"prefab" "weapon_sandvich"
+
 			"item_slot"		"secondary"
 			"used_by_classes"
 			{
@@ -5038,6 +5039,11 @@ This weapon will reload automatically when not active"
 					"attribute_class" 	"mod_lunchbox_critboostable"
 					"value"				"1"
 				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class" "set_weapon_mode"
+					"value" "8"
+				}
 			}
 
 			"model_player"			"models/weapons/v_models/v_sandwich_heavy.mdl"
@@ -5049,9 +5055,6 @@ This weapon will reload automatically when not active"
 			{
 				"min_viewmodel_offset"	"10 0 -11"
 
-				"item_meter_charge_type"	"1"
-				"item_meter_charge_rate"	"30"
-				"meter_label"				"#TF_Meter_LunchBox"
 			}
 			"visuals"
 			{
@@ -5067,6 +5070,73 @@ This weapon will reload automatically when not active"
 			"mouse_pressed_sound"	"ui/item_sandwich_drop.wav"
 			"drop_sound"			"ui/item_sandwich_pickup.wav"
 		}
+
+
+		"9999" // Sandvich
+		{
+			"name"				"The Sandvich FIXED"
+			"item_name"			"#TF_Weapon_Sandvich"
+			"item_type_name"	"#TF_Weapon_LunchBox"
+			"item_description"	"#TF_Weapon_Sandvich_Desc"
+			"item_quality"		"normal"
+			"propername"		"1"
+			"show_in_armory" "1"
+			"prefab" "weapon_sandvich"
+
+			"item_slot"		"secondary"
+			"used_by_classes"
+			{
+				"Heavy"		"1"
+			}
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"				"1"
+				}
+				"mod lunchbox critboostable"
+				{
+					"attribute_class" 	"mod_lunchbox_critboostable"
+					"value"				"1"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class" "set_weapon_mode"
+					"value" "8"
+				}
+			}
+
+			"model_player"			"models/weapons/v_models/v_sandwich_heavy.mdl"
+			"model_world"			"models/weapons/w_models/w_sandwich.mdl"
+			"anim_slot"				"ITEM1"
+			"extra_wearable"		"models/player/items/sandvich_lunchbox.mdl"
+			"attach_to_hands"		"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -11"
+
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_ITEM1_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM1_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_ITEM1_VM_INSPECT_END"
+				}
+			}
+
+			"image_inventory"		"backpack/weapons/w_models/w_sandwich"
+			"mouse_pressed_sound"	"ui/item_sandwich_drop.wav"
+			"drop_sound"			"ui/item_sandwich_pickup.wav"
+		}
+
 		"52" // The Huntsman
 		{
 			"name"				"The Huntsman"
@@ -12707,40 +12777,15 @@ This weapon will reload automatically when not active"
 			}
 			"attributes"
 			{
-				"provide on active"
-				{
-					"attribute_class"	"provide_on_active"
-					"value"				"1"
-				}
 				"mod see enemy health"
 				{
 					"attribute_class"	"see_enemy_health"
 					"value"				"1"
 				}
-				"health regen"					 										
+				"fire rate penalty"
 				{
-					"attribute_class"	"add_health_regen"
-					"value"				"50"
-				}
-				"self mark for death"															
-				{
-					"attribute_class"	"self_mark_for_death"
-					"value"				"1"
-				}
-				"damage penalty"
-				{
-					"attribute_class" "mult_dmg"
-					"value" "0.01"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"				"0"
-				}
-				"health from packs decreased"															
-				{
-					"attribute_class"	"mult_health_frompacks"
-					"value"				"0.34"
+					"attribute_class" "mult_postfiredelay"
+					"value" "1.10"
 				}
 			}
 			"visuals"
@@ -13084,7 +13129,12 @@ This weapon will reload automatically when not active"
 				"heal on kill on crit"
 				{
 					"attribute_class" "heal_on_kill_crit"
-					"value" "75"
+					"value" "50"
+				}
+				"sniper charge per sec"
+				{
+					"attribute_class" "mult_sniper_charge_per_sec"
+					"value" "1.30"
 				}
 				"drop team health pack on kill"
 				{
@@ -14845,6 +14895,11 @@ Weapon by: 'Quinnz'"
 					"attribute_class" "mult_crit_chance"
 					"value" "0"
 				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models\weapons\w_models\w_weewilly_bomb.mdl"
+				}
 			}
 			"visuals"
 			{
@@ -16181,6 +16236,11 @@ Weapon by: 'Sigara'"
 				{
 					"attribute_class" "mult_decloak_rate"
 					"value" "0.5"
+				}
+				"decloak is killer noise"
+				{
+					"attribute_class" "decloak_is_killer_noise"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound" "ui/item_pack_pickup.wav"
@@ -18269,7 +18329,7 @@ Weapon by: 'Lime Girl'"
             "prefab" "paintkit_base"
 			"item_class" "tf_weapon_rocketlauncher_fireball"
 			"item_logname" "Quetzal_Flama"
-			"item_iconname" "Quetzal_Flama" 
+			"item_iconname" "spellbook_fireball" 
                 "item_description" "
  Model by 'Astute'
  Weapon by 'Sigara'"
@@ -19227,7 +19287,7 @@ Weapon by: 'Lime Girl'"
 					"attribute_class"	"ragdolls_become_ash"
 					"value"				"1"
 				}
-			    "viewfinder outline aoe headshot"																
+			    	"viewfinder outline aoe headshot"																
 				{
 					"attribute_class"	"dummy"
 					"value"				"1"
@@ -19235,7 +19295,7 @@ Weapon by: 'Lime Girl'"
 				"explosive sniper shot"
 				{
 					"attribute_class"	"explosive_sniper_shot"
-					"value"				"1 0.01"
+					"value"				"1.5 0.01"
 				}
 			    	"mod outline hit DISPLAY"																
 				{
@@ -19251,6 +19311,11 @@ Weapon by: 'Lime Girl'"
 				{
 					"attribute_class" "headshot_is_minicrit"
 					"value" "1"
+				}
+				"damage penalty on bodyshot"
+				{
+					"attribute_class" "bodyshot_damage_modify"
+					"value" "0.8"
 				}
 				"sniper fires tracer"
 				{
@@ -20647,7 +20712,12 @@ Weapon by: 'Reagy'"
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value" 			"1.34"
-				}					
+				}	
+				"longer damage falloff distance"
+				{
+					"attribute_class"	"mult_falloff_distance"
+					"value"				"1.5"
+				}				
 			}
 			"visuals"
 			{
@@ -22381,7 +22451,7 @@ Remastered by: 'Sigara'"
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				"1.5" 
+					"value"				"3" 
 				}
 				"clip size bonus"
 				{
@@ -24439,6 +24509,8 @@ Weapon by: 'Sigara'"
 				"primary ammo from dropped weapons penalty" "0"
 				"weapon enemy knockback mod mult hidden" "2"
 				"override grenade type" "4"
+				"dmg penalty vs players" "3"
+				"dmg bonus vs buildings" "3"
 			}
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
@@ -24453,16 +24525,6 @@ Weapon by: 'Sigara'"
 				{
 					"attribute_class"	"minicrit_vs_playercond"
 					"value"				"24"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" 			"0.39999"
-				}
-								"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.075"
 				}
 				"projectile scale increased"
 				{
@@ -25405,7 +25467,7 @@ Weapon by: 'Lime Girl'"
             		"anim_slot" "secondary"
 			"bucket" "0"
 			"bucket_position" "0"
-			"item_quality" "completed"
+			"item_quality" "vintage"
 			"image_inventory"			"backpack/weapons/w_models/w_infantry_garand"
 			"model_world"				"models/weapons/w_models/w_infantry_garand.mdl"
 			"model_player"				"models/weapons/v_models/v_infantry_garand.mdl"
@@ -25881,7 +25943,7 @@ Weapon By: 'RedElite'"
 				"grenade launcher ammo cost"
 				{
 					"attribute_class"	"grenade_launcher_ammo_cost"
-					"value"				"10"
+					"value"				"31"
 				}				
 			}	
 			"visuals"
@@ -26284,6 +26346,8 @@ Revisions by: 'Sigara'"
 			{
 				"min_viewmodel_offset" "10 0 -7"
 				"Halo AR Accuracy Info" "1"
+				"engie armor display" "0.5"
+				"engie armor" "0.5"
 			}
 			"attributes"
 			{
@@ -27147,7 +27211,7 @@ Weapon By 'Sigara'
 				"damage penalty"
 				{
 					"attribute_class" "mult_dmg"
-					"value" "0.86"
+					"value" "0.9"
 				}
 				"self dmg push force decreased"
 				{
@@ -27453,6 +27517,12 @@ Weapon by: 'Sigara'"
 					"attribute_class" "special_taunt"
 					"value" "1"
 				}
+				"hidden separator"	"1"
+				"lunchbox healing decreased"
+				{
+					"attribute_class" "lunchbox_healing_scale"
+					"value" "2.5"
+				}
 			}
 		    "visuals"
 			{
@@ -27609,7 +27679,7 @@ Weapon by: 'Sigara'"
 			"item_iconname" 			"RipperCannon"
 			"image_inventory"			"backpack/weapons/c_models/c_duke_nukem_ripper/c_duke_nukem_ripper"
 			"model_world"				"models/weapons/w_models/w_duke_nukem_ripper.mdl"
-			"model_player"				"models/weapons/v_models/v_duke_nukem_ripper.mdl"
+			"model_player"				"models/weapons/v_models/v_duke_nukem_ripper_fix.mdl"
 			"extra_wearable"            "models/workshop/player/items/all_class/fall17_nuke/fall17_nuke_heavy.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
@@ -27794,7 +27864,7 @@ Weapon by: 'Sigara'"
 			"item_iconname" 			"TankBuster"
 			"image_inventory"			"backpack/weapons/c_models/c_mvmtankminigun/c_mvmtankminigun"
 			"model_world"				"models/weapons/c_models/c_mvmtankminigun/c_mvmtankminigun.mdl"
-			"model_player"				"models/weapons/v_models/v_tank_minigun.mdl"
+			"model_player"				"models/weapons/v_models/v_tank_minigun_fix.mdl"
 			"extra_wearable"            "models/workshop/player/items/heavy/dec22_ol_reliable_style2/dec22_ol_reliable_style2.mdl"
 			"attach_to_hands"			"2"
 			"item_quality"		"completed"
@@ -28028,7 +28098,7 @@ Weapon by: 'Sigara'"
 			"item_iconname"				"ChainGrinder"
 			"image_inventory"			"backpack/weapons/c_models/c_lmg_chaingrinder/c_lmg_chaingrinder"
 			"model_world"				"models/workshop/weapons/c_models/c_lmg_chaingrinder.mdl"
-			"model_player"				"models/weapons/v_models/v_lmg_chaingrinder_heavy.mdl"
+			"model_player"				"models/weapons/v_models/v_lmg_chaingrinder_heavy_fix.mdl"
 			"extra_wearable"   "models/workshop/player/items/all_class/sum20_sophisticated_smoker/sum20_sophisticated_smoker_heavy.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
@@ -28160,7 +28230,7 @@ Weapon by: 'Sigara'"
 			"item_iconname" 			"AssaultCannon"
 			"image_inventory"			"backpack/weapons/c_models/c_tfc_minigun/c_tfc_minigun"
 			"model_world"				"models/weapons/w_models/w_tfc_minigun.mdl"
-			"model_player"				"models/weapons/v_models/v_tfc_minigun_heavy.mdl"
+			"model_player"				"models/weapons/v_models/v_tfc_minigun_heavy_fix.mdl"
 			"extra_wearable"   "models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_heavy.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
@@ -28262,7 +28332,7 @@ Weapon by: 'Sigara'"
 			"item_iconname" 			"Veles"
 			"image_inventory"			"backpack/weapons/c_models/c_velesremaster/c_velesremaster"
 			"model_world"				"models/weapons/c_models/c_velesremaster/c_velesremaster.mdl"
-			"model_player"				"models/weapons/v_models/v_veles_remaster.mdl"
+			"model_player"				"models/weapons/v_models/v_veles_remaster_fix.mdl"
 			"extra_wearable"   "models/workshop/player/items/heavy/dec18_cool_capuchon/dec18_cool_capuchon.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
@@ -28522,7 +28592,7 @@ Weapon by: 'Sigara'"
 				"aiming movespeed increased"
 				{
 					"attribute_class"	"mult_player_aiming_movespeed"
-					"value"				"1.5"
+					"value"				"1.25"
 				}
 				"can breathe under water"
 				{
@@ -28534,15 +28604,15 @@ Weapon by: 'Sigara'"
 					"attribute_class" "swimming_mastery"
 					"value" "1"
 				}
-                "damage penalty"
+				"minigun spinup time increased"
+				{
+					"attribute_class" "mult_minigun_spinup_time"
+					"value" "1.25"
+				}
+                		"damage penalty"
 				{
 					"attribute_class" "mult_dmg"
 					"value" "0.65"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class" "mult_postfiredelay"
-					"value" "1.20"
 				}
 				"crit mod disabled"
 				{
@@ -28867,7 +28937,6 @@ Weapon By 'Sigara'"
 
 			"extra_wearable" "models/workshop/player/items/pyro/fall17_deitys_dress/fall17_deitys_dress.mdl"
 			"item_class"	"tf_weapon_grenade_mirv"
-			"equip_region" "Glasses"
 			"item_slot"		"secondary"
 			"anim_slot"		"MELEE_ALLCLASS"
 			"used_by_classes"
@@ -28913,7 +28982,7 @@ Weapon By 'Sigara'"
 			    "rocket gravity"
 				{
 					"attribute_class"	"mod_rocket_gravity"
-					"value"				"0.75"
+					"value"				"0.5"
 				}
 				"Projectile speed decreased"
 				{
@@ -28960,10 +29029,15 @@ Weapon By 'Sigara'"
 					"attribute_class"	"mult_dmgself_push_force"
 					"value" 			"0.25"
 				}
-								"custom projectile model"
+				"custom projectile model"
 				{
 					"attribute_class" "custom_projectile_model"
 					"value" "models/weapons/w_models/projectiles/w_bullet_tracer_sm.mdl"
+				}
+				"projectile scale increased"
+				{
+					"attribute_class" "mult_projectile_scale"
+					"value" "0.05"
 				}
 			}
 			"visuals"
@@ -29284,7 +29358,7 @@ Weapon by: 'Sigara'"
 			"image_inventory"			"backpack\weapons\w_models\w_aircraft_minigun\w_aircraft_minigun"
 			"model_world"				"models\w_models\w_aircraft_gun.mdl"
 			"extra_wearable" "models/workshop/player/items/heavy/hw2013_heavy_robin/hw2013_heavy_robin.mdl"
-			"model_player"				"models\v_models\v_aircraft_gun_heavy.mdl"
+			"model_player"				"models\v_models\v_aircraft_gun_heavy_fix.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
 			{
@@ -29594,7 +29668,7 @@ Weapon by: 'Sigara And Quinnz'"
 				"custom projectile origin offset"
 				{
 					"attribute_class"	"custom_projectile_origin_offset"
-					"value"				"0 25 -25"
+					"value"				"10 25 -25"
 				}			
 			    "projectile speed increased"
 				{
@@ -29604,7 +29678,7 @@ Weapon by: 'Sigara And Quinnz'"
 			    "clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"				"2"
+					"value"				"3"
 				}
 			    "maxammo primary increased"
 				{
@@ -30780,6 +30854,11 @@ Weapon by: 'Lime Girl'"
 					"attribute_class" "ragdolls_plasma_effect"
 					"value" "1"
 				}
+				"halominigun downside"
+				{
+					"attribute_class" "DISPLAY_ONLY"
+					"value" "1"
+				}
 				"no primary ammo from dispensers while active"
 				{
 					"attribute_class" "no_primary_ammo_from_dispensers"
@@ -31041,14 +31120,10 @@ Weapon by: 'Lime Girl and Sigara"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -10"
+				"bullets per shot bonus" "0.5"
 			}
 			"attributes"
 			{
-				"burst fire dummy"
-				{
-					"attribute_class" "dummy"
-					"value" "4"
-				}
 				"bullet is a hull"
 				{
 					"attribute_class"	"bullet_is_a_hull"
@@ -31083,32 +31158,32 @@ Weapon by: 'Lime Girl and Sigara"
 				"custom falloff"
 				{
 					"attribute_class"	"mod_custom_falloff"
-					"value"				"0.75"
+					"value"				"0.01"
 				}
 				"hidden primary max ammo bonus"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value" 			"6.25"
+					"value" 			"3.12"
 				}
 				"mod max primary clip override"
 				{
 					"attribute_class" "mod_max_primary_clip_override"
 					"value" "-1"
 				}
-				"custom rampup"
+				"longer damage falloff distance"
 				{
-					"attribute_class"	"mod_custom_rampup"
-					"value"				"0.75"
+					"attribute_class"	"mult_falloff_distance"
+					"value"				"0.5"
 				}
 			    	"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"0.5"
+					"value"				"0.46"
                 }
 				"weapon spread bonus"															
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				"3"
+					"value"				"1"
 				}
 				"punch angle mod mult hidden"
 				{
@@ -32861,11 +32936,6 @@ Weapon by: 'CloverCorp'"
 					"attribute_class" "dummy"
 					"value" "1"
 				}
-				"sinad negative"
-				{
-					"attribute_class" "dummy"
-					"value" "1"
-				}
 				"converts enemy builds"
 				{
 					"attribute_class" "converts_enemy_builds"
@@ -33135,6 +33205,10 @@ Weapon by 'Sigara'"
 					"attribute_class" "cannot_pick_up_intelligence"
 					"value" "1"
 				}
+				"decrease capture value text"
+				{
+					"value"				"1"
+				}
 			    "hidden separator"	"1"
 				"uber duration bonus"		
 				{
@@ -33151,10 +33225,16 @@ Weapon by 'Sigara'"
 					"attribute_class" "mod_ubercharge_cond"
 					"value" "107"
 				}
+
 				"boost speed from patient"
 				{
 					"attribute_class" "boost_speed_from_patient"
 					"value" "1"
+				}
+				"increase player capture value"
+				{
+					"attribute_class" "add_player_capturevalue"
+					"value" "-1"
 				}
 			}
 			"visuals_red"
@@ -33410,6 +33490,8 @@ Weapon by: 'Sigara'"
 				"pullymedic Desc" "1"
 				"single wep deploy time decreased" "0.75"
 				"switch from wep deploy time decreased" "0.75"
+				"take minicrits projectile airborne" "1"
+				"health drain medic"   "-2"
 				"cannot pick up intelligence" "1"
 			}
 			"attributes"
@@ -33417,7 +33499,7 @@ Weapon by: 'Sigara'"
 				"apply self knockback hidden"
 				{
 					"attribute_class"	"apply_self_knockback"
-					"value"				"-650"
+					"value"				"-500"
 				}
 				"Reload time increased"
 				{
@@ -33479,120 +33561,8 @@ Weapon by: 'Sigara'"
 		
 		
 		
-		
+		//////Kirby End Of Schema/////
 		//////Dev Stuff/////
-		"19185"
-		{
-			"name"	"Gold Frying Pan"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"item_logname"	"golden_fryingpan"
-			"item_iconname"	"golden_fryingpan"
-
-			"show_in_armory"	"0"
-
-			"item_type_name"	"#TF_Weapon_GoldFryingPan"
-			"item_name"	"#TF_Gold_FryingPan"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_frying_pan/c_frying_pan_gold"
-			"model_player"	"models/weapons/c_models/c_frying_pan/c_frying_pan.mdl"
-			"extra_wearable"  "models/player/items/demo/ttg_glasses.mdl"
-			"attach_to_hands"	"1"
-			"inspect_panel_dist" "40"
-			"item_quality"	"developer"
-			"propername"	"1"
-			"anim_slot" "MELEE_ALLCLASS"
-			"xifier_class_remap"	"Frying Pan"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-				"spy" "1"
-				"engineer" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 -3 -7"
-				"melee range multiplier"				"3.5"							
-				"melee bounds multiplier"				"3.0"
-			}
-			"attributes"
-			{
-
-				"turn to gold"
-				{
-					"attribute_class"	"set_turn_to_gold"
-					"value" "1"
-				}
-                "dmg pierces resists absorbs"
-				{
-					"attribute_class" "mod_pierce_resists_absorbs"
-					"value" "1"
-				}
-			    "damage bonus"															
-				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.15"
-				}
-				"heal on kill"
-				{
-					"attribute_class" "heal_on_kill"
-					"value" "67"
-				}
-			    "health regen"
-				{
-					"attribute_class"	"add_health_regen"
-					"value"				"33"
-				}
-				"move speed bonus"
-				{
-					"attribute_class" "mult_player_movespeed"
-					"value" "1.33"
-				}
-				"attach particle effect"
-				{
-					"attribute_class"	"set_attached_particle"
-					"value" "4"
-				}
-				"crit mod disabled hidden"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value" "3"
-				}
-                                "voice pitch scale"
-				{
-					"attribute_class" "voice_pitch_scale"
-					"value" "0.85"
-				}
-                                "special dsp"
-				{
-					"attribute_class" "special_dsp"
-					"value" "56"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit"		"FryingPan.HitFlesh"
-				"sound_melee_hit_world"	"FryingPan.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"visuals_red"
-			{
-				"skin" "3"
-			}
-			"visuals_blu"
-			{
-				"skin" "3"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}
 
 }
 	"attribute_controlled_attached_particles"
@@ -35979,6 +35949,56 @@ Alt-Fire: Drive the bike"
             "description_format"    "value_is_additive"
             "effect_type"           "negative"
         }
+		"20023"
+		{
+			"name"					"engie armor"
+			"description_format"	"value_is_additive"
+			"hidden"				"1"
+			"effect_type"			"positive"
+		}
+		"20024"
+		{
+			"name"					"engie armor penalty"
+			"description_string"	"Armor resists %s1% less damage"
+			"description_format"	"value_is_additive_percentage"
+			"effect_type"			"negative"
+		}
+		"20025"
+		{
+			"name"					"engie armor ratio"
+			"description_format"	"value_is_percentage"
+			"hidden"				"1"
+			"effect_type"			"neutral"
+		}
+		"20026"
+		{
+			"name"					"engie armor ratio bonus"
+			"description_string"	"Armor uses %s1% less metal"
+			"description_format"	"value_is_percentage"
+			"effect_type"			"positive"
+		}
+		"20027"
+		{
+			"name"					"engie armor ratio penalty"
+			"description_string"	"Armor uses %s1% more metal"
+			"description_format"	"value_is_percentage"
+			"effect_type"			"negative"
+		}
+		"20028"
+		{
+			"name"					"engie armor bonus"
+			"description_string"	"Armor resists %s1% more damage"
+			"description_format"	"value_is_additive_percentage"
+			"effect_type"			"positive"
+		}
+	    "20029"
+		{
+			"name"					"engie armor display"
+			"description_string"	"Metal becomes armor, absorbing %s1%
+of all damage taken in a 5-2 ratio"
+			"description_format"	"value_is_additive_percentage"
+			"effect_type"			"positive"
+		}
 		// === Gabe Attributes ====				
 		    "30023" //vscript
 			{
@@ -36016,6 +36036,14 @@ Alt-Fire: Drive the bike"
 			{
 			"name"					"mod ignite on eat"
 			"attribute_class"		"mod_ignite_on_eat"
+			"description_format"	"value_is_additive"
+			"hidden"				"1"
+			"effect_type"			"negative"
+			}
+			"30030"
+			{
+			"name"					"decloak is killer noise"
+			"attribute_class"		"decloak_is_killer_noise"
 			"description_format"	"value_is_additive"
 			"hidden"				"1"
 			"effect_type"			"negative"
