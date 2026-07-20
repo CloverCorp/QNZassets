@@ -8,6 +8,8 @@ Installation instructions
 4. Inside that zip file is a folder with the same name as the zip go inside that folder and there will be a folder named "tf2classified" 
 5. simply extract the "tf2classified" folder into steamapps\common\Team Fortress 2 Classified
 
+If you see somebody using weapons that are not in your schema check back here to get the latest one or just delete the locally saved one found in tf2classified\scripts\items
+
 ## Due to github file size limitations the maps are in a seperate download
 
 https://mega.nz/folder/0vkTQQbR#Ordrz7h-j6pw7wBnEBl4Ng <br/>
