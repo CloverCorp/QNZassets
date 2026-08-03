@@ -1048,7 +1048,18 @@
 		"wave"      "vo/soldier_negativevocalization04.wav"
 	}
 }
-// ------------------------------------------------------------------------------------ //
+"Weapon_Garand.TELEKENESIS"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"0.9"
+	"rndwave"
+	{
+		"wave"      "weapons\BF1Telekenesis\Telekenesis_Empty1.wav"
+		"wave"      "weapons\BF1Telekenesis\Telekenesis_Empty2.wav"
+		"wave"      "weapons\BF1Telekenesis\Telekenesis_Empty3.wav"
+	}
+}// ------------------------------------------------------------------------------------ //
 // Fourth Runner
 // ------------------------------------------------------------------------------------ //
 
@@ -2619,4 +2630,441 @@
 	"volume"	"1.0"
 	"wave"		")weapons/tommy_bolt_forward.wav"
 }
+// ------------------------------------------------------------------------------------ //
+// CREATURE
+// ------------------------------------------------------------------------------------ //
+"creature.spit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"rndwave"
+	{
+		"wave"			")weapons/Coughspit1.wav"
+		"wave"			")weapons/Coughspit2.wav"
+		"wave"			")weapons/Coughspit3.wav"
+	}
+}
+"creature.ShootUber"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_110dB"
+	"pitch"		"PITCH_NORM"
+	"wave"		")weapons/Coughcharge.wav"
+}
+"creaturereload.LeverForward"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"		")weapons/Deathcrunch.wav"
+}
+"creaturereload.LeverBack"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"		")weapons/Coughcharge.wav"
+}
+// ------------------------------------------------------------------------------------ //
+// ANTI-MATTER
+// ------------------------------------------------------------------------------------ //
 
+"Weapon_AntiMatter.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/antimatter_shoot.wav"
+}
+
+"Weapon_AntiMatter.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/antimatter_shoot_crit.wav"
+}
+// ------------------------------------------------------------------------------------ //
+// BRAINBLASTER
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_BrainBlaster.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/brainblaster_shoot.wav"
+}
+
+"Weapon_BrainBlaster.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/brainblaster_shoot_crit.wav"
+}
+// ------------------------------------------------------------------------------------ //
+// SPORTSMAN'S SIDEARM
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Sportsman.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/sportsman_shoot.wav"
+}
+
+"Weapon_Sportsman.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/sportsman_shoot_crit.wav"
+}
+// ------------------------------------------------------------------------------------ //
+// CREMATOR'S CELEBRATOR
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Cremator.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/crematorshot.wav"
+}
+
+"Weapon_Cremator.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/crematorshot_crit.wav"
+}
+// ------------------------------------------------------------------------------------ //
+// PROTOTYPE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Prototype.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/prototype_shoot.wav"
+}
+
+"Weapon_Prototype.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/prototype_shoot_crit.wav"
+}
+// ------------------------------------------------------------------------------------ //
+// FISTS OF FURY
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_FuryFists.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/firepunch_shoot.wav"
+}
+
+"Weapon_FuryFists.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/firepunch_shoot_crit.wav"
+}
+// ------------------------------------------------------------------------------------ //
+// BUCKAROO'S BRUSHFIRE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Brushfire.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/brushfire_shoot.wav"
+}
+
+"Weapon_Brushfire.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/brushfire_shoot_crit.wav"
+}
+// ------------------------------------------------------------------------------------ //
+// RIGHT HAND
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_RightHand.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"      "weapons/fal_shoot.wav"
+}
+
+"Weapon_RightHand.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"      "weapons/fal_shoot_crit.wav"
+
+}
+// ------------------------------------------------------------------------------------ //
+// Gauss Hog
+// ------------------------------------------------------------------------------------ //
+"Weapon_GaussHog.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"111, 123"
+	"rndwave"
+	{
+		"wave"      "weapons/gausshog/gausshog_fire.wav"
+		"wave"      "weapons/gausshog/gausshog_fire2.wav"
+		"wave"      "weapons/gausshog/gausshog_fire3.wav"
+		"wave"      "weapons/gausshog/gausshog_fire4.wav"
+	}
+}
+"Weapon_GaussHog.SingleCharged"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"111, 123"
+	"rndwave"
+	{
+		"wave"      "weapons/gausshog/gausshog_fire_charged.wav"
+		"wave"      "weapons/gausshog/gausshog_fire2_charge.wav"
+		"wave"      "weapons/gausshog/gausshog_fire3_charged.wav"
+		"wave"      "weapons/gausshog/gausshog_fire4_charged.wav"
+	}
+}
+"Weapon_GaussHog.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"98, 102"
+	"rndwave"
+	{
+		"wave"      "weapons/gausshog/gausshog_fire_crit.wav"
+		"wave"      "weapons/gausshog/gausshog_fire2_crit.wav"
+		"wave"      "weapons/gausshog/gausshog_fire3_crit.wav"
+		"wave"      "weapons/gausshog/gausshog_fire4_crit.wav"
+	}
+}
+"Weapon_GaussHog.ChargeTemp"	// Coilgun charging sounds are pitched and sped up and down by the game engine
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"			"weapons/gausshog/gausshog_charge.wav"
+}
+"Weapon_GaussHog.Deploy"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"	"weapons/gausshog/gausshog_deploy.wav"
+	}
+}
+// ------------------------------------------------------------------------------------ //
+// High Stakes
+// ------------------------------------------------------------------------------------ //
+"Weapon_Double_Crossbow.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"98, 102"
+	"rndwave"
+	{
+		"wave"      "weapons/double_crossbow/double_crossbow_shoot_01.wav"
+		"wave"      "weapons/double_crossbow/double_crossbow_shoot_02.wav"
+		"wave"      "weapons/double_crossbow/double_crossbow_shoot_03.wav"
+		"wave"      "weapons/double_crossbow/double_crossbow_shoot_04.wav"
+		"wave"      "weapons/double_crossbow/double_crossbow_shoot_05.wav"
+	}
+}
+
+"Weapon_Double_Crossbow.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"rndwave"
+	{
+		"wave"      "weapons/double_crossbow/double_crossbow_shoot_01_crit.wav"
+		"wave"      "weapons/double_crossbow/double_crossbow_shoot_02_crit.wav"
+		"wave"      "weapons/double_crossbow/double_crossbow_shoot_03_crit.wav"
+	}
+}
+
+"Weapon_Double_Crossbow.TubeOpen"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"			"weapons/double_crossbow/double_crossbow_reload_start_01.wav"
+}
+
+"Weapon_Double_Crossbow.ShellsIn"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"			"weapons/double_crossbow/double_crossbow_reload_mid_01.wav"
+}
+
+"Weapon_Double_Crossbow.TubeClose"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"			"weapons/double_crossbow/double_crossbow_reload_end_01.wav"
+}
+
+"Weapon_Double_Crossbow.WorldReload"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"1.0"
+	"pitch"			"88, 92"
+	"wave"		"weapons/double_crossbow/double_crossbow_reload_full_01.wav"
+}
+
+"Weapon_Double_Crossbow.Empty"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"	"1"
+	"wave"		"weapons/double_crossbow/double_crossbow_dryfire.wav"
+}
+// ------------------------------------------------------------------------------------ //
+// STEN
+// ------------------------------------------------------------------------------------ //
+"Weapon_StenGun.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"92, 102"
+	"rndwave"
+	{
+		"wave"      "weapons/sten_shoot.wav"
+	}
+}
+
+"Weapon_StenGun.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"rndwave"
+	{
+		"wave"      "weapons/sten_shoot_crit.wav"
+	}
+}
+// ------------------------------------------------------------------------------------ //
+// July Special
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_JulySpecial.Shoot"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/july_shoot.wav"
+}
+
+"Weapon_JulySpecial.Crit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/july_shoot_crit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// Silver Rose
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_SilverRose.Shoot"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/silver_rose_shoot.wav"
+}
+
+"Weapon_SilverRose.Crit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/silver_rose_crit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// MEDKIT /// I got it from my buddy Sven
+// ------------------------------------------------------------------------------------ //
+"Medkit_use.Swing"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"92, 102"
+	"rndwave"
+	{
+		"wave"      "weapons/cbar_miss1.wav"
+	}
+}
+
+"Medkit_heal.HitFlesh"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"rndwave"
+	{
+		"wave"      "weapons/medshot4.wav"
+	}
+}
+// ------------------------------------------------------------------------------------ //
+// Torque
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Torque.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/Texan_Special_shoot.wav"
+}
+"Weapon_Torque.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/Texan_Special_shoot_crit.wav"
+}
+"Weapon_Torque.Shells"
+{
+    "channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"			"weapons/Texan_Special_charge.wav"
+}

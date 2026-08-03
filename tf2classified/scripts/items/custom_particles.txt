@@ -27,4 +27,5 @@ particles_manifest
     file    "!particles/gasthrower.pcf"
     file    "!particles/qnzparticles3a1.pcf"
 	file    "!particles/nowp_flamethrower.pcf"
+	file    "!particles/custom_particles.pcf"
 }
