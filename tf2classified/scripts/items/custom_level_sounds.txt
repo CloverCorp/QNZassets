@@ -2069,7 +2069,7 @@
 	"channel"	"CHAN_WEAPON"
 	"soundlevel"	"SNDLVL_94dB"
 	"volume"	"1.0"
-	"wave"		")weapons/weewilly_shoot.wav"
+	"wave"		")weapons/weewilly_shoot2.wav"
 }
 
 "Weapon_WeeWilly.SingleCrit"
@@ -2077,7 +2077,7 @@
 	"channel"	"CHAN_WEAPON"
 	"soundlevel"	"SNDLVL_94dB"
 	"volume"	"1.0"
-	"wave"		")weapons/weewilly_shoot_crit.wav"
+	"wave"		")weapons/weewilly_shoot_crit2.wav"
 }
 // ------------------------------------------------------------------------------------ //
 // COIL JUMPER
@@ -3067,4 +3067,50 @@
 	"volume"		"1"
 	"soundlevel"	"SNDLVL_74dB"
 	"wave"			"weapons/Texan_Special_charge.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// MK19
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_MK19.Spin"	
+{
+	"channel"	"CHAN_ITEM"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"1.0"
+	"wave"		")weapons/boar_spin.wav"
+}
+
+"Weapon_MK19.WindUp"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/boar_spinup.wav"
+}
+
+
+"Weapon_MK19.Fire"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"98, 115"
+	"wave"		")weapons/mk19fire.wav"
+}
+
+"Weapon_MK19.FireCrit"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/mk19fire_crit.wav"
+}
+
+"Weapon_MK19.WindDown"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/boar_spindown.wav"
 }
