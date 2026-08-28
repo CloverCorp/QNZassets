@@ -3114,3 +3114,56 @@
 	"volume"	"1.0"
 	"wave"		")weapons/boar_spindown.wav"
 }
+// ------------------------------------------------------------------------------------ //
+// DRILL 2: THE CHAINSAW
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_chainsaw.Spin"	
+{
+	"channel"	"CHAN_ITEM"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"1.0"
+	"wave"		")weapons/chainsaw_spin.wav"
+}
+
+"Weapon_chainsaw.WindUp"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/chainsaw_wind_up.wav"
+}
+
+
+"Weapon_chainsaw.Fire"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"pitch"		"98, 102"
+	"wave"		")weapons/chainsaw_shoot.wav"
+}
+
+"Weapon_chainsaw.FireCrit"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/chainsaw_shoot_crit.wav"
+}
+
+"Weapon_chainsaw.WindDown"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/chainsaw_wind_down.wav"
+}
+
+"Weapon_chainsaw.empty"	
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/chainsaw_empty.wav"
+}
