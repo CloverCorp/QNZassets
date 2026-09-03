@@ -1,6 +1,6 @@
 // ------------------------------------------------------------------------------------ //
 // 				   Quinnz Custom Weapons
-//					      8.0.0
+//					      8.0.1
 //				 	  Health Update
 // ------------------------------------------------------------------------------------ //
 
@@ -159,6 +159,7 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -10"
+				"set_reload_prefer_sequence" "1"
 			}
 			"attributes"
 			{
@@ -207,6 +208,11 @@
 					"attribute_class" "mult_crit_chance"
 					"value" "0"
 				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
@@ -250,6 +256,7 @@
 			{
 				"min_viewmodel_offset" "10 0 -11"
 				"weapon_stattrak_module_scale" "0.66"
+				"set_reload_prefer_sequence" "1"
 			}
 			"tags"
 			{
@@ -320,10 +327,10 @@
 					"attribute_class" "mult_crit_chance"
 					"value" "0"
 				}
-				"longer damage falloff distance"
+				"set_reload_prefer_sequence"
 				{
-					"attribute_class"	"mult_falloff_distance"
-					"value"				"1.5"
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -433,6 +440,11 @@
 				{
 					"attribute_class" "mult_crit_chance"
 					"value" "0"
+				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -1518,9 +1530,6 @@ Model by: 'BONEMAN' 'Mr. Bunce'"
 			{
 				"min_viewmodel_offset" "10 0 -10"
 				"weapon_stattrak_module_scale" "0.608"
-				"special taunt"							"1"
-				"taunt attack name"						"TAUNTATK_PYRO_GASBLAST" /// according to nowp scorchshot taunt kill just doesnt function and im willing to believe kiri
-				"taunt attack time"						"1.85"
 			}
 			"attributes"
 			{
@@ -1563,13 +1572,6 @@ Model by: 'BONEMAN' 'Mr. Bunce'"
 				{
 					"attribute_class" "allowed_in_medieval_mode"
 					"value" "1"
-				}
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Pyro"				"scenes/player/pyro/low/taunt_scorch_shot.vcd"
 				}
 			}
 			"visuals"
@@ -2321,16 +2323,6 @@ Model by: 'BONEMAN' 'Mr. Bunce'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "12 -3 -10"
-                "special taunt"                            "1"
-                "taunt attack name"						   "TAUNTATK_DEMOMAN_BARBARIAN_SWING"
-                "taunt attack time"                        "2.4"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Demoman"			"scenes/player/demoman/low/taunt09.vcd"
-				}
 			}
 			"visuals"
 			{
@@ -2429,16 +2421,6 @@ Model by: 'BONEMAN' 'Mr. Bunce'"
 			{
 				"min_viewmodel_offset" "10 -3 -10"
 				"weapon_stattrak_module_scale" "0.455"
-                "special taunt"                            "1"
-                "taunt attack name"						   "TAUNTATK_DEMOMAN_BARBARIAN_SWING"
-                "taunt attack time"                        "2.4"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Demoman"			"scenes/player/demoman/low/taunt09.vcd"
-				}
 			}
 			"attributes"
 			{
@@ -2505,17 +2487,7 @@ Model by: 'BONEMAN' 'Mr. Bunce'"
 			{
 				"min_viewmodel_offset" "10 -3 -10"
 				"weapon_stattrak_module_scale" "0.455"
-                "special taunt"                            "1"
-                "taunt attack name"						   "TAUNTATK_DEMOMAN_BARBARIAN_SWING"
-                "taunt attack time"                        "2.4"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Demoman"			"scenes/player/demoman/low/taunt09.vcd"
-				}
-			}
+            }
 			"visuals"
 			{
 				"sound_melee_miss" "Weapon_Sword.Swing"
@@ -2599,16 +2571,6 @@ Model by: 'BONEMAN' 'Mr. Bunce'"
 			{
 				"min_viewmodel_offset" "10 -3 -10"
 				"weapon_stattrak_module_scale" "0.455"
-                "special taunt"                            "1"
-                "taunt attack name"						   "TAUNTATK_DEMOMAN_BARBARIAN_SWING"
-                "taunt attack time"                        "2.4"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Demoman"			"scenes/player/demoman/low/taunt09.vcd"
-				}
 			}
 			"mouse_pressed_sound" "ui/item_knife_large_pickup.wav"
 			"drop_sound" "ui/item_metal_weapon_drop.wav"
@@ -7040,9 +7002,6 @@ Model by: 'Psyke'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -6"
-                "special taunt"                            "1"
-				"taunt attack name"						"TAUNTATK_SCOUT_GRAND_SLAM"
-                "taunt attack time"                        "4"
 			}
 			"attributes"
 			{
@@ -7067,13 +7026,6 @@ Model by: 'Psyke'"
 					"value" "1"
 				}
 			}
-			"taunt"
-            {
-                "custom_taunt_scene_per_class"
-                {
-                    "scout"                "scenes/player/scout/low/taunt05_v1.vcd"
-                }
-            }
 			"mouse_pressed_sound" "ui/item_wood_pole_pickup.wav"
 			"drop_sound" "ui/item_wood_pole_drop.wav"
 		}
@@ -7116,14 +7068,6 @@ Model by: 'Psyke'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -6"
-                "special taunt"                            "1"
-			}
-			"taunt"
-            {
-                "custom_taunt_scene_per_class"
-                {
-                    "scout"                "scenes/player/scout/low/taunt_bat_man.vcd"
-                }
             }
 			"mouse_pressed_sound" "ui/item_wood_pole_pickup.wav"
 			"drop_sound" "ui/item_wood_pole_drop.wav"
@@ -7199,16 +7143,6 @@ Model by: 'Psyke'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -6"
-                "special taunt"                            "1"
-				"taunt attack name"						"TAUNTATK_SCOUT_GRAND_SLAM"
-                "taunt attack time"                        "4"
-			}
-			"taunt"
-            {
-                "custom_taunt_scene_per_class"
-                {
-                    "scout"                "scenes/player/scout/low/taunt05_v1.vcd"
-                }
             }
 			"mouse_pressed_sound" "ui/item_wood_pole_pickup.wav"
 			"drop_sound" "ui/item_wood_pole_drop.wav"
@@ -7279,14 +7213,6 @@ Model by: 'Psyke'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -6"
-                "special taunt"                            "1"
-			}
-			"taunt"
-            {
-                "custom_taunt_scene_per_class"
-                {
-                    "scout"                "scenes/player/scout/low/taunt_bat_man.vcd"
-                }
             }
 			"mouse_pressed_sound" "ui/item_metal_weapon_pickup.wav"
 			"drop_sound" "ui/item_metal_weapon_drop.wav"
@@ -7364,16 +7290,6 @@ Model by: 'Psyke'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -6"
-                "special taunt"                            "1"
-				"taunt attack name"						"TAUNTATK_SCOUT_GRAND_SLAM"
-                "taunt attack time"                        "4"
-			}
-			"taunt"
-            {
-                "custom_taunt_scene_per_class"
-                {
-                    "scout"                "scenes/player/scout/low/taunt05_v1.vcd"
-                }
             }
 			"attributes"
 			{
@@ -7455,9 +7371,6 @@ Model by: 'Psyke'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -7"
-                "special taunt"                            "1"
-				"taunt attack name"						"TAUNTATK_SCOUT_GRAND_SLAM"
-                "taunt attack time"                        "4"
 			}
 			"visuals_red"
 			{
@@ -7490,13 +7403,6 @@ Model by: 'Psyke'"
 					"value" "1"
 				}
 			}
-			"taunt"
-            {
-                "custom_taunt_scene_per_class"
-                {
-                    "scout"                "scenes/player/scout/low/taunt05_v1.vcd"
-                }
-            }
 			"mouse_pressed_sound" "ui/item_metal_weapon_pickup.wav"
 			"drop_sound" "ui/item_metal_weapon_drop.wav"
 		}
@@ -7543,14 +7449,6 @@ Model by: 'Psyke'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -6"
-                "special taunt"                            "1"
-			}
-			"taunt"
-            {
-                "custom_taunt_scene_per_class"
-                {
-                    "scout"                "scenes/player/scout/low/taunt_bat_man.vcd"
-                }
             }
 			"attributes"
 			{
@@ -9404,9 +9302,6 @@ Model by: 'Psyke'"
 			{
 				"min_viewmodel_offset" "10 0 -9"
 				"damage force increase hidden" "1.5"
-                "special taunt"                            "1"
-				"taunt attack name" "TAUNTATK_PYRO_GASBLAST"
-				"taunt attack time" "4.7"
 				"item_meter_charge_type" "1"
 				"item_meter_charge_rate" "30"
 				"holster_anim_time" "0.8"
@@ -9414,17 +9309,6 @@ Model by: 'Psyke'"
 				"thermal_thruster" "1"
 				"thermal_thruster_air_launch" "1"
 				"cannot pick up intelligence" "1"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"pyro" "scenes/player/pyro/low/taunt_gasblast.vcd"
-				}
-				"custom_taunt_prop_per_class"
-				{
-					"pyro" "models/player/items/taunts/matchbox/matchbox.mdl"
-				}
 			}
 			"visuals_red"
 			{
@@ -10073,6 +9957,11 @@ Model by: 'Psyke'"
 				{
 					"attribute_class" "stickies_detonate_stickies"
 					"value" "1"
+				}
+				"clip size bonus"
+				{
+					"attribute_class" "mult_clipsize"
+					"value" "1.8"
 				}
 				"maxammo secondary increased"
 				{
@@ -11997,9 +11886,6 @@ Model by: 'BenH' 'Weyland'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 -2 -7"
-                "special taunt"                            "1"
-                "taunt attack name"                        "TAUNTATK_ENGINEER_ARM_BLEND"
-                "taunt attack time"                        "3.2"
 			}
 			"attributes"
 			{
@@ -12044,13 +11930,6 @@ Model by: 'BenH' 'Weyland'"
 					"value" "1"
 				}
 			}
-			"taunt"
-            {
-                "custom_taunt_scene_per_class"
-                {
-                    "Engineer"                "scenes/player/engineer/low/taunt09.vcd"
-                }
-            }
 			"visuals"
 			{
 				"player_bodygroups"
@@ -12609,7 +12488,7 @@ Model by: 'BenH' 'Weyland'"
 					"system" "medicgun_beam_attrib_overheal_blue"
 				}
 			}
-			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
+			"mouse_pressed_sound"	"ui/item_metal_slosh_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 		}
 		"998"
@@ -12769,7 +12648,7 @@ Model by: 'Psyke' 'Frying Dutchman' 'The Ronin' 'Pie_Savvy'"
 					}
 				}
 			}
-			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
+			"mouse_pressed_sound"	"ui/item_metal_slosh_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 		}
 		"173"
@@ -13917,7 +13796,7 @@ Model by: 'nrek'"
 			"image_inventory" "backpack/workshop/weapons/c_models/c_snub_nose/c_snub_nose"
 			"inspect_panel_dist" "32"
 			"model_player" "models/workshop/weapons/c_models/c_snub_nose/c_snub_nose.mdl"
-                        "extra_wearable" "models\player\items\spy\spy_gang_cap.mdl"
+            "extra_wearable" "models\player\items\spy\spy_gang_cap.mdl"
 			"item_description" "Now I know jus' what ya thinkin', 'But how am I supposed to dish out some-a that mob-style justice without a proper tool?' Well, that's where this little beauty comes in."
 			"attach_to_hands" "1"
 			"used_by_classes"
@@ -13932,15 +13811,15 @@ Model by: 'nrek'"
 			"drop_sound" "ui/item_light_gun_drop.wav"
 			"attributes"
 			{
+                "dmg pierces resists absorbs"
+				{
+					"attribute_class" "mod_pierce_resists_absorbs"
+					"value" "1"
+				}
 				"damage bonus while disguised"
 				{
 					"attribute_class" "mult_dmg_disguised"
 					"value" "1.67"
-				}
-				"dmg pierces resists absorbs"
-				{
-					"attribute_class" "mod_pierce_resists_absorbs"
-					"value" "1"
 				}
 				"fire rate penalty"
 				{
@@ -14875,16 +14754,6 @@ Model by: 'nrek'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 -5 -10"
-                "special taunt"                            "1"
-                "taunt attack name"						   "TAUNTATK_DEMOMAN_BARBARIAN_SWING"
-                "taunt attack time"                        "2.4"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Demoman"			"scenes/player/demoman/low/taunt09.vcd"
-				}
 			}
 			"model_player_per_class"
 			{
@@ -15267,22 +15136,6 @@ Weapon by: 'Quinnz'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
-                "special taunt"                            "1"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Scout"			"scenes/player/scout/low/taunt_laugh.vcd"
-					"Soldier"			"scenes/player/Soldier/low/taunt_laugh.vcd"
-					"pyro"			"scenes/player/pyro/low/taunt_laugh.vcd"
-					"Demoman"			"scenes/player/demoman/low/taunt_laugh.vcd"
-					"Heavy"			"scenes/player/Heavy/low/taunt_laugh.vcd"
-					"Engineer"			"scenes/player/engineer/low/taunt_laugh.vcd"
-					"medic"			"scenes/player/medic/low/taunt_laugh.vcd"
-					"sniper"			"scenes/player/sniper/low/taunt_laugh.vcd"
-					"spy"			"scenes/player/spy/low/taunt_laugh.vcd"
-				}
 			}
 			"attributes"
 			{
@@ -15994,16 +15847,6 @@ Weapon by: 'Lime Girl'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "12 -3 -10"
-                "special taunt"                            "1"
-                "taunt attack name"						   "TAUNTATK_DEMOMAN_BARBARIAN_SWING"
-                "taunt attack time"                        "2.4"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Demoman"			"scenes/player/demoman/low/taunt09.vcd"
-				}
 			}
 			"attributes"
 			{
@@ -16898,6 +16741,11 @@ Weapon by: 'Quinnz'"
 					"attribute_class" "mult_postfiredelay"
 					"value" "1.1"
 				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
@@ -17563,17 +17411,6 @@ Weapon by: 'Sigara'"
 			{
 				"min_viewmodel_offset"					"20 0 -10"
 				"freedomfinish desc text"               "1"
-                "special taunt"                            "1"
-                "taunt attack name"						   "TAUNTATK_DEMOMAN_BARBARIAN_SWING"
-                "taunt attack time"                        "2.4"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Demoman"			"scenes/player/demoman/low/taunt09.vcd"
-					"Soldier"			"scenes/player/soldier/low/taunt09.vcd"
-				}
 			}
 			"attributes"
 			{
@@ -17599,8 +17436,8 @@ Weapon by: 'Sigara'"
 					"value"				"1"
 				}
 			}
-			"mouse_pressed_sound" "ui/item_knife_large_pickup.wav"
-			"drop_sound" "ui/item_metal_weapon_drop.wav"
+			"mouse_pressed_sound" "ui/item_wood_pole_pickup.wav"
+			"drop_sound" "ui/item_wood_pole_drop.wav"
 		}
 		"8039"
 		{
@@ -17724,6 +17561,11 @@ Weapon by: 'Sigara'"
 				{
 					"attribute_class"	"mult_projectile_range" //~1000 HUs
 					"value"				"0.122070312"
+				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
 				}	
 			}
 			"visuals"
@@ -18378,6 +18220,11 @@ Weapon by: 'Quinnz'"
 				{
 					"attribute_class"	"centerfire_projectile"
 					"value"	"1"
+				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
 				}			
 			}
 			"visuals"
@@ -18511,14 +18358,6 @@ Weapon by: 'Lime Girl'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 2 -9"
-                "special taunt"                            "1"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Pyro"			"scenes/player/pyro/low/taunt_lollichop.vcd"
-				}
 			}
 			"attributes"
 			{
@@ -18616,6 +18455,7 @@ Weapon by: 'Lime Girl'"
 				"item_meter_charge_rate" "0.8"
 				"meter_label" "#TF_Pressure"
 				"Flama desc text"        "1"
+				"hidden primary max ammo bonus" "0.2"
 			}
 			"attributes"
 			{
@@ -18639,6 +18479,11 @@ Weapon by: 'Lime Girl'"
 					"attribute_class" "mult_dmg"
 					"value" "0.8"
 				}
+				"dmg penalty vs buildings"
+				{
+					"attribute_class" "mult_dmg_vs_buildings"
+					"value" "0.34"
+				}
 				"add condition on hit"
 				{
 					"attribute_class" "add_onhit_addcond"
@@ -18654,12 +18499,16 @@ Weapon by: 'Lime Girl'"
 					"attribute_class" "mod_ammo_per_shot"
 					"value" "3"
 				}
-				"airblast disabled"
+				"airblast disabled VISUAL"
 				{
-					"attribute_class" "airblast_disabled"
 					"value" "1"
 				}
 				"hidden separator"	"1"
+                "airblast cost increased"
+				{
+					"attribute_class" "mult_airblast_cost"
+					"value" "4"
+				}
 				"bleeding duration"
 				{
 					"attribute_class"	"bleeding_duration"
@@ -18878,11 +18727,6 @@ Weapon by: 'Quinnz'"
 				{
 					"attribute_class"	"override_projectile_type"
 					"value"				"3"
-				}
-			    "dmg bonus vs buildings"
-				{
-					"attribute_class"	"mult_dmg_vs_buildings"
-					"value"				"1.5"
 				}
 			    "Blast radius increased"
 				{
@@ -19375,16 +19219,6 @@ Weapon by: 'Sigara'"
             "static_attrs"
             {
                 "min_viewmodel_offset"                "10 0 -14"
-                "special taunt"                            "1"
-                "taunt attack name"						   "TAUNTATK_DEMOMAN_BARBARIAN_SWING"
-                "taunt attack time"                        "2.4"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Demoman"			"scenes/player/demoman/low/taunt09.vcd"
-				}
 			}
         }
 
@@ -19537,6 +19371,7 @@ Weapon by: 'Lime Girl'"
 			"item_name" "View-finder"
 			"item_description" "I see ya!
 
+Model by: 'svdl'
 Weapon by: 'Lime Girl'"
 			"item_slot" "primary"
 			"anim_slot" "primary"
@@ -20267,6 +20102,11 @@ Weapon by 'siggy'"
 					"attribute_class" "custom_lunchbox_throwable_type"
 					"value" "1"
 				}
+								"lunchbox healing decreased"
+				{
+					"attribute_class" "lunchbox_healing_scale"
+					"value" "0.5"
+				}
 				"allowed in medieval mode"
 				{
 					"attribute_class" "allowed_in_medieval_mode"
@@ -20742,7 +20582,7 @@ Weapon by: 'Quinnz'"
 				"bomb explosion radius"
 				{
 					"attribute_class"	"bomb_explosion_radius"
-					"value"				"200"
+					"value"				"220"
 				}
 				"crit mod disabled"
 				{
@@ -21256,7 +21096,7 @@ Weapon by: 'Lime Girl'"
 				"sapper health bonus"
 				{
 					"attribute_class" "mult_sapper_health"
-					"value" "3.5"
+					"value" "3.25"
 				}
 				"sapper damage penalty"
 				{
@@ -21450,11 +21290,6 @@ Weapon by: 'Lime Girl'"
 				{
 					"attribute_class"	"mult_sentry_turnrate"
 					"value"				"0.4"
-				}
-				"mult_sentry_health"
-				{
-					"attribute_class" "mult_sentry_health"
-					"value" "0.667"
 				}
 				"custom_sentry_type"
 				{
@@ -22163,11 +21998,6 @@ Weapon by: 'Limegirl'"
 					"value"				"0"
 				}
 				"hidden separator"	"1"
-				"Reload time increased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value" 			"0.775"
-				}
 				"bullets per shot bonus"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
@@ -23129,7 +22959,7 @@ Weapon by: 'Colrot'"
 				"lunchbox healing decreased"
 				{
 					"attribute_class" "lunchbox_healing_scale"
-					"value" "0.5"
+					"value" "0.01"
 				}
 				"patient overheal penalty"
 				{
@@ -23734,9 +23564,9 @@ Weapon by: 'Sigara'"
 			"inspect_panel_dist" "55"
 			"image_inventory"			"backpack/weapons/c_models/c_doubletap_new/c_doubletap_new"
 			"model_world"				"models/workshop/weapons/c_models/c_doubletap/c_doubletap.mdl"
-			"model_player"				"models/weapons/v_models/v_doubletap_demo.mdl"
+			"model_player"				"models/workshop/weapons/c_models/c_doubletap/c_doubletap.mdl"
 			"extra_wearable"  "models\player\items\demo\fwk_demo_sashhat.mdl"
-			"attach_to_hands" "2"
+			"attach_to_hands" "1"
 			"used_by_classes"
 			{
 				"demoman" "1"
@@ -23863,6 +23693,11 @@ Remastered by: 'Sigara'"
 					"attribute_class" "charge_recharge_rate"
 					"value" "1.5"
 				}
+				"health regen"
+				{
+					"attribute_class" "add_health_regen"
+					"value" "8"
+				}
 				"charge time increased"
 				{
 					"attribute_class" "mod_charge_time"
@@ -23872,11 +23707,6 @@ Remastered by: 'Sigara'"
 				{
 					"attribute_class" "mult_player_movespeed_shieldrequired"
 					"value" "1.15"
-				}
-				"max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value"				"-25"
 				}
 				"allowed in medieval mode"
 				{
@@ -24491,8 +24321,8 @@ Weapon by: 'Sigara'"
 					"value"				"91"
 				}
 			}
-			"mouse_pressed_sound" "ui/item_knife_large_pickup.wav"
-			"drop_sound" "ui/item_metal_weapon_drop.wav"
+			"mouse_pressed_sound" "ui/item_wood_pole_pickup.wav"
+			"drop_sound" "ui/item_wood_pole_drop.wav"
 		}
 		"8110"
         {
@@ -24588,6 +24418,10 @@ Made By 'Sigara'"
 			{
 				"Medic"	"1"
 			}
+			"tags"
+			{
+				"bots_cant_use"			"1"
+			}
 			"model_player"				"models\weapons\c_models\c_kritbubble\c_kritbubble_edit.mdl"
 			"image_inventory"		"backpack/weapons/c_models/c_kritbubble/c_kritbubble"
 			"extra_wearable" "models/workshop/player/items/all_class/dec22_battle_bear_style1/dec22_battle_bear_style1_medic.mdl"
@@ -24638,7 +24472,7 @@ Made By 'Sigara'"
 			"item_logname"	"nader"
 			"item_iconname"	"nader"
 			"mouse_pressed_sound"	"ui/item_metal_slosh_pickup.wav"
-			"drop_sound"			"ui/item_metal_weapon_drop.wav"
+			"drop_sound" "ui/item_light_gun_drop.wav"
 		}
 		"8112"
 		{
@@ -25145,11 +24979,6 @@ Stats by: 'Panáček'"
 				{
 					"attribute_class"	"display_only"
 					"value"				"1"
-				}
-				"dmg pierces resists absorbs"
-				{
-					"attribute_class" "mod_pierce_resists_absorbs"
-					"value" "1"
 				}
                 "spread penalty"
 				{
@@ -26140,7 +25969,7 @@ Weapon by: 'Lime Girl And Sigara'"
 		}
 		"8127"
 		{
-			"name"						"Halved Life"
+			"name"						"hl2 mp7 smg"
 			"item_class"				"tf_weapon_smg"
 			"item_slot"					"secondary"
 			"item_quality"		"community"	
@@ -26204,12 +26033,12 @@ Weapon By: 'RedElite'"
 				"grenade launcher radius"
 				{
 					"attribute_class"	"grenade_launcher_radius"
-					"value"				"80"
+					"value"				"50"
 				}
 				"grenade launcher cooldown"
 				{
 					"attribute_class"	"grenade_launcher_cooldown"
-					"value"				"0.8"
+					"value"				"1"
 				}
 				"grenade launcher speed"
 				{
@@ -26224,8 +26053,13 @@ Weapon By: 'RedElite'"
 				"grenade launcher ammo cost"
 				{
 					"attribute_class"	"grenade_launcher_ammo_cost"
-					"value"				"31"
-				}				
+					"value"				"10"
+				}		
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
+				}		
 			}	
 			"visuals"
 			{
@@ -26302,13 +26136,6 @@ Weapon By: 'RedElite'"
 					"value"				"1"
 				}
 			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Demoman"				"scenes/player/demoman/low/taunt_russian.vcd"
-				}
-			}
 			"model_world"					"models/weapons/w_models/w_anchor.mdl"
 			"model_player"					"models/weapons/v_models/v_anchor_soldier.mdl"
 			"anim_slot"						"item1"
@@ -26319,10 +26146,6 @@ Weapon By: 'RedElite'"
 			{
 				"min_viewmodel_offset"					"8 0 -6"
 				"meter_label"							"#TF_Meter_Airtime"
-				"special taunt"							"1"
-				"taunt is press and hold"				"1"
-				"taunt move speed"						"80"
-				"taunt turn speed"						"100"
 			}
 			"item_logname"				"anchor"
 			"item_iconname"				"anchor"
@@ -26573,6 +26396,11 @@ Revisions by: 'Sigara'"
 					"attribute_class" "mult_player_aiming_movespeed"
 					"value" "0.8"
 				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
+				}
 				}
 			"visuals"
 			{
@@ -26664,6 +26492,11 @@ Revisions by: 'Sigara'"
 					"attribute_class" "mult_clipsize"
 					"value" "1.28"
 				}
+			    "damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" 			"1.05"
+				}
 				"punch angle mod add hidden"
 				{
 					"attribute_class"	"punch_angle_mod"
@@ -26688,6 +26521,11 @@ Revisions by: 'Sigara'"
 				{
 					"attribute_class" "mult_postfiredelay"
 					"value" ".8"
+				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -27193,6 +27031,16 @@ Weapon By 'Sigara'"
 					"value" "1"
 				}
 				"hidden separator"		"1"
+				"damage force reduction"
+				{
+					"attribute_class" "damage_force_reduction"
+					"value" "0"
+				}
+				"airblast vulnerability multiplier"
+				{
+					"attribute_class" "airblast_vulnerability_multiplier"
+					"value" "0"
+				}
 				"halloween reload time decreased"													
 				{
 					"attribute_class"	"hwn_mult_reload_time"
@@ -27216,8 +27064,8 @@ Weapon By 'Sigara'"
 					"shoes" "1"
 				}
 			}
-			"mouse_pressed_sound" "ui/item_pack_pickup.wav"
-			"drop_sound" "ui/item_pack_drop.wav"
+			"mouse_pressed_sound"	"ui/item_gooey_pickup.wav"
+			"drop_sound"		"ui/item_gooey_pickup.wav"
 		}
 			"8138"
         {
@@ -27283,7 +27131,7 @@ Weapon By: 'Sigara'"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" 			"0.7"
+					"value" 			"0.6"
 				}
 				"crit mod disabled"
 				{
@@ -27512,7 +27360,7 @@ Weapon By 'Sigara'
 				"damage penalty"
 				{
 					"attribute_class" "mult_dmg"
-					"value" "0.9"
+					"value" "0.95"
 				}
 				"self dmg push force decreased"
 				{
@@ -27910,11 +27758,6 @@ Weapon by: 'Sigara'"
 					"attribute_class"	"chargeweapon_no_extra_speed"
 					"value"				"1"
 				}
-				"fuse bonus"
-				{
-					"attribute_class" "fuse_mult"
-					"value" "2"
-				}
 				"bomblets count mod mult hidden"
 				{
 					"attribute_class"	"bomblets_count_mod"
@@ -28026,6 +27869,11 @@ Weapon by: 'Sigara'"
 					"attribute_class"	"add_maxhealth"
 					"value"				"-100"
 				}
+				"set_weapon_range"
+				{
+					"attribute_class" "set_weapon_range"
+					"value" "1800"
+				}
 				"patient overheal penalty"		
 				{
 					"attribute_class"	"mult_patient_overheal_penalty"
@@ -28128,29 +27976,28 @@ Weapon by: 'Sigara'"
 				"sound_special2"        "Weapon_Null"
 				"sound_special3"        "Weapon_Null"
 				"tracer_effect"         "db_tracer01"
-				"animation_replacement" 						/no more arm pump on rev to further differ from kocw iteration						
+				"animation_replacement" 													
 				{
 					//The Attacking Animations
 					"ACT_MP_ATTACK_STAND_SECONDARY"				"ACT_MP_ATTACK_STAND_PRIMARY"
-					"ACT_MP_ATTACK_STAND_PREFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
+					"ACT_MP_ATTACK_STAND_PREFIRE"				"ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
 					"ACT_MP_ATTACK_STAND_POSTFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
 
 					"ACT_MP_ATTACK_CROUCH_SECONDARY"			"ACT_MP_ATTACK_CROUCH_PRIMARY"
-					"ACT_MP_ATTACK_CROUCH_PREFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
+					"ACT_MP_ATTACK_CROUCH_PREFIRE"				"ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
 					"ACT_MP_ATTACK_CROUCH_POSTFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
 
 					"ACT_MP_ATTACK_SWIM_SECONDARY"				"ACT_MP_ATTACK_SWIM_PRIMARY"
-					"ACT_MP_ATTACK_SWIM_PREFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
+					"ACT_MP_ATTACK_SWIM_PREFIRE"				"ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
 					"ACT_MP_ATTACK_SWIM_POSTFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
-
-
+					//Deployed
 					"ACT_MP_DEPLOYED_IDLE"						"ACT_MP_STAND_SECONDARY"
 					"ACT_MP_DEPLOYED_PRIMARY"					"ACT_MP_RUN_SECONDARY"
-					"ACT_MP_DEPLOYED"						"ACT_MP_RUN_SECONDARY" 
+					"ACT_MP_DEPLOYED"							"ACT_MP_RUN_SECONDARY" 
 
 					"ACT_MP_CROUCH_DEPLOYED_IDLE"				"ACT_MP_CROUCH_SECONDARY"
 					"ACT_MP_SWIM_DEPLOYED_PRIMARY"				"ACT_MP_SWIM_SECONDARY"
-					"ACT_MP_SWIM_DEPLOYED"					"ACT_MP_SWIM_SECONDARY"
+					"ACT_MP_SWIM_DEPLOYED"						"ACT_MP_SWIM_SECONDARY"
 				}
 			}
 			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
@@ -28221,7 +28068,7 @@ Weapon by: 'Sigara'"
 				"medigun healing received penalty"
 				{
 					"attribute_class"	"mult_medigun_healing_received"
-					"value"				"0.10"
+					"value"				"0.50"
 				}
 				"minigun spinup time increased"
 				{
@@ -28458,6 +28305,11 @@ Weapon by: 'Sigara'"
                     "attribute_class"    "add_onhit_addcond_self_weapon"
                     "value"                "137 0.25"
                 }
+				"set_weapon_range"
+				{
+					"attribute_class" "set_weapon_range"
+					"value" "1350"
+				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -28987,6 +28839,11 @@ Weapon by: 'Sigara'"
 					"attribute_class" "heal_on_kill"
 					"value" "25"
 				}
+				"Movespeed On Active Desc"
+                {
+
+					"value" "20"
+				}
 				"minigun crouchwalk text"
 				{
 					"attribute_class" "DISPLAY_ONLY"
@@ -29091,7 +28948,13 @@ Weapon by: 'Sigara'"
 				{
 					"attribute_class"	"add_onkill_addcond_self"
 					"value"				"32, 3"
-				}		
+				}	
+				"hidden separator"		"1"
+				"mult_player_movespeed_active"
+				{
+					"attribute_class"	"mult_player_movespeed_active"
+					"value"				"1.20"
+                }				
 			}
 			"visuals"
 			{
@@ -29249,7 +29112,8 @@ Weapon by: 'Sigara'"
 			"item_type_name"	"Religion Type"
 			"item_quality" "completed"
 			"show_in_armory" "1"
-			"item_description"	"I am a snake! I am fire
+			"item_description"	"I am a snake! I am fire!
+
 Vscript By 'jugheadbomb'
 Weapon By 'Sigara'"
 			"image_inventory"		"backpack/workshop/player/items/all_class/fall17_quizzical_quetzal/fall17_quizzical_quetzal"
@@ -29309,12 +29173,12 @@ Weapon By 'Sigara'"
 					"attribute_class"	"mult_projectile_speed"
 					"value"				"0.75"
 				}
-								"damage penalty"
+				"damage penalty"
 				{
 					"attribute_class" "mult_dmg"
 					"value" "0.3"
 				}
-							    "no damage falloff over distance"
+				"no damage falloff over distance"
 				{
 					"attribute_class"	"mod_no_dmg_falloff"
 					"value"				"1"
@@ -29329,22 +29193,22 @@ Weapon By 'Sigara'"
                     "attribute_class"    "mod_custom_falloff"
                     "value"                "1"
                 }
-								"Set DamageType Ignite"
+				"Set DamageType Ignite"
 				{
 					"attribute_class" "set_dmgtype_ignite"
 					"value" "1"
 				}
-				                "blast splash damage decreased"
+				"blast splash damage decreased"
                 {
                     "attribute_class"    "mult_explosion_splash_damage"
                     "value"                "1.25"
                 }
-								"blast dmg to self increased"
+				"blast dmg to self increased"
 				{
 					"attribute_class"	"blast_dmg_to_self"
 					"value"				"0.25"
 				}
-								"self dmg push force decreased"
+				"self dmg push force decreased"
 				{
 					"attribute_class"	"mult_dmgself_push_force"
 					"value" 			"0.25"
@@ -29502,6 +29366,7 @@ Weapon By: 'Sigara'"
 				"brick explodes fixed" "0.6"
 				"Basketball Desc" "1"
 				"Basketball Desc2" "1"
+				"effect bar recharge rate increased"	"0.8"
 			}
 			"attributes"
 			{
@@ -29606,6 +29471,7 @@ Weapon By: 'Sigara'"
 				"brick explodes fixed" "0.8"
 				"Basketball Desc" "1"
 				"Basketball Desc2" "1"
+				"effect bar recharge rate increased"	"0.8"
 				"increased jump height"       "1.25"
 				"damage penalty" "0.65"
 				"crit mod disabled" "0"
@@ -30050,6 +29916,11 @@ Weapon by: 'Sigara And Quinnz'"
 					"attribute_class"	"mult_dmgself_push_force"
 					"value" 			"0"
 				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
@@ -30113,7 +29984,7 @@ Weapon By: 'Lime Girl'"
 				"damage bonus"
 				{
 					"attribute_class" "dummy"
-					"value" "1.25"
+					"value" "1.35"
 				}
 				"max pipebombs decreased"
 				{
@@ -30133,7 +30004,7 @@ Weapon By: 'Lime Girl'"
 				"Projectile speed decreased"
 				{
 					"attribute_class"	"mult_projectile_speed"
-					"value"				"0.67"
+					"value"				"0.85"
 				}
 				"crit mod disabled"
 				{
@@ -30146,11 +30017,6 @@ Weapon By: 'Lime Girl'"
 					"attribute_class" "mult_reload_time"
 					"value" "1.15"
 				}
-				"damage penalty"
-				{
-					"attribute_class" "mult_dmg"
-					"value" "1"
-				}
 				"projectile scale increased"
 				{
 					"attribute_class"	"mult_projectile_scale"
@@ -30159,7 +30025,7 @@ Weapon By: 'Lime Girl'"
 				"Blast radius increased"
 				{
 					"attribute_class"	"mult_explosion_radius"
-					"value" 			"1.35"
+					"value" 			"1.45"
 				}
 				"custom projectile model"
 				{
@@ -30340,7 +30206,7 @@ Weapon by: 'Sigara'"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_HealGrenadeLauncher"
 			"item_name"			"Clinical Trial"
-			"item_description"	"Force them break the Geneva Convention.
+			"item_description"	"Force them to break the Geneva Convention.
 
 Model by 'ColonelBD'
 Weapon by 'Silly Girl :3'"
@@ -30363,7 +30229,12 @@ Weapon by 'Silly Girl :3'"
 			}
 			"attributes"
 			{
-					"provisions positive attribs"
+				"provisions uber bubble"
+         	 	{
+					"attribute_class"	"dummy"
+					"value"				"1"
+              	}
+				"provisions aoe healing"
          	 	{
 					"attribute_class"	"dummy"
 					"value"				"1"
@@ -30456,7 +30327,7 @@ Weapon by 'Silly Girl :3'"
 				"bots_cant_use" "1"
 			}
 			"mouse_pressed_sound"		"#weapons/clinical_pickup.wav"
-			"drop_sound"			"ui/item_wood_pole_drop.wav"
+			"drop_sound" "ui/item_light_gun_drop.wav"
 		}
 			"8166" // Tavish Terminator
 		{
@@ -30687,12 +30558,12 @@ Weapon by: 'Sigara'"
 				"overheal fill rate reduced"
 				{
 					"attribute_class"	"overheal_fill_rate"
-					"value"				"0.4"
+					"value"				"0.6"
 				}
 				"heal rate penalty"
 				{
 					"attribute_class"	"mult_medigun_healrate"
-					"value"				"0.75"
+					"value"				"0.9"
 				}
 				"hidden separator"		"1"
 				"uber duration bonus"																
@@ -31499,19 +31370,23 @@ Weapon by: 'Lime Girl and Sigara"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -10"
-				"bullets per shot bonus" "0.5"
 			}
 			"attributes"
 			{
+				"provide on active"
+				{
+					"attribute_class" "provide_on_active"
+					"value" "1"
+				}
 				"bullet is a hull"
 				{
 					"attribute_class"	"bullet_is_a_hull"
-					"value"				"35"
+					"value"				"18"
 				}
-				"fire rate bonus"
+				"projectile penetration"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" 			"0.2"
+					"attribute_class" "projectile_penetration"
+					"value" "2"
 				}
 				"mod horizontal spread"
 				{
@@ -31523,21 +31398,35 @@ Weapon by: 'Lime Girl and Sigara"
 					"attribute_class" "ragdolls_plasma_effect"
 					"value" "1"
 				}
+				"move speed penalty"
+				{
+					"attribute_class" "mult_player_movespeed"
+					"value" "0.85"
+				}				"energy weapon no hurt building"
+				{
+					"attribute_class"	"energy_weapon_no_hurt_building"
+					"value" "1"
+				}
 				"crit mod disabled"
 				{
 					"attribute_class" "mult_crit_chance"
 					"value" "0"
 				}
-				"energy weapon no hurt building"
-				{
-					"attribute_class"	"energy_weapon_no_hurt_building"
-					"value" "1"
-				}
 				"hidden separator"	"1"
-				"mult_player_movespeed_active"
+				"mod burstfire"
 				{
-					"attribute_class" "mult_player_movespeed_active"
-					"value" "0.85"
+					"attribute_class"	"mod_burstfire"
+					"value"	"4 0.2"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" 			"1"
+				}
+				"set_weapon_range"
+				{
+					"attribute_class" "set_weapon_range"
+					"value" "400"
 				}
 				"custom falloff"
 				{
@@ -31547,27 +31436,22 @@ Weapon by: 'Lime Girl and Sigara"
 				"hidden primary max ammo bonus"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value" 			"3.12"
+					"value" 			"3.35"
 				}
 				"mod max primary clip override"
 				{
 					"attribute_class" "mod_max_primary_clip_override"
 					"value" "-1"
 				}
-				"longer damage falloff distance"
-				{
-					"attribute_class"	"mult_falloff_distance"
-					"value"				"0.5"
-				}
 			    	"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"0.46"
+					"value"				"0.3"
                 		}
 				"weapon spread bonus"															
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				"1"
+					"value"				"4"
 				}
 				"punch angle mod mult hidden"
 				{
@@ -31589,7 +31473,7 @@ Weapon by: 'Lime Girl and Sigara"
 			{
 				"sound_single_shot" "Weapon_Pomson.Single"
 				"sound_burst" "Weapon_Pomson.SingleCrit"
-				"muzzle_flash" "drg_pomson_muzzleflash"
+				"muzzle_flash" ""
 				"tracer_effect"         "bullet_scattershock_tracer01"	
 			}
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
@@ -31607,8 +31491,7 @@ Weapon by: 'Lime Girl and Sigara"
 			"item_quality"           "completed"
 			"item_name"					"Barrakada"
 			"item_type_name"			"Heavy Shotgun"
-			"item_description"			"
-Who needs anti-tank rifle, when shotgun with giant man slug works too?
+			"item_description"			"Who needs anti-tank rifle, when shotgun with giant man slug works too?
 
 Model by: 'Hau, Kibbleknight'
 Animations by: 'Kylul'
@@ -31631,21 +31514,15 @@ Weapon by: 'Lime Girl'"
 			}
 			"attributes"
 			{
-                		"override projectile type"
-                		{
-                    			"attribute_class" "override_projectile_type"
-                    			"value" "2"
-                		}
-                		"barrakada slug"
-                		{
-                    			"attribute_class" "dummy"
-                    			"value" "1"
-                		}
-			    	"dmg pierces resists absorbs"
-				{
-					"attribute_class"	"mod_pierce_resists_absorbs"
-					"value"				"1"
+                "override projectile type"
+                {
+                    "attribute_class" "override_projectile_type"
+                    "value" "2"
 				}
+            	"barrakada slug"
+           		{
+                    "value" "1"
+           		}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
@@ -31858,6 +31735,11 @@ Weapon by: 'Lime Girl'"
 				{
 					"attribute_class"	"mod_always_draw_tracer_effect"
 					"value"				"1"
+				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
 				}	
 			}
 			"visuals"
@@ -31913,7 +31795,7 @@ Weapon by: 'Lime Girl'"
 				"Reload time decreased"
 				{
 					"attribute_class" "mult_reload_time"
-					"value" "0.85"
+					"value" "0.70"
 				}
 				"minicrit vs burning player"
 				{
@@ -31978,6 +31860,7 @@ Weapon by: 'Lime Girl'"
 			{
 				"min_viewmodel_offset" "10 0 -10"
 				"weapon_stattrak_module_scale" "0.5"
+				"set_reload_prefer_sequence" "1"
 			}
 			"attributes"
 			{
@@ -32026,6 +31909,11 @@ Weapon by: 'Lime Girl'"
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value"				"0.75"
+				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -32273,7 +32161,7 @@ Weapon by: 'Lime Girl And Sigara'"
 				"sound_single_shot" "HealGrenade.Shoot"
 				"sound_reload"	"Weapon_HealLauncher.Charge"
 			}
-			"mouse_pressed_sound" "ui/item_light_gun_pickup.wav"
+			"mouse_pressed_sound"	"ui/item_metal_slosh_pickup.wav"
 			"drop_sound" "ui/item_light_gun_drop.wav"
 			"xifier_class_remap" "crusaders_crossbow"
 		}
@@ -32305,6 +32193,10 @@ Weapon by: 'Lime Girl'"
 			"used_by_classes"
 			{
 				"medic"					"1"
+			}
+			"tags"
+			{
+				"bots_cant_use"			"1"
 			}
 			"static_attrs"
 			{
@@ -32492,6 +32384,10 @@ Weapon by: 'Lime Girl'"
 			{
 				"medic"					"1"
 			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset" "10 0 -9"
+			}
 			"attributes"
 			{
 				"booster shot uber"																
@@ -32503,6 +32399,11 @@ Weapon by: 'Lime Girl'"
 				{
 					"attribute_class"	"add_uber_time"
 					"value" 			"8"
+				}
+								"overheal decay bonus"
+				{
+					"attribute_class" "mult_medigun_overheal_decay"
+					"value" "1.60"
 				}
 				"ubercharge rate bonus"
 				{
@@ -32533,7 +32434,6 @@ Weapon by: 'Lime Girl'"
 			}
 			"visuals"
 			{
-			    "sound_single_shot"		"Weapon_BoosterShot.Healing"
 				"player_bodygroups"
 				{
 					"medic_backpack"	"1"
@@ -32570,16 +32470,6 @@ Weapon by 'Lime Girl'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 -2 -5"
-				"special taunt"							"1"
-				"taunt attack name"	"TAUNTATK_MEDIC_HEROIC_TAUNT"
-				"taunt attack time"						"0.0"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Medic"				"scenes/player/medic/low/taunt03.vcd"
-				}
 			}
 			"attributes"
 			{
@@ -32656,16 +32546,6 @@ Rework by 'Lime Girl and Sigara'"
 			{
 				"add condition on miss" "30 3"
 				"min_viewmodel_offset"		"10 0 -12"
-				"special taunt"							"1"
-				"taunt attack name"						"TAUNTATK_MEDIC_UBERSLICE_IMPALE"
-				"taunt attack time"						"2.15"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Medic"				"scenes/player/medic/low/taunt08.vcd"
-				}
 			}
 			"tags"
 			{
@@ -32892,6 +32772,7 @@ Weapon by: 'Lime Girl'"
 			}
 			"static_attrs"
 			{
+				"min_viewmodel_offset" "10 0 -10"
 				"ragdolls become ash"		"1"
 			}
 			"attributes"
@@ -33030,13 +32911,26 @@ Weapon by: 'Quinnz'"
 			{
 			    "no fall off text"
 				{
-					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"Halo AR Accuracy Info"
+				{
 					"value"				"1"
 				}
 			    "no damage falloff over distance"
 				{
 					"attribute_class"	"mod_no_dmg_falloff"
 					"value"				"1"
+				}
+			    "no damage increase over distance"
+				{
+					"attribute_class"	"mod_no_dmg_rampup"
+					"value"				"1"
+				}
+				"mod sustained fire accuracy"
+				{
+					"attribute_class" "mod_sustained_fire_accuracy"
+					"value" "1.3 1.5"
 				}
 				"crit mod disabled"
 				{
@@ -33052,7 +32946,7 @@ Weapon by: 'Quinnz'"
                 "damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" 			"1.5"
+					"value" 			"2"
 				}
                 "clip size penalty"
 				{
@@ -33092,12 +32986,12 @@ Weapon by: 'Quinnz'"
 				"grenade launcher damage"
 				{
 					"attribute_class"	"grenade_launcher_damage"
-					"value"				"100"
+					"value"				"200"
 				}
 				"grenade launcher radius"
 				{
 					"attribute_class"	"grenade_launcher_radius"
-					"value"				"80"
+					"value"				"50"
 				}
 				"grenade launcher cooldown"
 				{
@@ -33118,6 +33012,11 @@ Weapon by: 'Quinnz'"
 				{
 					"attribute_class"	"grenade_launcher_ammo_cost"
 					"value"				"10"
+				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
 				}
 			}
 			"used_by_classes"
@@ -33289,16 +33188,6 @@ Weapon by: 'CloverCorp'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -12"
-				"special taunt"							"1"
-				"taunt attack name"						"TAUNTATK_HEAVY_HIGH_NOON"
-				"taunt attack time"						"2.15"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Medic"				"scenes/player/medic/low/taunt08.vcd"
-				}
 			}
 			"used_by_classes"
 			{
@@ -33361,6 +33250,11 @@ Weapon by: 'CloverCorp'"
 				{
 					"attribute_class"	"mod_use_custom_ammo_type"
 					"value"				"1"
+				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -33445,7 +33339,7 @@ Backpack icon by: 'Skyrym'"
 			"item_slot" "secondary"
 			"image_inventory" "backpack\weapons\c_models\c_gluongun/c_gluon_medigun"
 			"model_player" "models\weapons\c_models\c_gluon_medigun\c_gluon_medigun.mdl"
-			"extra_wearable" "models\player\hats\medicbacks/gluon_backpack.mdl"
+			"extra_wearable" "models\player\hats\medicbacks/c_gluon_backpackv2.mdl"
 			"attach_to_hands" "1"
 			"item_logname" "gluongun"
 			"item_iconname" "gluongun"
@@ -33517,11 +33411,11 @@ Backpack icon by: 'Skyrym'"
 				}
 				"medigun targets enemies rework"
 				{
-					"value" "5"
+					"value" "10"
 				}
 				"medigun targets fire rate"
 				{
-					"value" "0.2"
+					"value" "0.4"
 				}
 				"medigun targets enemies cond uber"
 				{
@@ -33655,7 +33549,7 @@ Weapon By: 'Sigara'"
 			"extra_wearables"
 			{
 				"2" "models/player/items/medic/archimedes.mdl"
-				"3" "models\player\hats\medicbacks/pigeoncoop_backpack.mdl"
+				"3" "models\player\hats\medicbacks/pigeoncoop_backpackv2.mdl"
 			}
 			"attach_to_hands" "1"
 			"item_quality" "completed"
@@ -33678,16 +33572,6 @@ Weapon By: 'Sigara'"
 				"ubercharge rate bonus" "2"
 				"dmg taken from fall reduced" "0.9"
 				"take minicrits projectile airborne" "1"
-				"special taunt"							"1"
-				"taunt attack name"	"TAUNTATK_MEDIC_HEROIC_TAUNT"
-				"taunt attack time"						"0.0"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Medic"				"scenes/player/medic/low/taunt09.vcd"
-				}
 			}
 			"attributes"
 			{
@@ -33778,8 +33662,8 @@ Weapon By: 'Sigara'"
 					"system" "medicgun_beam_attrib_overheal_blue"
 				}
 			}
-			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
-			"drop_sound" "ui/item_heavy_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_metal_slosh_pickup.wav"
+			"drop_sound"			"ui/item_wood_weapon_drop.wav"
 		}
 		"8203"
 		{
@@ -33795,6 +33679,10 @@ Made By 'Sigara'"
 			"propername"		"0"
 
 			"item_class"	"tf2c_weapon_heallauncher"
+			"tags"
+			{
+				"bots_cant_use"			"1"
+			}
 			"item_slot"		"secondary"
 			"used_by_classes"
 			{
@@ -34279,11 +34167,6 @@ Weapon by: 'Quinnz'"
 					"attribute_class"	"apply_self_knockback"
 					"value"				"400"
 				}
-				"dmg pierces resists absorbs"
-				{
-					"attribute_class" "mod_pierce_resists_absorbs"
-					"value" "1"
-				}
 				"centerfire projectile"
 				{
 					"attribute_class"	"centerfire_projectile"
@@ -34546,6 +34429,7 @@ Weapon by: 'CloverCorp'"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 -2 -9"
+				"melee range multiplier" "1.25"
 			}
 			"attributes"
 			{
@@ -34592,11 +34476,6 @@ Weapon by: 'CloverCorp'"
 					"attribute_class" "mod_taser_damage_noscale"
 					"value" "1"
 				}
-				"dmg pierces resists absorbs"
-				{
-					"attribute_class" "mod_pierce_resists_absorbs"
-					"value" "1"
-				}
 				 "mult dmg crit multiplier"											
 				{
 					"attribute_class"	"mult_dmg_crit_multiplier"
@@ -34619,16 +34498,12 @@ Weapon by: 'CloverCorp'"
 				}
 			}
 			"visuals"
-			{
-				"player_bodygroups"
-                                {
-                                "Hat"        "1"
-                                }
-			}
 			"mouse_pressed_sound" "ui/item_metal_weapon_pickup.wav"
 			"drop_sound" "ui/item_metal_weapon_drop.wav"
+			{
 			"sound_melee_miss" "Medkit_use.Swing"
 			"sound_melee_hit" "Medkit_heal.HitFlesh"
+			}
 		}
 //		"8212"
 //		{
@@ -34848,7 +34723,7 @@ Weapon by: 'CloverCorp'"
 			"item_logname"	"CreatureRejuv"
 			"item_iconname"	"infection_acid_ball"
 			"mouse_pressed_sound"	"ui/item_metal_slosh_pickup.wav"
-			"drop_sound"			"ui/item_metal_weapon_drop.wav"
+			"drop_sound"		"ui/item_gooey_pickup.wav"
 		}
 		"8214" // Sportsman's Sidearm
 		{
@@ -34906,7 +34781,7 @@ Weapon by: 'Saturn'"
 			    	"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"1.4"
+					"value"				"1.5"
                 		}
 				"clip size penalty"
 				{
@@ -35138,11 +35013,6 @@ Weapon by: 'Lime Girl'"
 				{
 					"value"				"1"
 				}
-				"weapon burn dmg reduced"
-				{
-					"attribute_class" "mult_wpn_burndmg"
-					"value" "0.5"
-				}
                			"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
@@ -35277,20 +35147,6 @@ Weapon by: 'Lime Girl'"
 				"class select override vcd"				"taunt02"
 				"min_viewmodel_offset" "10 0 -10"
 				"hidden primary max ammo bonus" "100"
-				"special taunt"							"1"
-				"taunt attack name"						"TAUNTATK_PYRO_ARMAGEDDON"
-				"taunt attack time"						"3"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Pyro"				"scenes/player/pyro/low/taunt_bubbles.vcd"
-				}
-				"custom_taunt_prop_per_class"
-				{
-					"Pyro"				"models/player/items/pyro/mtp_bubble_wand.mdl"
-				}
 			}
 			"attributes"
 			{
@@ -35541,6 +35397,11 @@ Weapon by: 'Lime Girl' and 'Saturn'"
 					"attribute_class"	"punch_angle_is_constant"
 					"value"				"1"
 				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
@@ -35615,11 +35476,15 @@ Weapon by: 'Lime Girl' and 'Saturn'"
 					"attribute_class"	"mod_use_custom_ammo_type"
 					"value"				"1"
 				}
-
-				"penetration damage penalty"
+				"reveal disguised victim on hit"
 				{
-					"attribute_class" "penetration_damage_penalty"
-					"value" ".7"
+					"attribute_class"	"reveal_disguised_victim_on_hit"
+					"value"	"1"
+				}
+				"reveal cloaked victim on hit"
+				{
+					"attribute_class"	"reveal_cloaked_victim_on_hit"
+					"value"	"1"
 				}
 				"override projectile type"
 				{
@@ -35636,6 +35501,12 @@ Weapon by: 'Lime Girl' and 'Saturn'"
 					"attribute_class"	"mod_custom_falloff"
 					"value"				"0.75"
 				}
+				"mod coilgun explode time"
+                {
+                    "attribute_class" "mod_coilgun_explode_time"
+                    "value" "1"
+                }
+
 				"sniper fires tracer"
 				{
 					"attribute_class" "sniper_fires_tracer"
@@ -35802,6 +35673,11 @@ Weapon by: Reddoh"
 					"attribute_class" "mult_spread_scale"
 					"value" "0.001"
 				}
+				"set_reload_prefer_sequence"
+				{
+					"attribute_class" "set_reload_prefer_sequence"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
@@ -35854,15 +35730,7 @@ Weapon by: Reddoh"
 				"min_viewmodel_offset" "10 0 -6"
 				"burst fire dummy" "2"
 				"greek tragedy explain" "1"
-                "special taunt"                            "1"
 			}
-			"taunt"
-            {
-                "custom_taunt_scene_per_class"
-                {
-                    "scout"                "scenes/player/scout/low/taunt_bat_man.vcd"
-                }
-            }
 			"attributes"
 			{
 				"mod burstfire"
@@ -35924,7 +35792,7 @@ Weapon by: 'CloverCorp'"
 			"item_slot" "secondary"
 			"image_inventory" "backpack\weapons\c_models\c_dispenserizer\c_dispenserizer"
 			"model_player" "models\weapons\c_models\c_dispenser_medigun\c_dispenser_medigun.mdl"
-			"extra_wearable" "models\player\hats\medicbacks/ver_dispack.mdl"
+			"extra_wearable" "models\player\hats\medicbacks/ver_dispackv2.mdl"
 			"attach_to_hands" "1"
 			"item_logname" "dispensermedigun"
 			"item_iconname" "dispensermedigun"
@@ -35951,6 +35819,10 @@ Weapon by: 'CloverCorp'"
 				{
 					"value" "5"
 				}
+				"Dispenser construct expl"
+				{
+					"value" "1"
+				}
 				"medigun give ammo"
 				{
 					"value" "0.05"
@@ -35959,6 +35831,14 @@ Weapon by: 'CloverCorp'"
 				{
 					"attribute_class" "mod_ubercharge_cond"
 					"value" "73"
+				}
+				"medigun give upgrade buildings"
+				{
+					"value" "5"
+				}
+				"medigun buildings construction mult"
+				{
+					"value" "1.1"
 				}
 				"ubercharge rate bonus"
 				{
@@ -35994,6 +35874,14 @@ Weapon by: 'CloverCorp'"
 				"medigun give ammo"
 				{
 					"value" "0.05"
+				}
+				"medigun buildings construction uber mult"
+				{
+					"value" "5"
+				}
+				"medigun give upgrade buildings uber mult"
+				{
+					"value" "5"
 				}
 				"medigun give ammo buildings"
 				{
@@ -36032,8 +35920,8 @@ Weapon by: 'CloverCorp'"
 					"value" "0.5"
 				}
 			}
-			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
-			"drop_sound" "ui/item_heavy_gun_drop.wav"
+			"mouse_pressed_sound"		"#ui/item_metal_weapon_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
 		}
 		"8223"		
 		{
@@ -36151,6 +36039,7 @@ Weapon By: 'Sigara'"
 				"brick explodes fixed" "0.6"
 				"Basketball Desc" "1"
 				"Basketball Desc2" "1"
+				"effect bar recharge rate increased"	"0.8"
 			}
 			"tags"
 			{
@@ -36290,6 +36179,7 @@ Weapon By: 'Quinnz'"
 					"attribute_class" "mult_crit_chance"
 					"value" "0"
 				}
+
 			}	
 			"visuals"
 			{
@@ -36337,6 +36227,11 @@ Weapon By: 'RedElite'"
 					"attribute_class" "provide_on_active"
 					"value" "1"
 				}
+				"damage bonus"
+				{
+					"attribute_class" "mult_dmg"
+					"value" "1.15"
+				}
 				"single wep deploy time decreased"
 				{
 					"attribute_class" "mult_single_wep_deploy_time"
@@ -36351,12 +36246,7 @@ Weapon By: 'RedElite'"
 				{
 					"attribute_class"	"mult_postfiredelay_with_reduced_health"
 					"value"				"0.45"
-				}		
-				"restore health on kill"
-				{
-					"attribute_class" "restore_health_on_kill"
-					"value" "30"
-				}					
+				}						
 				"clip size penalty"
 				{
 					"attribute_class" "mult_clipsize"
@@ -36366,12 +36256,7 @@ Weapon By: 'RedElite'"
 				{
 					"attribute_class"	"mod_always_draw_tracer_effect"
 					"value"				"1"
-				}			
-				"healing received penalty"
-				{
-					"attribute_class"	"mult_healing_received"
-					"value"				"0.5"
-				}	
+				}				
 				"crit mod disabled"
 				{
 					"attribute_class" "mult_crit_chance"
@@ -36426,35 +36311,16 @@ Weapon By: 'RedElite'"
 			}
 			"attributes"
 			{
-				"crit vs burning players"
+				"minicrit vs burning player"
 				{
-					"attribute_class"	"or_crit_vs_playercond"
+					"attribute_class"	"or_minicrit_vs_playercond_burning"
 					"value"	"1"
 				}				
 				"Projectile speed increased"
 				{
 					"attribute_class"	"mult_projectile_speed"
 					"value"				"1.35"
-				}				
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"				"0.70"
-				}					
-				"dmg taken from fire increased"
-				{
-					"attribute_class" "mult_dmgtaken_from_fire"
-					"value" "1.20"
-				}		
-				"julyspecial desc text"
-				{
-					"value" "1"
-				}				
-				"dmg taken from burning target reduced"
-				{
-					"attribute_class" "mult_dmgtaken_from_burning_target_wearer"
-					"value" "1.35"
-				}		
+				}								
 				"custom projectile model"
 				{
 					"attribute_class"	"custom_projectile_model"
@@ -36470,11 +36336,6 @@ Weapon By: 'RedElite'"
 					"attribute_class" "mult_crit_chance"
 					"value" "0"
 				}					
-				"mult dmg crit multiplier"													
-				{
-					"attribute_class"	"mult_dmg_crit_multiplier"
-					"value"				"0.95"
-				}
 				"hidden separator" "1"
 				"rocket limited lifetime"
 				{
@@ -36553,14 +36414,6 @@ Weapon By: 'Sigara'"
 				"Set DamageType Ignite" "1"
 				"bomblet fuse flat" "-0.5"
 				"bomblet blast radius" "100"
-                "special taunt"                            "1"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"Scout"			"scenes/player/scout/low/taunt_chicken_bucket.vcd"
-				}
 			}
 			"tags"
 			{
@@ -36568,6 +36421,11 @@ Weapon By: 'Sigara'"
 			}
 			"attributes"
 			{
+							"Projectile speed increased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"1.5"
+				}
 			    "charge weapon no extra speed"
 				{
 					"attribute_class"	"chargeweapon_no_extra_speed"
@@ -36676,6 +36534,11 @@ Weapon By: 'Sigara'"
 			}
 			"attributes"
 			{
+				"Projectile speed increased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"1.5"
+				}
 			    "charge weapon no extra speed"
 				{
 					"attribute_class"	"chargeweapon_no_extra_speed"
@@ -36782,7 +36645,7 @@ Weapon By: 'Sigara'"
                 "custom lunchbox throwable model" "models\items\mysterymeat.mdl"
 				"sandvich can overheal enemy" "1"
 				"sandvich enemy healing"				"0"
-				"sandvich enemy healing additive"		"-90"
+				"sandvich enemy healing additive"		"-67"
 				"sandvich enemy cond"					"30"
 				"sandvich enemy cond time"				"8"
 				"lunchbox add condition on eat" "30 8"
@@ -36926,6 +36789,7 @@ Weapon By: 'Sigara'"
 				"brick explodes fixed" "0.8"
 				"Basketball Desc" "1"
 				"Basketball Desc2" "1"
+				"effect bar recharge rate increased"	"0.8"
 				"increased jump height"       "1.25"
 				"damage penalty" "0.65"
 				"crit mod disabled" "0"
@@ -37068,6 +36932,7 @@ Weapon By: 'Sigara'"
 				"brick explodes fixed" "0.8"
 				"Basketball Desc" "1"
 				"Basketball Desc2" "1"
+				"effect bar recharge rate increased"	"0.8"
 				"increased jump height"       "1.25"
 				"damage penalty" "0.65"
 				"crit mod disabled" "0"
@@ -37266,11 +37131,6 @@ Weapon by: 'Quinnz'"
 			}
 			"attributes"
 			{
-				"dmg pierces resists absorbs"
-				{
-					"attribute_class" "mod_pierce_resists_absorbs"
-					"value" "1"
-				}
 				"kill upgrade max"
 				{
 					"attribute_class" "kill upgrade max"
@@ -37336,6 +37196,11 @@ Weapon by: 'Quinnz'"
 					"attribute_class"	"VISUALONLY"
 					"value"				"1"
 				}
+								"set_weapon_range"
+				{
+					"attribute_class" "set_weapon_range"
+					"value" "1350"
+				}
 				"crit mod disabled"
 				{
 					"attribute_class" "mult_crit_chance"
@@ -37389,13 +37254,15 @@ Weapon by: 'Quinnz'"
 				"8239"
 		{
 			"name" "Pony Rider"
-			"item_class" "tf_wearable"
+			"item_class" "tf_weapon_buff_item"
 			"show_in_armory" "1"
 			"item_type_name" "Body Type"
 			"item_name" "Sergeant Hooves"
-			"item_description" " CRASH FASTER
+			"item_description" " Soldier got drunk and stole stuff from a museum that he assumed was an american civil war museum
+
 Vscript: 'Clocks-Weapon-Vscripts' By 'IAmTheOneWhoStoleYourClock'
 Vscript By 'jugheadbomb'
+Model By 'tree'
 Weapon By 'Sigara'"
 			"item_slot" "secondary"
 			"equip_region" "feet"
@@ -37403,7 +37270,14 @@ Weapon By 'Sigara'"
 			"item_quality" "completed"
 			"propername" "0"
 			"image_inventory" "backpack/workshop/player/items/engineer/hwn2022_pony_express/hwn2022_pony_express"
-			"model_player" "models\player\hats\ponyrider/ponyrider.mdl"
+			"model_player" "models\workshop_partner\weapons\c_models\c_horsebeer/c_horsebeer.mdl"
+			"attach_to_hands" "1"
+			"extra_wearables"
+			{
+				"2" "models\player\hats\ponyrider/ponyrider.mdl"
+				"3" "models/workshop/player/items/soldier/dec15_diplomat/dec15_diplomat.mdl"
+				"4" "models/workshop/player/items/soldier/jul13_the_presidential/jul13_the_presidential.mdl"
+			}
 			"used_by_classes"
 			{
 				"soldier" "1"
@@ -37411,22 +37285,43 @@ Weapon By 'Sigara'"
 						"static_attrs"
 			{
 			"Pony desc" "1"
+			"pumpking Desc2" "1"
+			"Pony desc2" "1"
 			"add cond while wearer" "126"
 		    "medieval my mode" "1"
-			"melee swing speed" "1.5"
-			"damage force reduction" "0.5"
+			"melee swing speed" "1.25"
+			"custom banner sound" "Taunt.WormsHHG"
 			}
 			"attributes"
 			{
+				"max health additive bonus"
+				{
+					"attribute_class" "add_maxhealth"
+					"value" "25"
+				}
+				"mod soldier buff type"
+				{
+					"attribute_class" "set_buff_type"
+					"value" "3"
+				}
+				"mod set banner cond"
+				{
+					"attribute_class" "mod_set_banner_cond"
+					"value" "137"
+				}
+				"heal on kill wearer"
+				{
+					"value"				"50"
+				}
 				"melee damage increased"													
 				{
-					"value"				"1.25"
+					"value"				"1.5"
 				}
 				"melee damage"													
 				{
-					"value"				"1.25"
+					"value"				"1.5"
 				}
-				"Pony desc2"
+				"Pony desc3"
 				{
 					"value"				"1"
 				}
@@ -37446,23 +37341,124 @@ Weapon By 'Sigara'"
 					"value" "1"
 				}
 				"hidden separator"	"1"
-				"move speed penalty"
+				"damage force reduction"
+				{
+					"attribute_class" "damage_force_reduction"
+					"value" "0"
+				}
+				"airblast vulnerability multiplier"
+				{
+					"attribute_class" "airblast_vulnerability_multiplier"
+					"value" "0"
+				}
+				"increased jump height"
+				{
+					"attribute_class" "mod_jump_height"
+					"value" "1.3"
+				}
+				"add jingle to footsteps"
+				{
+					"attribute_class" "add_jingle_to_footsteps"
+					"value" "1"
+				}
+				"move speed bonus"
 				{
 					"attribute_class" "mult_player_movespeed"
-					"value" "0.25"
+					"value" "2"
 				}
 			}
 			"visuals"
 			{
-				"player_bodygroups"
-				{
-					"shoes" "1"
-				}
+                "player_bodygroups"
+                {
+                "Hat"        "1"
+                }
 			}
 			"mouse_pressed_sound" "ui/item_pack_pickup.wav"
 			"drop_sound" "ui/item_pack_drop.wav"
 		}
-		
+		   "8240"
+		{
+			"name" "Billybob's Rocketpack"
+			"item_class" "tf_wearable"
+			"show_in_armory" "1"
+			"item_type_name" "Ammo Pack"
+			"item_name" "Billybob's Rocketpack"
+			"item_description" "A rocket a day keeps the enemy at bay!
+			
+Vscript: 'Clocks-Weapon-Vscripts' By 'IAmTheOneWhoStoleYourClock'
+Model by: 'blaholtzen, skeletor, and Orko'
+Weapon by: 'Quinnz'"
+			"item_slot" "secondary"
+			"equip_region" "back"
+			"anim_slot" "FORCE_NOT_USED"
+			"item_quality" "completed"
+			"propername" "1"
+			"min_ilevel" "10"
+			"max_ilevel" "10"
+			"image_inventory" "backpack\weapons\c_models\c_solrocketpack\c_solrocketpack_large.vtf"
+			"model_player"   "models\weapons\c_models\c_solrocketpack\c_solrocketpack.mdl"
+			"extra_wearable"  "models\weapons\c_models\c_solrocketpack\c_solrocketpack.mdl"
+			"used_by_classes"
+			{
+				"soldier" "1"
+     		}
+			"attributes"
+			{
+				"billybob desc text"													
+				{
+					"value"				"1"
+				}
+				"billybob desc text2"													
+				{
+					"value"				"1"
+				}
+				"primary clip size"													
+				{
+					"attribute_class"	"primary clip size"
+					"value"				"1.25"
+				}
+				"halloween reload time decreased"													
+				{
+					"attribute_class"	"hwn_mult_reload_time"
+					"value"				"0.5"
+				}
+                "maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" 			"2"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"				"-25"
+				}
+				"halominigun downside"
+				{
+					"attribute_class" "DISPLAY_ONLY"
+					"value" "1"
+				}
+				"primary ammo from ammo packs penalty"
+				{
+					"attribute_class" "mult_primary_ammo_from_ammo_packs"
+					"value" "0.5"
+				}
+				"primary ammo from dropped weapons penalty"
+				{
+					"attribute_class" "mult_primary_ammo_from_dropped_weapons"
+					"value" "0.5"
+				}
+				"billybob desc text3"													
+				{
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound" "ui/item_pack_pickup.wav"
+			"drop_sound" "ui/item_pack_drop.wav"
+		}
 		//////Dodge End Of Schema/////
 		///Dev Only////
 				"10234"
@@ -37543,7 +37539,7 @@ Weapon By 'Sigara'"
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-		"8675309"
+		"31967"
         {
             "name" "Rocket Jumper Stock"
             "item_class" "tf_weapon_rocketlauncher"
@@ -37590,6 +37586,71 @@ Weapon By 'Sigara'"
                 }
             }
         }
+		"32000"			////// DO NOT GO PAST THIS ID
+		{
+			"name"				"Lexecutor"
+			"item_name"			"L'executor"
+			"item_type_name" 	"#TF_Weapon_Revolver"
+			"item_description"	"Buffed!
+
+Weapon By: 'Grouch'"
+			"item_quality"		"Developer"
+			"propername"		"0"
+            "show_in_armory" 	"0"
+			"item_logname"      "Enforcer"
+			"item_iconname"     "Enforcer"
+			"item_class"        "tf_weapon_revolver"
+			"item_slot"			"secondary"
+			"image_inventory" "backpack/workshop/weapons/c_models/c_snub_nose/c_snub_nose"
+			"inspect_panel_dist" "32"
+			"model_player" "models/workshop/weapons/c_models/c_snub_nose/c_snub_nose.mdl"
+            "extra_wearable" "models\player\items\spy\spy_gang_cap.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"spy"			"1"
+			}			
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -10"
+			}
+			"attributes"
+			{
+				"bleeding duration"
+				{
+					"attribute_class"	"bleeding_duration"
+					"value"				"8"
+				}
+				"clip size penalty"
+				{
+					"attribute_class" "mult_clipsize"
+					"value" "0.1"
+				}
+				"damage penalty"
+				{
+					"attribute_class" "mult_dmg"
+					"value" "0.01"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"2"
+				}				
+				"crit mod disabled"
+				{
+					"attribute_class" "mult_crit_chance"
+					"value" "0"
+				}
+				"hidden separator" "1"	
+            }			
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Enforcer.Single"
+				"sound_burst" "Weapon_Enforcer.SingleCrit"
+			}				
+			"mouse_pressed_sound" "ui/item_light_gun_pickup.wav"
+			"drop_sound" "ui/item_light_gun_drop.wav"
+	    }
 		//////Dev Stuff/////
 
 }
@@ -38434,6 +38495,15 @@ Disables buildings for a short amount of time when thrown!"
 			"effect_type"			"negative"
 			"stored_as_integer"		"1"
 		}
+		"7097"
+		{
+			"name"					"set_weapon_range"
+			"attribute_class"		"set_weapon_range"
+			"description_string"	"Weapon has limited range"
+			"description_format"	"value_is_additive"
+			"effect_type"			"negative"
+			"stored_as_integer"		"1"
+		}
 		
 //  --------------------------------
 // |!!!!! VISUAL ATTRIBUTES !!!!!  |
@@ -38495,8 +38565,9 @@ Both bolts connecting minicrits your target"
 		{
 			"name"					"no fall off text" 
 			"description_string"	"This weapon has no damage falloff over distances"
+            "custom_color"			"223 203 51 255"
 			"description_format"	"value_is_additive"
-			"effect_type"			"neutral"
+			"effect_type"			"Positive"
 		}
 
 		"15007"
@@ -39393,20 +39464,19 @@ On Kill: Increase movespeed for 3 seconds"
 			"hidden"				"0"
 			"effect_type"			"positive"
 		}
-				"15123"
+		"15123"
         {
-            "name"                  "provisions positive attribs" 
-            "description_string"    "Uber bubble applies damage resistance and extra sentry damage resistance to allies and mad milk to enemies
-Applies AOE healing to nearby teammates when you damage an enemy"
+            "name"                  "provisions uber bubble" 
+            "description_string"    "Alt-Fire: Launch a device that grants damage resistance to allies and applies milk to enemies in a radius"
             "description_format"    "value_is_additive"
-            "effect_type"           "positive"
+            "effect_type"           "neutral"
         }
 		"15124"
 		{
-			"name" 					"provisions negative attribs"
-			"description_string"	"-90% ammo, 50% slower reload"
+			"name" 					"provisions aoe healing"
+			"description_string"	"Applies AOE healing to nearby teammates when you damage an enemy"
 			"description_format"    "value_is_additive"
-            "effect_type"           "negative"
+            "effect_type"           "positive"
 		}
 		"15125"
 		{
@@ -40049,7 +40119,7 @@ does not reveal you"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
         }
-		        "42526"
+        "42526"
         {
             "name"                    "battle_rifle_desc"
             "description_string"    "Headshots when Zoomed
@@ -40058,7 +40128,7 @@ does not reveal you"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
         }
-				        "42527"
+		"42527"
         {
             "name"                    "Pony desc"
             "description_string"    "Restricted To Medieval Only And You Ride A Large Silly Horse With Horse Controls"
@@ -40066,13 +40136,52 @@ does not reveal you"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
         }
-								        "42528"
+		"42528"
         {
             "name"                    "Pony desc2"
-            "description_string"    "You melee attack 50% Slower"
+            "description_string"    "Provides Haste To Teammates When Fully Charged. Rage increases through damage done
+			+50 health restored on kill"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+        }
+		"42529"
+        {
+            "name"                    "Pony desc3"
+            "description_string"    "You melee attack 25% Slower"
 			"description_format"	"value_is_additive"
 			"effect_type"			"negative"
         }
+		"42530"
+        {
+            "name"    "mod coilgun explode time"
+            "attribute_class"    "mod_coilgun_explode_time"
+            "description_string" "Max charge hold time increased by %s1 seconds"
+            "description_format"    "value_is_additive"
+            "effect_type"    "positive"
+        }
+				"42531"
+		{
+			"name"					"billybob desc text" 
+			"description_string"	"50% faster primary reload time"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+
+		"42532"
+		{
+			"name"					"billybob desc text2" 
+			"description_string"	"25% primary clip size"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+
+		"42533"
+		{
+			"name"					"billybob desc text3" 
+			"description_string"	"-50% less ammo from ammo boxes"
+			"description_format"	"value_is_additive"
+			"effect_type"			"negative"
+		}
 // === Community Vscripts ====	
 		 "20001"
         {
@@ -41263,7 +41372,7 @@ of all damage taken in a 5-2 ratio"
 		"40001"
 		{
         "name"                  "Medkit explain"
-		"description_string"	"The medkit deals a flat 20 damage to enemies and heals a flat 20 health to allies."
+		"description_string"	"The medkit deals 20 damage to enemies and heals a flat 20 health to allies."
 		"description_format"	"value_is_additive"
 		"custom_color"		"223 203 51 255"
 		"effect_type"			"neutral"
@@ -41726,7 +41835,8 @@ Enemies are covered in a disgusting bile"
 		"40062"
 		{
 			"name"					"Dispenser uber expl"
-			"description_string"	"Uber applies a 300% increase in healing/repair + ammo gain"
+			"description_string"	"Uber applies a 300% increase in healing & ammo gain
+Ubering a building fully repairs it and increases upgrade rate and construction rate by 5x"
 			"description_format"	"value_is_additive"
 			"effect_type"			"Neutral"
 		}
@@ -41790,6 +41900,45 @@ Enemies are covered in a disgusting bile"
 			"description_format"	"value_is_percentage"
 			"effect_type"			"positive"
 			"hidden"				"1"
+		}
+		"40071"
+		{
+			"name"					"airblast disabled VISUAL"
+			"description_string"	"No airblast"
+			"description_format"	"value_is_additive"
+			"effect_type"			"Negative"
+		}
+		"40072" ///// VSCRIPT ATTRIBUTE
+		{
+			"name"					"medigun give upgrade buildings"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+		}
+		"40073" ///// VSCRIPT ATTRIBUTE
+		{
+			"name"					"medigun give upgrade buildings uber mult"
+			"description_format"	"value_is_percentage"
+			"effect_type"			"neutral"
+		}
+		"40074" ///// VSCRIPT ATTRIBUTE
+		{
+			"name"					"medigun buildings construction mult"
+			"description_format"	"value_is_percentage"
+			"effect_type"			"neutral"
+		}
+		"40075" ///// VSCRIPT ATTRIBUTE
+		{
+			"name"					"medigun buildings construction uber mult"
+			"description_format"	"value_is_percentage"
+			"effect_type"			"neutral"
+		}
+		"40076"
+		{
+			"name"					"Dispenser construct expl"
+			"description_string"	"Passively increases construction rate by 10%
+Passively upgrades for 5 metal per tick."
+			"description_format"	"value_is_additive"
+			"effect_type"			"Positive"
 		}
 	}
 }
