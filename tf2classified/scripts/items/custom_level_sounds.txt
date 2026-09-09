@@ -3167,3 +3167,22 @@
 	"volume"	"1.0"
 	"wave"		")weapons/chainsaw_empty.wav"
 }
+
+// ------------------------------------------------------------------------------------ //
+// Bolt Pistol
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_BoltPistol.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/BoltPistol_Fire.wav"
+}
+"Weapon_BoltPistol.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/BoltPistol_FireCrit.wav"
+}

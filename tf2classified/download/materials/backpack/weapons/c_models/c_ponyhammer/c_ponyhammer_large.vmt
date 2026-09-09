@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/weapons/c_models/c_ponyhammer/c_ponyhammer_large"
+	"$translucent" 1
+}
